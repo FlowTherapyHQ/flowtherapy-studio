@@ -1,0 +1,1322 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FlowTherapy | Masaje terapéutico</title>
+
+    <meta
+      name="description"
+      content="Masaje terapéutico personalizado que tiene en cuenta las experiencias de trauma. Descubre el ritmo de la relajación."
+    />
+
+    <meta property="og:title" content="FlowTherapy | Therapeutic Massage" />
+
+    <meta
+      property="og:description"
+      content="Discover the Rhythm of Relaxation through personalized therapeutic bodywork."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta name="theme-color" content="#1d2328" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css?v=4" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-N1Q7YEW5MF"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "G-N1Q7YEW5MF");
+    </script>
+    <style>
+      /* Keep the ten principles compact and legible on narrow screens. */
+      .ft-respect-massage .ft-service-content {
+        padding-inline: 0.5rem !important;
+      }
+      .ft-respect-massage ol {
+        list-style: none !important;
+        counter-reset: respect-principle;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+        font-family: Inter, Arial, sans-serif !important;
+        font-size: 0.94rem !important;
+        font-weight: 500 !important;
+        line-height: 1.4 !important;
+        letter-spacing: -0.012em;
+        color: #eaf2fa;
+      }
+      .ft-respect-massage li {
+        counter-increment: respect-principle;
+        display: grid;
+        grid-template-columns: 1.55rem minmax(0, 1fr);
+        gap: 0.2rem;
+        align-items: baseline;
+        margin: 0 !important;
+        padding: 0.55rem 0 !important;
+        border-bottom: 1px solid rgba(145, 190, 230, 0.2);
+        font: inherit !important;
+      }
+      .ft-respect-massage li::before {
+        content: counter(respect-principle, decimal-leading-zero);
+        color: #69bcff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+    </style>
+    <style>
+      /* Make the content use the available width on phones and small tablets. */
+      @media (max-width: 800px) {
+        .ft-section .ft-shell,
+        .ft-flowhub .ft-shell,
+        .ft-footer .ft-shell {
+          width: calc(100% - 2rem) !important;
+          max-width: none !important;
+          margin-inline: auto !important;
+          padding-inline: 0 !important;
+          box-sizing: border-box;
+        }
+        .ft-services-layout {
+          display: block !important;
+          width: 100% !important;
+          max-width: none !important;
+        }
+        .ft-services-menu,
+        .ft-services-side,
+        .ft-services-menu > .ft-service-group,
+        .ft-services-menu .ft-service-content {
+          width: 100% !important;
+          max-width: none !important;
+          min-width: 0 !important;
+          box-sizing: border-box;
+          margin-inline: 0 !important;
+        }
+      }
+      .ft-services-menu
+        > details:first-of-type
+        .ft-service-content
+        > details.ft-service-group {
+        border-bottom: 0 !important;
+      }
+      .ft-services-menu
+        > details:first-of-type
+        .ft-service-content
+        > details.ft-service-group
+        summary {
+        border-bottom: 0 !important;
+      }
+      .ft-library-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        max-width: 42rem;
+        margin-inline: auto;
+      }
+      .ft-library-grid article {
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 1.5rem !important;
+      }
+      .ft-social-cards {
+        margin-top: 1rem !important;
+        gap: 1rem;
+      }
+      .ft-community-card h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .ft-community-card h3 img {
+        width: 1.35rem;
+        height: 1.35rem;
+        object-fit: contain;
+        filter: none !important;
+        opacity: 1 !important;
+        flex: none;
+      }
+      .ft-footer-grid > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 0.55rem;
+        min-width: 0;
+      }
+      .ft-footer-grid a {
+        display: block !important;
+        overflow-wrap: anywhere;
+        line-height: 1.45;
+      }
+      .ft-footer-grid p {
+        margin: 0.25rem 0 0.5rem;
+      }
+      @media (max-width: 800px) {
+        .ft-footer {
+          padding-bottom: 5.5rem;
+        }
+      }
+      .ft-meta-glint {
+        display: inline-block !important;
+        flex: 0 0 3px;
+        width: 3px !important;
+        height: 3px !important;
+        margin-inline: 0.5rem;
+        border-radius: 50%;
+        background: #e9f8ff !important;
+        box-shadow:
+          0 0 5px 2px #b9eaff,
+          0 0 11px 4px rgba(53, 169, 255, 0.55) !important;
+      }
+      .ft-access-tools {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
+        background: transparent;
+      }
+
+      .ft-access-tools a[aria-disabled="true"] {
+        opacity: 0.55;
+        cursor: not-allowed;
+      }
+
+      .ft-access-tools a,
+      .ft-access-tools button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 34px;
+        padding: 0 9px;
+        border: 1px solid #49647a;
+        border-radius: 999px;
+        background: #11171b;
+        box-shadow:
+          0 0 10px rgba(56, 182, 255, 0.65),
+          0 0 20px rgba(9, 94, 255, 0.4);
+        color: #fff;
+        font:
+          700 12px/1 Inter,
+          Arial,
+          sans-serif;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+
+      .ft-access-tools #ft-text-size {
+        min-width: 48px;
+        padding-inline: 12px;
+      }
+
+      .ft-access-tools #ft-spanish {
+        border-color: #8edcff;
+      }
+
+      .ft-access-tools a:focus-visible,
+      .ft-access-tools button:focus-visible {
+        outline: 2px solid #9bdcff;
+        outline-offset: 3px;
+      }
+
+      html.ft-large-text {
+        font-size: 125% !important;
+      }
+
+      html.ft-large-text .ft-service-content,
+      html.ft-large-text .ft-about-copy,
+      html.ft-large-text .ft-flowhub {
+        font-size: 1.15rem !important;
+      }
+    </style>
+  </head>
+
+  <body class="flowtherapy-home">
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="ft-header">
+      <div class="ft-shell ft-nav">
+        <a href="#home" class="ft-logo-link" aria-label="Inicio de FlowTherapy">
+          <img
+            src="./assets/images/flowtherapy-logo.png"
+            alt="FlowTherapy"
+            class="ft-logo"
+          />
+        </a>
+
+        <nav class="ft-nav-links" aria-label="Navegación principal">
+          <a href="#services">Servicios</a>
+          <a href="#about">Sobre mí</a>
+          <a href="#flowhub">FlowHub</a>
+          <a href="#contact">Contacto</a>
+
+          <div class="ft-access-tools" aria-label="Opciones de lectura">
+            <a
+              id="ft-spanish"
+              href="./index.html"
+              lang="en"
+              aria-label="Read this page in English"
+              >◉ English ›</a
+            >
+
+            <button
+              id="ft-text-size"
+              type="button"
+              aria-pressed="false"
+              aria-label="Aumentar el tamaño del texto"
+              title="Texto más grande"
+            >
+              Aa
+            </button>
+          </div>
+
+          <a
+            class="ft-nav-book"
+            href="https://flowtherapy.noterro.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            Reservar
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- ===================================================
+     HERO
+=================================================== -->
+
+      <section class="ft-hero" id="home">
+        <div class="ft-hero-overlay" aria-hidden="true"></div>
+
+        <div class="ft-shell ft-hero-inner">
+          <div class="ft-hero-content">
+            <h1>
+              Descubre el
+              <br />
+              <em>ritmo</em> de la
+              <br />
+              relajación
+            </h1>
+
+            <div class="ft-hero-meta">
+              <span>MASAJE TERAPÉUTICO</span>
+
+              <span
+                class="ft-hero-meta-orb ft-meta-glint"
+                aria-hidden="true"
+              ></span>
+
+              <span>MÓVIL Y A DOMICILIO</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================================
+           FLOW STATEMENT
+           =================================================== -->
+
+      <section class="ft-flow-statement">
+        <div class="ft-shell">
+          <p>
+            Cuando el movimiento fluye con más libertad, la vida también suele
+            hacerlo.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           SERVICES
+           =================================================== -->
+
+      <section class="ft-section ft-services" id="services">
+        <div class="ft-shell">
+          <div class="ft-services-layout">
+            <!-- ===============================================
+                 SERVICE MENU
+                 =============================================== -->
+
+            <div class="ft-services-menu">
+              <!-- FLOWCLINIC -->
+
+              <details class="ft-service-group">
+                <summary>
+                  <span>
+                    <small> FLOWCLINIC • MASAJE TERAPÉUTICO </small>
+
+                    <strong> FlowClinic </strong>
+                  </span>
+
+                  <b aria-hidden="true"></b>
+                </summary>
+
+                <div class="ft-service-content">
+                  <p class="ft-service-intro">
+                    Cada sesión comienza con una breve conversación sobre tus
+                    objetivos, las zonas que te preocupan y la presión que
+                    prefieres.
+                  </p>
+                  <div class="ft-simple-service ft-premium-service">
+                    <strong>Masaje Signature Flow</strong>
+                    <span
+                      >Masaje terapéutico de cuerpo completo de 75 o 90 minutos,
+                      adaptado a tus objetivos y con tiempo adicional para las
+                      zonas que más lo necesitan.</span
+                    >
+                  </div>
+                  <a
+                    class="ft-service-row"
+                    href="https://flowtherapy.noterro.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>Focused Flow</strong>
+                    <span
+                      >Masaje terapéutico de 45 minutos para una o dos zonas
+                      específicas; incluye estiramientos asistidos.</span
+                    >
+                  </a>
+                  <a
+                    class="ft-service-link"
+                    href="https://flowtherapy.noterro.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Ver sesiones y precios →</a
+                  >
+                  <!-- COMING SOON -->
+                  <details class="ft-service-group">
+                    <summary>
+                      <span>
+                        <small>PRÓXIMAMENTE • NUEVAS FORMAS DE FLUIR</small>
+                        <strong>Próximamente</strong>
+                      </span>
+                      <b aria-hidden="true"></b>
+                    </summary>
+                    <div class="ft-service-content">
+                      <div class="ft-simple-service">
+                        <strong>VeteranFlow</strong>
+                        <span
+                          >Atención comunitaria de VA a través de TriWest;
+                          acreditación pendiente.</span
+                        >
+                      </div>
+                      <div class="ft-simple-service">
+                        <strong>Tok Sen Flow</strong>
+                        <span
+                          >Percusión rítmica con herramientas de madera (mazo y
+                          cuña), combinada con masaje manual y estiramientos
+                          para abordar la tensión muscular. Próximamente.</span
+                        >
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              </details>
+
+              <!-- SPAFLOW -->
+
+              <details class="ft-service-group">
+                <summary>
+                  <span>
+                    <small> FLOWSPA • EXPERIENCIAS RESTAURADORAS </small>
+
+                    <strong> FlowSpa </strong>
+                  </span>
+
+                  <b aria-hidden="true"></b>
+                </summary>
+
+                <div class="ft-service-content">
+                  <p class="ft-service-intro">
+                    El cuidado terapéutico también puede ser restaurador. Elige
+                    una exfoliación FlowSpa —Medicinal, Leche y miel o Rosa
+                    auténtica— con HandFlow o SoleFlow.
+                  </p>
+
+                  <div class="ft-spaflow-list">
+                    <div class="ft-simple-service">
+                      <strong>LymphFlow</strong
+                      ><span
+                        >Masaje especializado y suave que favorece el flujo
+                        linfático y puede ayudar a aliviar la hinchazón y la
+                        acumulación de líquidos.</span
+                      >
+                    </div>
+                    <div class="ft-simple-service">
+                      <strong>HandFlow · Servicio adicional</strong
+                      ><span
+                        >Exfoliación restauradora y masaje enfocado en manos,
+                        muñecas y antebrazos.</span
+                      >
+                    </div>
+                    <div class="ft-simple-service">
+                      <strong>SoleFlow · Servicio adicional</strong
+                      ><span
+                        >Masaje restaurador y exfoliación refrescante para pies,
+                        tobillos y parte inferior de las piernas.</span
+                      >
+                    </div>
+                    <div class="ft-simple-service">
+                      <strong>Crown Flow · Servicio adicional</strong
+                      ><span
+                        >Atención enfocada en cuero cabelludo, cabeza, cuello y
+                        mandíbula, incluida la tensión asociada con la
+                        disfunción de la articulación temporomandibular.</span
+                      >
+                    </div>
+                    <div class="ft-simple-service">
+                      <strong
+                        >Flow &amp; Glow Mini Facial · Servicio
+                        adicional</strong
+                      ><span
+                        >Cuidado suave de la piel con masaje facial terapéutico
+                        para aliviar la tensión y refrescar la piel.</span
+                      >
+                    </div>
+                  </div>
+                  <a
+                    class="ft-service-link"
+                    href="https://hub.discoverflowtherapy.com/pages/spaflow.html"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Explorar FlowSpa →
+                  </a>
+                </div>
+              </details>
+
+              <!-- FLOWBOOST -->
+
+              <details class="ft-service-group">
+                <summary>
+                  <span>
+                    <small> FLOWBOOST • COMPLEMENTA TU SESIÓN </small>
+
+                    <strong> FlowBoost </strong>
+                  </span>
+
+                  <b aria-hidden="true"></b>
+                </summary>
+
+                <div class="ft-service-content">
+                  <p class="ft-service-intro">
+                    Puedes añadir complementos opcionales a tu sesión.
+                  </p>
+
+                  <div class="ft-boost-list">
+                    <div class="ft-boost-row">
+                      <strong>Tri-Flow · Recuperación muscular</strong
+                      ><span
+                        >Protocolo tópico de recuperación en tres pasos con
+                        magnesio, árnica, hamamelis y clavo, seleccionado según
+                        tus objetivos de tratamiento.</span
+                      >
+                    </div>
+
+                    <div class="ft-boost-row">
+                      <strong>CBD Calm</strong>
+
+                      <span>
+                        Opción tópica de CBD para zonas con dolor o molestias.
+                      </span>
+                    </div>
+
+                    <div class="ft-boost-row">
+                      <strong>Time Boost</strong>
+
+                      <span>
+                        Añade más tiempo cuando tu sesión lo necesite.
+                      </span>
+                    </div>
+                  </div>
+
+                  <a
+                    class="ft-service-link"
+                    href="https://flowtherapy.noterro.com/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Ver opciones FlowBoost →
+                  </a>
+                </div>
+              </details>
+
+              <!-- RECOVERY LAB -->
+              <details class="ft-service-group ft-recovery-lab">
+                <summary>
+                  <span>
+                    <small>HERRAMIENTAS • COMODIDAD • RECUPERACIÓN</small>
+                    <strong>Laboratorio de recuperación FlowTherapy</strong>
+                  </span>
+                  <b aria-hidden="true"></b>
+                </summary>
+                <div class="ft-service-content">
+                  <p class="ft-service-intro">
+                    Podemos incorporar herramientas de apoyo a tu sesión sin
+                    costo adicional. Tu terapeuta las selecciona según tus
+                    objetivos, comodidad e historial de salud.
+                  </p>
+                  <div class="ft-boost-list">
+                    <div class="ft-boost-row">
+                      <strong>Toallas calientes</strong
+                      ><span
+                        >Compresas tibias durante o después del masaje para
+                        facilitar la transición entre zonas de
+                        tratamiento.</span
+                      >
+                    </div>
+                    <div class="ft-boost-row">
+                      <strong>Ventosas deslizantes</strong
+                      ><span
+                        >Succión deslizante sobre zonas apropiadas de tejido
+                        blando para complementar el tratamiento manual.</span
+                      >
+                    </div>
+                    <div class="ft-boost-row">
+                      <strong>Rapid Flow Release</strong
+                      ><span
+                        >Percusión controlada para grupos musculares
+                        seleccionados, ajustada a tu comodidad.</span
+                      >
+                    </div>
+                    <div class="ft-boost-row">
+                      <strong>Piedras calientes ThermaBliss</strong
+                      ><span
+                        >Piedras calientes integradas con técnicas manuales
+                        cuando el calor beneficia tu sesión.</span
+                      >
+                    </div>
+                    <div class="ft-boost-row">
+                      <strong>Aromaterapia · Terapia de color</strong
+                      ><span
+                        >Opciones de aromas e iluminación para personalizar el
+                        ambiente de tu sesión.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <!-- =============================================
+     MORE WAYS TO FLOW
+     ============================================= -->
+
+              <details class="ft-service-group ft-more-ways">
+                <summary>
+                  <span>
+                    <small>EVENTOS • PAQUETES • REGALOS</small>
+                    <strong>Más formas de fluir</strong>
+                  </span>
+                  <b aria-hidden="true"></b>
+                </summary>
+                <div class="ft-service-content">
+                  <p class="ft-service-intro">
+                    Encuentra atención que se adapte a tu horario, a tu trabajo
+                    o a alguien a quien quieres.
+                  </p>
+                  <a
+                    class="ft-service-row"
+                    href="https://hub.discoverflowtherapy.com/pages/flowpass.html"
+                  >
+                    <strong>FlowPass</strong>
+                    <span
+                      >Bienestar como hábito. Membresías con sesiones de 75 o 90
+                      minutos y ahorros para miembros.</span
+                    >
+                  </a>
+                  <a
+                    class="ft-service-row"
+                    href="https://flowtherapy.noterro.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>FlowPack</strong>
+                    <span
+                      >Bienestar a tu manera. Elige un paquete de 4, 8 o 12
+                      sesiones de 75 o 90 minutos y reserva según tu
+                      horario.</span
+                    >
+                  </a>
+                  <a
+                    class="ft-service-row"
+                    href="https://hub.discoverflowtherapy.com/pages/corporate.html"
+                  >
+                    <strong>FlowChair</strong>
+                    <span
+                      >Bienestar en el trabajo. Lleva masaje en silla a eventos
+                      de reconocimiento, conferencias y jornadas de
+                      bienestar.</span
+                    >
+                  </a>
+                  <a
+                    class="ft-service-row"
+                    href="https://app.squareup.com/gift/MLV560DXHSF4H/order"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>FlowGift</strong>
+                    <span>Regala el cuidado de un masaje terapéutico.</span>
+                  </a>
+                  <a
+                    class="ft-service-row"
+                    href="https://flowtherapy.noterro.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>Eventos privados Flow</strong>
+                    <span
+                      >Masajes personalizados para celebraciones, reuniones y
+                      eventos de bienestar.</span
+                    >
+                  </a>
+                </div>
+              </details>
+              <!-- RESPECT MASSAGE -->
+              <details class="ft-service-group ft-respect-massage">
+                <summary>
+                  <span>
+                    <small
+                      >LOS DIEZ PRINCIPIOS QUE GUÍAN CADA EXPERIENCIA
+                      FLOWTHERAPY</small
+                    >
+                    <strong>Respect Massage: esto es atención de salud</strong>
+                  </span>
+                  <b aria-hidden="true"></b>
+                </summary>
+                <div class="ft-service-content">
+                  <ol>
+                    <li>Compromiso con una atención de alta calidad</li>
+                    <li>Compromiso de no causar daño</li>
+                    <li>
+                      Compromiso de representar honestamente las cualificaciones
+                    </li>
+                    <li>
+                      Compromiso de reconocer el valor inherente de todas las
+                      personas
+                    </li>
+                    <li>
+                      Compromiso de respetar la dignidad y los derechos básicos
+                      de cada cliente
+                    </li>
+                    <li>Compromiso con el consentimiento informado</li>
+                    <li>Compromiso con la confidencialidad</li>
+                    <li>
+                      Compromiso con los límites personales y profesionales
+                    </li>
+                    <li>Compromiso con la honestidad comercial</li>
+                    <li>Compromiso con el profesionalismo</li>
+                  </ol>
+                </div>
+              </details>
+              <!-- ===============================================
+     SERVICES SIDE — THERAPEUTIC CARE
+     =============================================== -->
+
+              <aside class="ft-services-side">
+                <div class="ft-services-side-content">
+                  <p class="ft-eyebrow">Atención terapéutica</p>
+
+                  <h2>
+                    Atención terapéutica,
+                    <em>a tu manera.</em>
+                  </h2>
+
+                  <p>
+                    Cada sesión se adapta a tus objetivos, tu cuerpo y tu vida.
+                    Ya sea que busques alivio, recuperación, mantenimiento o
+                    descanso, tu atención se organiza en torno a tus
+                    necesidades.
+                  </p>
+
+                  <a
+                    href="https://flowtherapy.noterro.com/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Ver todos los servicios y precios →
+                  </a>
+                </div>
+
+                <figure class="ft-services-atmosphere">
+                  <div class="ft-services-atmosphere-frame">
+                    <img
+                      src="/assets/images/home/flowtherapy-salt-lamp.jpg"
+                      alt="Warm ambient lighting in the FlowTherapy treatment space"
+                    />
+                  </div>
+
+                  <figcaption>
+                    Entra. Ponte cómodo. Respira con calma.
+                  </figcaption>
+                </figure>
+              </aside>
+            </div>
+          </div>
+
+          <!-- ===================================================
+     FLOWSTART
+=================================================== -->
+
+          <section class="ft-section ft-flowstart">
+            <div class="ft-shell">
+              <!-- =========================================
+         DESKTOP — TWO STATIC CARDS
+    ========================================== -->
+
+              <div class="ft-flowstart-desktop">
+                <article
+                  class="ft-flowstart-desktop-card ft-flowstart-desktop-offer"
+                >
+                  <p class="ft-eyebrow">¿Primera vez en FlowTherapy?</p>
+
+                  <h2>
+                    Empieza con
+                    <em>FlowStart.</em>
+                  </h2>
+
+                  <p class="ft-flowstart-tagline">
+                    Tu primer paso para sentirte mejor.
+                  </p>
+
+                  <div class="ft-flowstart-price">
+                    <strong>$20</strong>
+
+                    <span>DE DESCUENTO EN TU PRIMERA SESIÓN</span>
+                  </div>
+
+                  <p class="ft-flowstart-front-copy">
+                    Atención terapéutica personalizada desde tu primera visita.
+                  </p>
+                </article>
+
+                <article
+                  class="ft-flowstart-desktop-card ft-flowstart-desktop-visit"
+                >
+                  <p class="ft-eyebrow">Tu primera visita</p>
+
+                  <h3>
+                    El cuidado comienza al
+                    <em>conocerte.</em>
+                  </h3>
+
+                  <ul class="ft-flowstart-visit-list">
+                    <li>Formulario de salud y conversación personal</li>
+
+                    <li>Tus objetivos, zonas de atención y preferencias</li>
+
+                    <li>
+                      Una sesión terapéutica adaptada a lo que necesitas ese día
+                    </li>
+
+                    <li>
+                      Recomendaciones prácticas para después de la sesión,
+                      cuando sean útiles
+                    </li>
+                  </ul>
+
+                  <a
+                    class="ft-button ft-flowstart-book"
+                    href="https://flowtherapy.noterro.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Reserva FlowStart
+                  </a>
+
+                  <small class="ft-flowstart-note">
+                    FlowStart está disponible para nuevos clientes de
+                    FlowTherapy.
+                  </small>
+                </article>
+              </div>
+
+              <!-- =========================================
+         MOBILE — ORIGINAL FLIP CARD
+    ========================================== -->
+
+              <div
+                class="ft-flowstart-flip"
+                tabindex="0"
+                role="button"
+                aria-pressed="false"
+                aria-label="Flip FlowStart card to view first visit details"
+              >
+                <div class="ft-flowstart-flip-inner">
+                  <!-- =========================================
+             FRONT
+        ========================================== -->
+
+                  <div class="ft-flowstart-face ft-flowstart-front">
+                    <div class="ft-flowstart-front-content">
+                      <p class="ft-eyebrow">¿Primera vez en FlowTherapy?</p>
+
+                      <h2>
+                        Empieza con
+                        <em>FlowStart.</em>
+                      </h2>
+
+                      <p class="ft-flowstart-tagline">
+                        Tu primer paso para sentirte mejor.
+                      </p>
+
+                      <div class="ft-flowstart-price">
+                        <strong> $20 </strong>
+
+                        <span> DE DESCUENTO EN TU PRIMERA SESIÓN </span>
+                      </div>
+
+                      <p class="ft-flowstart-front-copy">
+                        Atención terapéutica personalizada desde tu primera
+                        visita.
+                      </p>
+
+                      <div class="ft-flowstart-flip-prompt">
+                        <span> Toca para ver tu primera visita </span>
+
+                        <b aria-hidden="true"> ↻ </b>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- =========================================
+             BACK
+        ========================================== -->
+
+                  <div class="ft-flowstart-face ft-flowstart-back">
+                    <div class="ft-flowstart-back-content">
+                      <p class="ft-eyebrow">Tu primera visita</p>
+
+                      <h3>
+                        El cuidado comienza al
+                        <em>conocerte.</em>
+                      </h3>
+
+                      <ul class="ft-flowstart-visit-list">
+                        <li>Formulario de salud y conversación personal</li>
+
+                        <li>Tus objetivos, zonas de atención y preferencias</li>
+
+                        <li>
+                          Una sesión terapéutica adaptada a lo que necesitas ese
+                          día
+                        </li>
+
+                        <li>
+                          Recomendaciones prácticas para después de la sesión,
+                          cuando sean útiles
+                        </li>
+                      </ul>
+
+                      <a
+                        class="ft-button ft-flowstart-book"
+                        href="https://flowtherapy.noterro.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Reserva FlowStart
+                      </a>
+
+                      <small class="ft-flowstart-note">
+                        FlowStart está disponible para nuevos clientes de
+                        FlowTherapy.
+                      </small>
+
+                      <div class="ft-flowstart-flip-prompt">
+                        <span> Toca para volver </span>
+
+                        <b aria-hidden="true"> ↺ </b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================================================
+     ABOUT
+     =================================================== -->
+
+          <section class="ft-section ft-about" id="about">
+            <div class="ft-shell ft-about-layout">
+              <div class="ft-about-photo-wrap">
+                <div class="ft-about-photo-frame">
+                  <img
+                    class="ft-about-photo"
+                    src="/assets/images/brandy-flowtherapist.png"
+                    alt="Brandy Hennigan, Licensed Massage Therapist"
+                  />
+                </div>
+              </div>
+
+              <div class="ft-about-content">
+                <p class="ft-eyebrow">Conoce a tu FlowTherapist</p>
+
+                <h2>
+                  Cuidado para toda
+                  <span>la persona.</span>
+                </h2>
+
+                <p class="ft-about-belief">
+                  El masaje es atención de salud, no un lujo.
+                </p>
+
+                <div class="ft-about-copy">
+                  <p>
+                    Hola, soy Brandy Hennigan, masajista con licencia. Mi
+                    práctica terapéutica tiene en cuenta las experiencias de
+                    trauma, y sigo aprendiendo sobre el movimiento humano.
+                  </p>
+
+                  <p>
+                    Trabajo con personas que experimentan tensión persistente,
+                    estrés, dolores de cabeza, limitaciones del movimiento y
+                    necesidades de recuperación.
+                  </p>
+
+                  <p>
+                    Creo en la atención colaborativa. Puedes hacer preguntas,
+                    expresar lo que necesitas y avanzar a tu propio ritmo. Cada
+                    sesión se adapta a tus objetivos.
+                  </p>
+
+                  <p>
+                    Mi objetivo es ayudarte a moverte con más facilidad y
+                    sentirte mejor en tu cuerpo.
+                  </p>
+                </div>
+
+                <div class="ft-about-signature">
+                  <span>Descubre el ritmo de la relajación.</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================================================
+           CLIENT EXPERIENCES
+           =================================================== -->
+
+          <section class="ft-section ft-reviews">
+            <div class="ft-shell">
+              <p class="ft-eyebrow">Experiencias de clientes</p>
+
+              <h2>
+                Atención que las personas
+                <em>recuerdan.</em>
+              </h2>
+
+              <div class="ft-review-grid">
+                <article>
+                  <div class="ft-stars">★★★★★</div>
+
+                  <blockquote>
+                    “Tengo neuropatía periférica y he conocido a muchos
+                    terapeutas a lo largo de los años, pero ninguno tan
+                    talentoso, dedicado y atento como Brandy.”
+                  </blockquote>
+
+                  <p>— Bill</p>
+                </article>
+
+                <article>
+                  <div class="ft-stars">★★★★★</div>
+
+                  <blockquote>
+                    “La FlowTherapist es una verdadera profesional y me ayudó
+                    muchísimo con la tensión en el cuello que me causaba dolores
+                    de cabeza.”
+                  </blockquote>
+
+                  <p>— Rebecca</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================================================
+           FLOWHUB
+           =================================================== -->
+
+          <section class="ft-section ft-flowhub" id="flowhub">
+            <div class="ft-shell">
+              <div class="ft-flowhub-intro">
+                <p class="ft-eyebrow">Más allá de la camilla</p>
+                <h2>Mantente en el <em>Flow.</em></h2>
+                <p>Orientación útil para los días entre sesiones.</p>
+              </div>
+              <div class="ft-flowhub-grid ft-library-grid">
+                <article>
+                  <small>APRENDE • MUÉVETE • DESCANSA</small>
+                  <h3>
+                    <svg
+                      class="ft-library-icon"
+                      viewbox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 6.5c-2.5-1.8-5.5-2.2-9-1.5v13c3.5-.7 6.5-.3 9 1.5"
+                      ></path>
+                      <path
+                        d="M12 6.5c2.5-1.8 5.5-2.2 9-1.5v13c-3.5-.7-6.5-.3-9 1.5"
+                      ></path>
+                      <path d="M12 6.5v13"></path>
+                    </svg>
+                    FlowLibrary
+                  </h3>
+                  <p>
+                    Explora artículos sobre masaje, movimiento, recuperación y
+                    cuidado diario para comprender mejor tu cuerpo y cuidarte
+                    con intención.
+                  </p>
+                  <a
+                    href="https://library.discoverflowtherapy.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar FlowLibrary →</a
+                  >
+                </article>
+              </div>
+              <div class="ft-flowhub-grid ft-library-grid ft-social-cards">
+                <article class="ft-community-card">
+                  <small>ESCUCHA • APRENDE</small>
+                  <h3>
+                    <img
+                      src="https://cdn.simpleicons.org/patreon/FFFFFF"
+                      alt=""
+                      loading="lazy"
+                    />Flow Table Talk
+                  </h3>
+                  <p>
+                    Únete a la conversación más allá de la sala de tratamiento
+                    en Patreon.
+                  </p>
+                  <a
+                    href="https://www.patreon.com/flowtherapy?utm_campaign=creatorshare_creator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar Flow Table Talk →</a
+                  >
+                </article>
+                <article class="ft-community-card">
+                  <small>SIGUE • CONECTA</small>
+                  <h3>
+                    <img
+                      src="https://cdn.simpleicons.org/bluesky/69BFFF"
+                      alt=""
+                      loading="lazy"
+                    />FlowTherapy en Bluesky
+                  </h3>
+                  <p>
+                    Sigue las novedades, ideas y conversaciones de FlowTherapy.
+                  </p>
+                  <a
+                    href="https://bsky.app/profile/flowtherapy.bsky.social"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Visitar Bluesky →</a
+                  >
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================================================
+           FINAL CTA
+           =================================================== -->
+
+          <section class="ft-final" id="contact">
+            <div class="ft-shell ft-final-grid">
+              <div class="ft-final-brand">
+                <img
+                  src="/assets/images/flowtherapy-logo.png"
+                  alt="FlowTherapy"
+                  class="ft-final-logo"
+                />
+
+                <div>
+                  <p class="ft-eyebrow">CUANDO TÚ QUIERAS</p>
+
+                  <h2>Encuentra tu Flow.</h2>
+                </div>
+              </div>
+
+              <div class="ft-final-actions">
+                <a
+                  class="ft-button ft-button-primary"
+                  href="https://flowtherapy.noterro.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Reserva tu sesión
+                </a>
+
+                <a
+                  class="ft-button ft-button-outline"
+                  href="mailto:hello@discoverflowtherapy.com"
+                >
+                  Escribe a FlowTherapy
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+          <footer class="ft-footer">
+            <div class="ft-shell ft-footer-grid">
+              <div>
+                <strong> FlowTherapy Massage </strong>
+
+                <p>Descubre el ritmo de la relajación.</p>
+              </div>
+
+              <div>
+                <small> ENLACES RÁPIDOS </small>
+
+                <a href="#services">Servicios</a>
+                <a href="#about">Sobre mí</a>
+                <a href="https://library.discoverflowtherapy.com/"
+                  >FlowLibrary</a
+                >
+                <a
+                  href="https://square.link/u/egV3tk8K"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Deja propina a tu terapeuta</a
+                >
+                <a
+                  href="https://venmo.com/code?user_id=4052718532429412887&amp;created=1789594686.053042&amp;printed=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Deja propina con Venmo</a
+                >
+              </div>
+
+              <div>
+                <small> CONTACTO Y AYUDA </small>
+
+                <a href="tel:5127903569"> (512) 790-FLOW </a>
+
+                <a href="mailto:hello@discoverflowtherapy.com">
+                  Hello@DiscoverFlowTherapy.com
+                </a>
+
+                <span> DiscoverFlowTherapy.com</span>
+
+                <span> MÓVIL Y A DOMICILIO </span>
+                <a
+                  href="mailto:hello@discoverflowtherapy.com?subject=FlowTherapy%20Feedback"
+                  >Comparte tus comentarios</a
+                >
+              </div>
+            </div>
+          </footer>
+
+          <!-- =====================================================
+     MOBILE ACTION BAR
+     ===================================================== -->
+
+          <div class="ft-mobile-bar">
+            <a
+              class="ft-mobile-book"
+              href="https://flowtherapy.noterro.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reservar en línea
+            </a>
+
+            <a class="ft-mobile-text" href="sms:5127903569"> Enviar mensaje </a>
+
+            <a
+              class="ft-mobile-call"
+              href="mailto:hello@discoverflowtherapy.com"
+            >
+              Enviar correo
+            </a>
+          </div>
+          <script>
+            const flowStartCard = document.querySelector(".ft-flowstart-flip");
+
+            if (flowStartCard) {
+              const toggleFlowStart = () => {
+                const flipped = flowStartCard.classList.toggle("is-flipped");
+
+                flowStartCard.setAttribute(
+                  "aria-pressed",
+                  flipped ? "true" : "false",
+                );
+              };
+
+              flowStartCard.addEventListener("click", (event) => {
+                if (event.target.closest(".ft-flowstart-book")) {
+                  return;
+                }
+
+                toggleFlowStart();
+              });
+
+              flowStartCard.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+
+                  toggleFlowStart();
+                }
+              });
+            }
+          </script>
+          <script>
+            const sizeButton = document.getElementById("ft-text-size");
+            sizeButton?.addEventListener("click", () => {
+              const active =
+                document.documentElement.classList.toggle("ft-large-text");
+              sizeButton.setAttribute("aria-pressed", String(active));
+              sizeButton.setAttribute(
+                "aria-label",
+                active
+                  ? "Usar tamaño de texto estándar"
+                  : "Aumentar el tamaño del texto",
+              );
+              sizeButton.title = active ? "Texto estándar" : "Texto más grande";
+            });
+          </script>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
