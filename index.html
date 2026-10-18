@@ -4418,8 +4418,40 @@
         }
       }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/studio-v2.css" />
   </head>
   <body class="flowtherapy-home">
+<header class="studio-header" aria-label="FlowTherapy Studio navigation">
+ <div class="studio-head-inner">
+  <a class="studio-brand" href="#studio-home" aria-label="FlowTherapy Massage Co. home"><span class="studio-brandline">Flow<span>Therapy</span></span><span class="studio-brand-sub">MASSAGE CO.</span></a>
+  <div class="studio-utilities"><a class="studio-book" href="https://flowtherapy.noterro.com/" target="_blank" rel="noopener">Book Now</a><a href="https://app.squareup.com/gift/MLV560DXHSF4H/order" target="_blank" rel="noopener">♧ FlowGift</a><a href="tel:5127903569">♧ 512-790-FLOW</a></div>
+  <button class="studio-mobile-toggle" type="button" aria-expanded="false" aria-controls="studio-nav" aria-label="Toggle navigation">☰</button>
+  <nav id="studio-nav" class="studio-nav" aria-label="Primary navigation">
+   <a href="#studio-home">Home</a>
+   <details><summary>Services</summary><div class="studio-dropdown"><a href="#services" data-studio-open="ft-flowclinic-accordion">FlowClinic</a><a href="#services">SpecialtyFlow</a><a href="#services">FlowSpa</a><a href="#services">FlowBoost</a><a href="#services">Recovery Lab</a></div></details>
+   <details><summary>More Ways to Flow</summary><div class="studio-dropdown"><a href="#services" data-studio-explore="flowpass-explore">FlowPass</a><a href="#services" data-studio-explore="flowpack-explore">FlowPack</a><a href="https://app.squareup.com/gift/MLV560DXHSF4H/order" target="_blank" rel="noopener">FlowGift</a><a href="#services">FlowMobile</a><a href="./pages/corporate.html">FlowChair</a><a href="./pages/private-events.html">Private Flow Events</a></div></details>
+   <details><summary>About</summary><div class="studio-dropdown"><a href="#about">Meet Your FlowTherapist</a><a href="#about">Our Approach</a><a href="#flowhub">Resource Center</a></div></details>
+   <details><summary>Respect Massage</summary><div class="studio-dropdown"><a href="#contact">Professional Boundaries</a><a href="./documents/office-policies.pdf">Office Policies</a></div></details>
+   <details><summary>Stay in the Flow</summary><div class="studio-dropdown"><a href="#flowhub">FlowNotes &amp; Resources</a><a href="#contact">Contact</a><a href="./es.html" lang="es">Español</a><a href="#contact" data-studio-access="text">Text Size: Aa</a><a href="#contact" data-studio-access="music">Soul Flow Music</a></div></details>
+  </nav>
+ </div>
+</header>
+<section class="studio-landing" id="studio-home" aria-label="FlowTherapy introduction">
+ <div class="studio-hero"><div class="studio-hero-content"><h1>Discover the<br>Rhythm of<br><em>Relaxation.</em></h1><p class="studio-kicker">PERSONALIZED. &nbsp; THERAPEUTIC. &nbsp; RESTORATIVE.</p><p class="studio-lead">Trauma-informed therapeutic massage designed to support your body, quiet your mind, and restore your flow.</p><div class="studio-hero-actions"><a class="studio-btn studio-btn-primary" href="https://flowtherapy.noterro.com/" target="_blank" rel="noopener">Book a Service &nbsp; →</a><a class="studio-btn studio-btn-secondary" href="#services">Explore Services</a></div></div></div>
+ <div class="studio-benefits"><div class="studio-benefit"><span class="studio-benefit-symbol">✿</span><span>Recovery<br>Lab Included</span></div><div class="studio-benefit"><span class="studio-benefit-symbol">♡</span><span>No Deep Tissue<br>Surcharge</span></div><div class="studio-benefit"><span class="studio-benefit-symbol">♧</span><span>True<br>Hands-On Time</span></div></div>
+ <div class="studio-cards">
+  <a class="studio-card" href="#services" data-studio-open="ft-flowclinic-accordion"><img src="./assets/images/home/signature.jpg" alt="Therapeutic massage session" loading="eager"><div class="studio-card-body"><h2>FlowClinic</h2><p>Therapeutic bodywork designed for real results.</p><span class="studio-card-arrow" aria-hidden="true">→</span></div></a>
+  <a class="studio-card" href="#services"><img src="./assets/images/home/rest.jpg" alt="Restorative head and neck massage" loading="lazy"><div class="studio-card-body"><h2>FlowSpa</h2><p>Soothing enhancements for total care.</p><span class="studio-card-arrow" aria-hidden="true">→</span></div></a>
+  <a class="studio-card" href="#services"><img src="./assets/images/home/cbd.jpg" alt="Botanical massage oil and treatment tools" loading="lazy"><div class="studio-card-body"><h2>FlowBoost</h2><p>Targeted add-ons to elevate your session.</p><span class="studio-card-arrow" aria-hidden="true">→</span></div></a>
+  <a class="studio-card" href="#services"><img src="./assets/images/home/stones.jpg" alt="Hot stone massage treatment" loading="lazy"><div class="studio-card-body"><h2>Recovery Lab</h2><p>Premium tools included when appropriate.</p><span class="studio-card-arrow" aria-hidden="true">→</span></div></a>
+  <a class="studio-card" href="#services" data-studio-open-more="1"><img src="./assets/images/home/room.jpg" alt="Comfortable FlowTherapy treatment space" loading="lazy"><div class="studio-card-body"><h2>More Ways to Flow</h2><p>FlowPass, FlowPack, FlowGift, FlowChair &amp; more.</p><span class="studio-card-arrow" aria-hidden="true">→</span></div></a>
+ </div>
+ <div class="studio-signature-title"><h2>Our Signature Services</h2><a href="#services">View All Services &nbsp; →</a></div>
+</section>
+
     <!-- =====================================================
          HEADER
          ===================================================== -->
@@ -7078,5 +7110,6 @@
           obs.observe(modal, { attributes: true, attributeFilter: ["hidden"] });
       })();
     </script>
+    <script src="./assets/js/studio-v2.js" defer></script>
   </body>
 </html>
