@@ -741,3 +741,57 @@ body.fm-home,
     padding: 20px 14px;
   }
 }
+@media (max-width: 600px) {
+  /* Hero: readable copy above the photograph */
+  .fm-hero {
+    min-height: 0;
+    padding-bottom: 260px;
+    background-color: #faf5ec;
+    background-size: 100% auto;
+    background-position: center bottom;
+  }
+
+  .fm-hero::before {
+    background: linear-gradient(
+      to bottom,
+      #faf5ec 0%,
+      #faf5ec 55%,
+      transparent 78%
+    );
+  }
+
+  .fm-hero-copy {
+    max-width: none;
+    padding: 30px 6% 35px;
+    background: #faf5ec;
+  }
+
+  .fm-hero h1 {
+    font-size: clamp(40px, 10vw, 49px);
+    line-height: 1;
+  }
+
+  /* Music player: keep both edges on screen */
+  .soul-flow-player {
+    position: static;
+  }
+
+  .fm-header {
+    position: relative;
+  }
+
+  .soul-flow-panel {
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .soul-flow-panel iframe {
+    width: 100%;
+    max-width: 100%;
+  }
+}
