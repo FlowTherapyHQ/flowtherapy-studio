@@ -4426,7 +4426,239 @@
     />
     <link rel="stylesheet" href="./assets/css/studio-v2.css" />
     <link rel="stylesheet" href="./assets/css/making-flow.css" />
-  </head>
+  
+    <style id="fm-ways-warm-mobile-20261020">
+      /* Scoped to More Ways to Flow; all original content and controls retained. */
+      #ways.fm-ways {
+        display: block !important;
+        padding: 24px 4.2% !important;
+        background: radial-gradient(ellipse at 100% 0%, rgba(217,174,110,.13), transparent 55%), linear-gradient(145deg, #f3f8fa, #e8f2f7) !important;
+      }
+      #ways .fm-section-intro {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 6px 24px;
+        max-width: none !important;
+        margin: 0 0 18px !important;
+      }
+      #ways .fm-section-intro .fm-eyebrow { grid-column: 1 / -1; margin: 0 !important; }
+      #ways .fm-section-intro > p:not(.fm-eyebrow) { padding-bottom: 3px; }
+      #ways .fm-section-intro h2 { margin: 0 !important; font-size: clamp(2rem, 3vw, 2.7rem) !important; line-height: 1.1 !important; }
+      #ways .fm-section-intro > p:not(.fm-eyebrow) { margin: 0 !important; }
+      #ways .fm-section-intro .fm-swish { display: none !important; }
+      #ways .fm-way-grid {
+        display: grid !important;
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+        align-items: start !important;
+        gap: 14px !important;
+        margin: 0 !important;
+      }
+      #ways .fm-way-grid > article,
+      #ways .fm-way-grid > article:last-child {
+        display: grid !important;
+        grid-template-columns: 36px minmax(0, 1fr) !important;
+        grid-template-rows: auto auto auto !important;
+        grid-column: auto !important;
+        align-items: center !important;
+        align-content: start !important;
+        gap: 8px 10px !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 16px !important;
+        text-align: left !important;
+        background: linear-gradient(145deg, #fffdf8, #f8f4ed) !important;
+        border: 1px solid rgba(180,139,81,.3) !important;
+        border-radius: 20px !important;
+        box-shadow: 0 7px 20px rgba(19,56,76,.055), inset 0 1px 0 rgba(255,255,255,.9) !important;
+      }
+      #ways .fm-way-grid > article > svg {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        box-sizing: border-box !important;
+        width: 36px !important;
+        height: 36px !important;
+        padding: 7px !important;
+        margin: 0 !important;
+        border-radius: 50%;
+        color: #17475f !important;
+        background: linear-gradient(145deg, #f7ead2, #efe0c4);
+      }
+      #ways .fm-way-grid > article h3 {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        color: #13394e !important;
+        font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+      }
+      #ways .fm-way-grid > article p {
+        grid-column: 1 / -1 !important;
+        grid-row: 2 !important;
+        align-self: start !important;
+        color: #294b5b !important;
+        font-size: .94rem !important;
+        line-height: 1.45 !important;
+        margin: 0 !important;
+        min-height: 2.9em !important;
+        flex: none !important;
+      }
+      #ways .fm-way-grid .fm-btn {
+        grid-column: 1 / -1 !important;
+        grid-row: 3 !important;
+        justify-self: start !important;
+        align-self: end !important;
+        display: inline-flex !important;
+        align-items: center;
+        gap: 7px;
+        box-sizing: border-box;
+        width: auto !important;
+        max-width: 100%;
+        min-height: 44px !important;
+        margin: 0 !important;
+        padding: 10px 15px !important;
+        font-size: .84rem !important;
+        line-height: 1.25 !important;
+        border-radius: 999px !important;
+        white-space: normal;
+        background: linear-gradient(115deg, #13618b, #103b62) !important;
+        color: #fff !important;
+        border: 1px solid rgba(255,255,255,.2) !important;
+        box-shadow: 0 3px 9px rgba(17,63,97,.12) !important;
+      }
+      #ways .fm-way-grid .fm-btn:hover { background: #103b62 !important; }
+      #ways .fm-way-grid .fm-btn:focus-visible { outline: 3px solid #aa7634; outline-offset: 4px; }
+      @media (min-width: 641px) and (max-width: 1100px) {
+        #ways .fm-way-grid { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
+        #ways .fm-way-grid > article { grid-column: span 2 !important; }
+        #ways .fm-way-grid > article:nth-last-child(-n+2) { grid-column: span 3 !important; }
+      }
+  @media (max-width: 640px) {
+  #ways.fm-ways {
+    padding: 28px 20px !important;
+  }
+
+  #ways .fm-section-intro {
+    display: block !important;
+    margin-bottom: 14px !important;
+  }
+
+  #ways .fm-section-intro .fm-eyebrow {
+    margin-bottom: 8px !important;
+  }
+
+  #ways .fm-section-intro h2 {
+    font-size: 2rem !important;
+  }
+
+  #ways .fm-section-intro > p:not(.fm-eyebrow) {
+    margin-top: 8px !important;
+  }
+
+  #ways .fm-way-grid {
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  #ways .fm-way-grid > article,
+  #ways .fm-way-grid > article:last-child {
+    display: grid !important;
+    grid-template-columns: 28px minmax(0, 1fr) auto !important;
+    grid-template-rows: auto auto !important;
+    grid-column: auto !important;
+    align-items: center !important;
+    align-content: center !important;
+    gap: 4px 12px !important;
+    padding: 14px 0 !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(180,139,81,.3) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-align: left !important;
+  }
+
+  #ways .fm-way-grid > article:last-child {
+    border-bottom: 0 !important;
+  }
+
+  #ways .fm-way-grid > article > svg {
+    grid-column: 1 !important;
+    grid-row: 1 / 3 !important;
+    align-self: start !important;
+    width: 28px !important;
+    height: 28px !important;
+    padding: 0 !important;
+    margin: 2px 0 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    color: #17475f !important;
+    box-shadow: none !important;
+  }
+
+ #ways .fm-way-grid > article h3 {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  margin: 0 !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  color: #13394e !important;
+  font-family: Arial, sans-serif !important;
+font-weight: 650 !important;
+}
+
+  #ways .fm-way-grid > article p {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    font-size: .88rem !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    color: #294b5b !important;
+  }
+
+  #ways .fm-way-grid > article .fm-btn {
+    grid-column: 3 !important;
+    grid-row: 1 / 3 !important;
+    align-self: center !important;
+    justify-self: end !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    width: auto !important;
+    max-width: none !important;
+    font-weight: 700 !important;
+    min-height: 44px !important;
+    margin: 0 !important;
+    padding: 6px 2px !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    color: #13567c !important;
+    font-size: .8rem !important;
+    line-height: 1.3 !important;
+    text-align: right !important;
+    white-space: nowrap !important;
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(19,86,124,.35);
+  }
+
+  #ways .fm-way-grid > article .fm-btn:hover {
+    background: transparent !important;
+    color: #0b304e !important;
+  }
+}
+</style>
+</head>
   <body class="flowtherapy-home fm-home">
     <a class="fm-skip" href="#fm-main">Skip to content</a>
     <header class="fm-header">
@@ -4497,10 +4729,11 @@
             target="_blank"
             rel="noopener"
             ><img
-              src="./assets/images/signature-flow.jpg"
-              alt=""
-              loading="lazy"
-            />
+  src="./assets/images/warm-massage-dark-background.webp"
+  alt=""
+  loading="lazy"
+  style="filter: brightness(1.3);"
+/>
             <div>
               <h2>FlowClinic</h2>
               <p>Therapeutic Massage</p>
@@ -4549,7 +4782,7 @@
             target="_blank"
             rel="noopener"
           >
-            <img src="./assets/images/home/table.jpg" alt="" loading="lazy" />
+            <img src="assets\images\thereapeutic-pressure.png" alt="" loading="lazy" />
             <div>
               <h2>SpecialtyFlow</h2>
               <p>Specialized Massage Experiences</p>
@@ -4561,7 +4794,7 @@
       <section class="fm-signatures">
         <div class="fm-section-intro">
           <p class="fm-eyebrow">SIGNATURE SERVICES</p>
-          <h2>Massage for<br />Real Life</h2>
+          <h2>Massage for <br />Real Life</h2>
           <p>Intentional bodywork to help you move, feel, and live better.</p>
           <a
             class="fm-btn"
@@ -4575,10 +4808,10 @@
         <div class="fm-service-cards">
           <article class="fm-service">
             <img
-              src="assets/images/warm-massage-dark-background.webp"
-              alt="Signature Flow Bodywork"
-              loading="lazy"
-            />
+  src="./assets/images/signature-flow.jpg"
+  alt="Therapeutic massage"
+  style="filter: brightness(1.3);"
+/>
             <div>
               <h3>Signature Flow Bodywork</h3>
               <p>
@@ -4601,7 +4834,7 @@
           </article>
           <article class="fm-service">
             <img
-              src="assets/images/hot-stone-collection.webp"
+              src="assets/images/hot-stone-collection.webp"style="filter: contrast(1.18) saturate(1.05);"
               alt="Focused Flow"
               loading="lazy"
             />
@@ -4762,7 +4995,7 @@
       <section class="fm-ways" id="ways">
         <div class="fm-section-intro">
           <p class="fm-eyebrow">MORE WAYS TO FLOW</p>
-          <h2>Wellness<br />Your Way</h2>
+          <h2>Wellness Your Way</h2>
           <p>Flexible options to fit your lifestyle.</p>
           <span class="fm-swish" aria-hidden="true"></span>
         </div>
@@ -4848,7 +5081,7 @@
             </svg>
             <h3>FlowChair</h3>
             <p>On-site chair massage for your team.</p>
-            <a class="fm-btn" href="./pages/corporate.html"
+            <a class="fm-btn" href="./pages/corporate.html" target="_blank" rel="noopener noreferrer"
               >Learn More <span aria-hidden="true">→</span></a
             >
           </article>
@@ -4890,9 +5123,9 @@
           <p>
             I’m a trauma-informed therapeutic massage therapist, lifelong
             student of human movement and the person behind FlowTherapy Massage
-            Co. My approach blends focused therapeutic work with a
-            trauma-informed understanding of care. That means we work
-            together—with clear communication, respect for your boundaries, and
+            Company. My approach blends focused therapeutic work with a
+            clinical understanding of care. That means we work
+            together—with clear boundaries, respectful communication, and
             room to adjust as your body needs. My goal is simple: to help you
             feel better in your body, so you can give more of yourself to the
             life you want to live.
@@ -5044,16 +5277,8 @@
               >
             </article>
             <article>
-              <svg
-                viewBox="0 0 48 48"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M9 40C7 18 20 9 41 6c-1 22-11 36-29 28M10 39l24-24" />
+              <svg viewBox="0 0 568 501" fill="none" stroke="currentColor" style="fill: none; stroke: currentColor;" stroke-width="18" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true" focusable="false">
+                <path d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.039C285.169 375.812 284.017 372.431 284 375.306C283.983 372.431 282.831 375.812 280.369 383.039C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z" fill="none" stroke="currentColor" />
               </svg>
               <h3>Bluesky</h3>
               <p>Connect with FlowTherapy on Bluesky.</p>
@@ -6383,9 +6608,9 @@
                           >
                             <span class="ft-choice-label">4 SESSIONS</span
                             ><strong>$580</strong
-                            ><span class="fm-plan-sub"
-                              >$145 per session · Save $40</span
-                            ></button
+                            >
+                            
+                              </button
                           ><button
                             type="button"
                             class="ft-plan-choice"
@@ -6395,8 +6620,6 @@
                           >
                             <span class="ft-choice-label">6 SESSIONS</span
                             ><strong>$855</strong
-                            ><span class="fm-plan-sub"
-                              >$142.50 per session · Save $75</span
                             >
                           </button>
                         </div>
@@ -6411,8 +6634,6 @@
                           >
                             <span class="ft-choice-label">4 SESSIONS</span
                             ><strong>$670</strong
-                            ><span class="fm-plan-sub"
-                              >$167.50 per session · Save $30</span
                             ></button
                           ><button
                             type="button"
@@ -6423,8 +6644,6 @@
                           >
                             <span class="ft-choice-label">6 SESSIONS</span
                             ><strong>$990</strong
-                            ><span class="fm-plan-sub"
-                              >$165 per session · Save $60</span
                             >
                           </button>
                         </div>
