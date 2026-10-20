@@ -59,3 +59,61 @@ body.flowtherapy-home .ft-services > .ft-shell { padding-top:12px; }
 @media(max-width:760px) { .studio-head-inner { grid-template-columns:1fr auto; grid-template-rows:auto; padding:10px 18px; } .studio-brand { grid-row:auto; } .studio-brandline { font-size:43px; } .studio-brand-sub { margin-left:67px; font-size:8px; } .studio-utilities { grid-column:1/-1; grid-row:2; justify-content:space-between; margin-top:10px; } .studio-utilities .studio-book { padding:9px 18px; } .studio-mobile-toggle { display:block; grid-column:2; grid-row:1; border:1px solid #d5c6b1; border-radius:10px; background:transparent; color:var(--studio-ink); padding:9px 13px; font-size:20px; } .studio-nav { display:none; grid-column:1/-1; grid-row:3; flex-direction:column; align-items:stretch; gap:0; padding:12px 0; font-size:15px; } .studio-nav.is-open { display:flex; } .studio-nav details { width:100%; } .studio-dropdown { position:static; box-shadow:none; margin-bottom:6px; } .studio-hero { min-height:565px; align-items:flex-start; } .studio-hero::before { background-position:62% center; } .studio-hero::after { background:linear-gradient(180deg,rgba(255,244,228,.97) 0%,rgba(255,244,228,.94) 46%,rgba(255,244,228,.18) 82%); } .studio-hero-content { padding:42px 24px; } .studio-hero h1 { font-size:clamp(53px,11vw,80px); } .studio-lead { max-width:450px; } .studio-benefits { gap:15px; font-size:11px; } .studio-cards { grid-template-columns:repeat(2,minmax(0,1fr)); } .studio-card img { height:130px; } .studio-signature-title { align-items:flex-start; } }
 @media(max-width:430px) { .studio-cards { gap:9px; padding:14px 12px; } .studio-card-body { padding:9px 11px; } .studio-card h2 { font-size:23px; } .studio-card p { font-size:16px; } .studio-utilities { font-size:11px; } .studio-hero h1 { font-size:53px; } .studio-signature-title { flex-direction:column; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .studio-card { transition:none; } }
+
+/* V2 refined: BELOW HERO ONLY. Keep the approved header and hero layout untouched. */
+.studio-landing .studio-cards { gap:14px; padding-top:24px; padding-bottom:26px; }
+.studio-landing .studio-card { background:#fff9f0; border-color:#eedcc7; box-shadow:0 8px 24px rgba(17,38,59,.045); }
+.studio-landing .studio-card img { height:146px; }
+.studio-landing .studio-card-body { padding:13px 16px 17px; min-height:166px; }
+.studio-landing .studio-card h2 { font-size:clamp(23px,2.15vw,34px); }
+.studio-landing .studio-card p { line-height:1.23; }
+.studio-landing .studio-signature-title { padding-top:14px; padding-bottom:27px; }
+.studio-landing .studio-signature-title a { font-weight:600; }
+/* Blue-glass services introduction: retain native details/summary behavior and existing content. */
+body.flowtherapy-home .ft-flow-statement { background:linear-gradient(105deg,#eaf5fb,#e0eff8 65%,#e8f4fa); color:#17354d; }
+body.flowtherapy-home .ft-flow-statement p { color:#17354d; }
+body.flowtherapy-home .ft-services { background:linear-gradient(180deg,#e6f2f9 0%,#eaf5fa 70%,#f8fbfd 100%); }
+body.flowtherapy-home .ft-services .ft-services-layout { max-width:980px; margin-left:auto; margin-right:auto; }
+body.flowtherapy-home .ft-services-menu.ft-menu-premium { border-radius:22px; padding:18px clamp(16px,2vw,30px); box-shadow:0 20px 54px rgba(21,58,86,.09),inset 0 1px 0 rgba(255,255,255,.85); }
+body.flowtherapy-home .ft-services-menu > details.ft-service-group > summary { min-height:66px; }
+body.flowtherapy-home .ft-services-menu > details.ft-service-group > summary small { letter-spacing:.095em; }
+body.flowtherapy-home .ft-services-menu > details.ft-service-group > summary strong { font-family:'Cormorant Garamond','Playfair Display',Georgia,serif; font-size:clamp(26px,2.5vw,34px); font-weight:600; }
+body.flowtherapy-home .ft-services-menu > details.ft-service-group:focus-within { scroll-margin-top:145px; }
+body.flowtherapy-home .ft-services-menu a:focus-visible,body.flowtherapy-home .ft-services-menu summary:focus-visible { outline:3px solid #147dc1; outline-offset:3px; }
+@media(max-width:760px) {
+ .studio-landing .studio-cards { gap:12px; }
+ .studio-landing .studio-card img { height:125px; }
+ .studio-landing .studio-card-body { min-height:155px; }
+ body.flowtherapy-home .ft-services-menu.ft-menu-premium { padding:14px 12px; border-radius:16px; }
+ body.flowtherapy-home .ft-services-menu > details.ft-service-group > summary { min-height:62px; }
+}
+@media(max-width:430px) { .studio-landing .studio-card img { height:108px; } .studio-landing .studio-card-body { min-height:168px; } }
+
+/* Final menu and compact editorial homepage, October 19. */
+.studio-hero h1{font-size:clamp(48px,5.7vw,82px);line-height:.98;letter-spacing:-.035em}
+.studio-hero-content{padding-top:48px;padding-bottom:50px}
+.studio-hero{min-height:445px}
+.studio-lead small{display:block;font-size:.78em;margin-top:13px;font-style:italic}
+.studio-cards{gap:12px;padding-top:18px;padding-bottom:18px}
+.studio-landing .studio-card{position:relative;min-height:175px;border-radius:10px;background:#062238}
+.studio-landing .studio-card img{height:175px;display:block;opacity:.83}
+.studio-landing .studio-card-body{position:absolute;inset:0;justify-content:flex-end;padding:18px 16px;min-height:0;background:linear-gradient(transparent 20%,rgba(0,18,30,.88));color:white}
+.studio-landing .studio-card h2{font-size:clamp(22px,2vw,30px);color:white;margin-bottom:6px}
+.studio-landing .studio-card h2:after{display:none}
+.studio-landing .studio-card p{flex:0;font:400 12px/1.4 Inter,Arial,sans-serif;padding-right:18px}
+.studio-card-arrow{position:absolute;bottom:14px;right:12px;font-size:23px}
+#ft-specialtyflow-accordion .ft-spa-card-rail{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;overflow:visible!important}
+#ft-specialtyflow-accordion .ft-spa-card{min-width:0!important;width:auto!important}
+#ft-specialtyflow-accordion .ft-spa-card img{width:100%;height:145px;object-fit:cover}
+.studio-quick-services{max-width:1360px;margin:0 auto;padding:24px clamp(20px,4.4vw,72px) 32px;display:grid;grid-template-columns:1.05fr repeat(3,1fr);gap:16px;color:#08233b}
+.studio-quick-intro small{font:600 10px Inter,Arial,sans-serif;letter-spacing:.2em}
+.studio-quick-intro h2{font:500 36px/1.02 'Cormorant Garamond',Georgia,serif;margin:12px 0}
+.studio-quick-services article{border:1px solid #e5d9c8;border-radius:12px;overflow:hidden;background:#fffaf2}
+.studio-quick-services article img{width:100%;height:120px;object-fit:cover}
+.studio-quick-services article div{padding:15px}
+.studio-quick-services h3{font:600 20px Georgia,serif;margin:0 0 9px}
+.studio-quick-services p{font:400 13px/1.5 Inter,Arial,sans-serif;margin:0 0 12px}
+.studio-quick-services a{display:inline-block;color:#fff;background:#082a42;padding:9px 14px;border-radius:20px;font:500 12px Inter,Arial,sans-serif;text-decoration:none}
+@media(max-width:900px){.studio-quick-services{grid-template-columns:repeat(2,minmax(0,1fr))}#ft-specialtyflow-accordion .ft-spa-card-rail{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.studio-hero{min-height:430px}.studio-hero h1{font-size:48px}.studio-landing .studio-card,.studio-landing .studio-card img{min-height:165px;height:165px}.studio-quick-services{grid-template-columns:1fr}.studio-quick-services article{display:grid;grid-template-columns:110px 1fr}.studio-quick-services article img{height:100%;min-height:160px}#ft-specialtyflow-accordion .ft-spa-card-rail{grid-template-columns:1fr}.studio-signature-title h2{font-size:34px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.studio-card{transition:none}}
