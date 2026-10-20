@@ -799,3 +799,87 @@ body.fm-home,
     max-width: 100%;
   }
 }
+
+/* FLOWTHERAPY PREMIUM — BOTANICAL CREDENTIALS */
+
+.fm-credentials {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 24px 24px 24px 30px;
+  border-left: 1px solid rgba(173, 131, 63, 0.55);
+}
+
+/* Keep credentials above the decorations */
+.fm-credentials > div {
+  position: relative;
+  z-index: 2;
+}
+
+/* Botanical leaf motif — upper right */
+
+
+/* Premium typography */
+.fm-credentials strong,
+.fm-credentials .respect-trigger {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #06283e;
+  line-height: 1.4;
+}
+
+.fm-credentials .fm-credential-detail {
+  display: inline-block;
+  margin-top: 4px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #38546a;
+}
+
+.fm-credentials svg {
+  color: #164d63;
+}
+
+@media (max-width: 700px) {
+  .fm-credentials {
+    padding: 22px 18px;
+  }
+
+  .fm-credentials::before {
+    font-size: 115px;
+  }
+
+  .fm-credentials::after {
+    font-size: 100px;
+  }
+}
+
+/* FlowTherapy Premium — Watercolor Botanical */
+
+.fm-credentials {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.fm-credentials::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  bottom: -35px;
+  width: 145px;
+  height: 245px;
+
+  background-image: url("../images/eucalyptus-gold.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+
+  opacity: 0.24;
+  pointer-events: none;
+  z-index: -1;
+}
+
