@@ -2037,7 +2037,10 @@ body.fm-home,
   .fm-flowstart-offer span { font-size: 8px; }
 }
 @media (max-width: 480px) {
-  .fm-categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fm-categories {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
   .fm-categories .fm-flowstart-card { grid-column: auto; aspect-ratio: 1.6; }
   .fm-flowstart-front .fm-flowstart-eyebrow {
     top: 7%; left: 7%; right: 5%;
