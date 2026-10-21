@@ -2159,38 +2159,48 @@ body.fm-home,
   color: #d8bb8c;
 }
 
+
 @media (max-width: 640px) {
-  
-.fm-flowstart-front .fm-flowstart-eyebrow {
-  top: 7%;
-  left: 7%;
-  font-size: 7px !important;
-  letter-spacing: 0.04em;
-}
+  .fm-flowstart-front .fm-flowstart-eyebrow {
+    top: 8%;
+    left: 7%;
+    right: 5%;
+    font-size: 8px !important;
+    letter-spacing: 0.04em;
+  }
 
-.fm-flowstart-front h2 {
-  top: 23%;
-  left: 7%;
-  right: 5%;
-  font-size: 14px !important;
-  line-height: 1.05 !important;
-}
+  .fm-flowstart-front h2 {
+    top: 24%;
+    left: 7%;
+    right: 5%;
+    font-size: 17px !important;
+    line-height: 1.05 !important;
+  }
 
-.fm-flowstart-front .fm-flowstart-offer {
-  top: 60%;
-  right: 5%;
-}
+  .fm-flowstart-front h2 em {
+    display: block;
+  }
 
-.fm-flowstart-front .fm-flowstart-offer strong {
-  font-size: 19px !important;
-}
+  .fm-flowstart-front .fm-flowstart-offer {
+    top: 62%;
+    right: 6%;
+    left: 49%;
+    align-items: flex-end;
+    text-align: right;
+  }
 
-.fm-flowstart-front .fm-flowstart-offer span {
-  font-size: 6px !important;
-}
+  .fm-flowstart-front .fm-flowstart-offer strong {
+    font-size: 19px !important;
+    white-space: nowrap;
+  }
 
-.fm-flowstart-front .fm-flowstart-turn {
-  display: none !important;
-}
+  .fm-flowstart-front .fm-flowstart-offer span {
+    font-size: 6px !important;
+    line-height: 1.3;
+    white-space: normal;
+  }
 
+  .fm-flowstart-front .fm-flowstart-turn {
+    display: none !important;
+  }
 }
