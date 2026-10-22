@@ -1445,9 +1445,12 @@
 }
 
 .fm-plan-dialog .ft-plan-explore {
-
   margin: 0 !important;
-
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  max-width: none !important;
+  width: 100% !important;
 }
 
 .fm-info-dialog {
