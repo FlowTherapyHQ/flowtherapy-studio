@@ -122,7 +122,7 @@
 
   align-items: center;
 
-  justify-content: center;
+ justify-content: space-evenly;
 
   gap: 8px;
 
@@ -548,27 +548,7 @@
 
 .fm-category > span {
 
-  position: absolute;
-
-  right: 11px;
-
-  bottom: 15px;
-
-  z-index: 2;
-
-  border: 1px solid white;
-
-  border-radius: 50%;
-
-  width: 26px;
-
-  height: 26px;
-
-  display: grid;
-
-  place-items: center;
-
-  font-size: 20px;
+  display: none !important;
 
 }
 
@@ -3384,176 +3364,121 @@ body.fm-home,
 
 }
 
-/* FLOWSTART — CONSOLIDATED FLIP CARD */
+/* FLOWSTART — SINGLE SOURCE OF TRUTH
+   Flip card styles. Responsive rules are grouped below. */
 
 .fm-categories .fm-flowstart-card {
-
   position: relative;
-
   display: block;
-
   grid-column: auto;
-
   aspect-ratio: 1.44;
-
   min-width: 0;
-
   overflow: hidden;
-
   border: 2px solid #315c46;
-
   border-radius: 6px;
-
   background: #f9f8f4;
-
   box-shadow: 0 0 0 1px rgba(49, 92, 70, .18), 0 2px 9px rgba(24, 65, 46, .22);
-
   perspective: 1200px;
-
   color: #092c42 !important;
-
 }
 
 .fm-categories .fm-flowstart-card::after { content: none; }
 
 .fm-flowstart-inner {
-
   position: absolute;
-
   inset: 0;
-
   width: 100%;
-
   height: 100%;
-
   transform-style: preserve-3d;
-
   transition: transform .7s ease;
-
 }
 
-.fm-flowstart-card.is-flipped .fm-flowstart-inner { transform: rotateY(180deg); }
+.fm-flowstart-card.is-flipped .fm-flowstart-inner {
+  transform: rotateY(180deg);
+}
 
 .fm-flowstart-face {
-
   position: absolute;
-
   inset: 0;
-
   overflow: hidden;
-
   backface-visibility: hidden;
-
   -webkit-backface-visibility: hidden;
-
 }
 
-.fm-flowstart-front { background: #f9f8f4; transform: rotateY(0deg); }
+.fm-flowstart-front {
+  background: #f9f8f4;
+  transform: rotateY(0deg);
+}
 
 .fm-flowstart-front > img {
-
   position: absolute;
-
   inset: 0;
-
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
-
   object-position: center;
-
 }
 
-.fm-flowstart-front-copy { position: absolute; inset: 0; z-index: 2; }
+.fm-flowstart-front-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
 
 .fm-flowstart-front .fm-flowstart-eyebrow {
-
   position: absolute;
-
-  top: 8%; left: 7%; right: 4%;
-
+  top: 8%;
+  left: 7%;
+  right: 4%;
+  margin: 0;
   font: 700 11px/1.2 Inter, Arial, sans-serif;
-
   letter-spacing: .07em;
-
   color: #a88659;
-
 }
-
-/* =========================================
-   FLOWSTART — CLEAN FRONT & BACK STYLING
-   ========================================= */
-
-/* FRONT — HEADING */
 
 .fm-flowstart-front h2 {
   position: absolute;
-  top: 19%;
-  left: 7%;
+  top: 34%;
+  left: 43%;
   right: 5%;
   margin: 0;
-
-  font: 500 clamp(20px, 2.1vw, 30px)/1.05
-    "Cormorant Garamond", Georgia, serif;
-
+  font: 500 clamp(20px, 2.1vw, 30px)/1.05 "Cormorant Garamond", Georgia, serif;
   color: #092c42 !important;
   white-space: normal;
 }
 
-/* FRONT — PRICE */
-
-.fm-flowstart-front .fm-flowstart-offer {
+.fm-flowstart-front .fm-flowstart-price {
   position: absolute;
   top: 52%;
   right: 7%;
   margin: 0;
-
-  font: 600 clamp(22px, 2.8vw, 40px)/1
-    "Cormorant Garamond", Georgia, serif;
-
+  font: 600 clamp(22px, 2.8vw, 40px)/1 "Cormorant Garamond", Georgia, serif;
   color: #092c42;
   white-space: nowrap;
 }
-
-/* FLIP BUTTON */
 
 .fm-flowstart-turn {
   border: 0;
   border-bottom: 1px solid #a88659;
   border-radius: 0;
   padding: 0 0 3px;
-
   background: transparent;
   color: #175477;
-
   font: 700 10px/1.3 Inter, Arial, sans-serif;
   cursor: pointer;
 }
 
-.fm-flowstart-front .fm-flowstart-turn {
-  position: absolute;
-  right: 7%;
-  bottom: 8%;
-}
-
-/* =========================================
-   BACK OF CARD
-   ========================================= */
+.fm-flowstart-front .fm-flowstart-turn { display: none !important; }
 
 .fm-flowstart-back {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-
-  gap: 7px;
-  padding: 14px;
+  gap: 12px;
+  padding: 20px;
   box-sizing: border-box;
-
   transform: rotateY(180deg);
-
   background: #092c42;
   color: #f9f8f4;
 }
@@ -3562,168 +3487,129 @@ body.fm-home,
   position: absolute;
   top: 12px;
   right: 14px;
-
   color: #d8bb8c;
   font-size: 20px;
   line-height: 1;
-
   pointer-events: none;
 }
 
 .fm-flowstart-back .fm-flowstart-eyebrow {
+  margin: 0;
   color: #d8bb8c;
-
   font: 700 10px/1.2 Inter, Arial, sans-serif;
-  letter-spacing: 0.07em;
+  letter-spacing: .07em;
 }
 
 .fm-flowstart-back h2 {
   margin: 0;
-
-  font: 500 23px/1.05
-    "Cormorant Garamond", Georgia, serif;
-
+  font: 500 26px/1.1 "Cormorant Garamond", Georgia, serif;
   color: #f9f8f4 !important;
   white-space: normal;
 }
 
 .fm-flowstart-back p {
   margin: 0;
-
-  font: 400 10px/1.4 Inter, Arial, sans-serif;
+  font: 400 11px/1.5 Inter, Arial, sans-serif;
   color: #e1eaf0;
 }
 
-/* BOOKING LINK */
-
 .fm-flowstart-book {
   display: inline-block;
-  padding: 6px 10px;
-
+  padding: 8px 13px;
   border: 1px solid #c9a978;
   border-radius: 20px;
-
   color: #fff !important;
   text-decoration: none;
-
-  font: 700 10px/1.3 Inter, Arial, sans-serif;
+  font: 700 11px/1.3 Inter, Arial, sans-serif;
 }
 
-.fm-flowstart-back .fm-flowstart-turn {
-  color: #d8bb8c;
-}
+.fm-flowstart-back .fm-flowstart-turn { color: #d8bb8c; }
 
-/* =========================================
-   TABLET — 481px TO 800px
-   Grid layout remains unchanged
-   ========================================= */
+/* Desktop/tablet use desktop wording; mobile wording is opt-in only below 480px. */
+.fm-flowstart-back .fm-flowstart-mobile { display: none !important; }
+.fm-flowstart-back .fm-flowstart-desktop { display: block !important; }
 
+/* Tablet */
 @media (min-width: 481px) and (max-width: 800px) {
-
-  .fm-categories .fm-flowstart-card {
-    aspect-ratio: 1.6;
-  }
-
-  .fm-flowstart-front h2 {
-    font-size: clamp(17px, 2.7vw, 24px);
-  }
-
-  .fm-flowstart-front .fm-flowstart-eyebrow {
-    font-size: 9px;
-  }
-
-  .fm-flowstart-front .fm-flowstart-offer{
-    font-size: clamp(20px, 3vw, 28px);
-  }
+  .fm-categories .fm-flowstart-card { aspect-ratio: 1.6; }
+  .fm-flowstart-front h2 { font-size: clamp(17px, 2.7vw, 24px); }
+  .fm-flowstart-front .fm-flowstart-eyebrow { font-size: 9px; }
+  .fm-flowstart-front .fm-flowstart-price { font-size: clamp(20px, 3vw, 28px); }
+  .fm-flowstart-back { padding: 8px; gap: 5px; }
+  .fm-flowstart-back .fm-flowstart-eyebrow { font-size: 7px; }
+  .fm-flowstart-back h2 { font-size: 14px; line-height: 1.05; }
+  .fm-flowstart-back p { font-size: 8px; line-height: 1.2; }
+  .fm-flowstart-back .fm-flowstart-book { padding: 5px 7px; font-size: 8px; }
 }
 
-/* =========================================
-   MOBILE — 480px AND BELOW
-   FlowStart only; no grid changes
-   ========================================= */
-
+/* Mobile */
 @media (max-width: 480px) {
-
-  .fm-categories .fm-flowstart-card {
-    grid-column: auto;
-    aspect-ratio: 1.6;
-  }
-
-  /* Eyebrow */
+  .fm-categories .fm-flowstart-card { grid-column: auto; aspect-ratio: 1.6; }
 
   .fm-flowstart-front .fm-flowstart-eyebrow {
     top: 7%;
     left: 7%;
     right: 5%;
-
     font-size: 7px !important;
     line-height: 1.1;
-    letter-spacing: 0.01em;
+    letter-spacing: .01em;
   }
 
- 
-/* FlowStart — mobile text placement */
+  .fm-flowstart-front h2 {
+    top: 34%;
+    left: 43%;
+    right: 4%;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    text-align: right;
+  }
 
-.fm-flowstart-front h2 {
-  top: 34%;
-  left: 43%;
-  right: 4%;
-  margin: 0;
-  font-size: 14px !important;
-  line-height: 1 !important;
-  white-space: normal;
-  text-align: right;
-}
+  .fm-flowstart-front .fm-flowstart-price {
+    top: auto;
+    bottom: 16%;
+    right: 5%;
+    font-size: 19px !important;
+    line-height: 1;
+  }
 
-.fm-flowstart-front .fm-flowstart-offer{
-  top: auto;
-  bottom: 16%;
-  right: 5%;
-  font-size: 19px !important;
-  line-height: 1;
-}
-
-.fm-flowstart-front .fm-flowstart-turn {
-  display: none !important;
-}
-
-
-  /* Back of card */
+  .fm-flowstart-front .fm-flowstart-turn { display: none !important; }
 
   .fm-flowstart-back {
-    padding: 10px;
-    gap: 5px;
+    gap: 5px !important;
+    padding: 8px !important;
+    justify-content: center;
+    overflow: hidden;
   }
+
+  .fm-flowstart-back .fm-flowstart-desktop { display: none !important; }
+  .fm-flowstart-back .fm-flowstart-mobile { display: block !important; }
 
   .fm-flowstart-back .fm-flowstart-eyebrow {
-    font-size: 7px;
+    font-size: 6px !important;
+    line-height: 1.2 !important;
+    letter-spacing: .04em !important;
   }
 
-  .fm-flowstart-back h2 {
-    font-size: 18px;
+  .fm-flowstart-back h2.fm-flowstart-mobile {
+    font-size: 11px;
+    line-height: 1.05;
   }
 
-  .fm-flowstart-back p {
-    font-size: 8px;
-    line-height: 1.25;
+  .fm-flowstart-back p.fm-flowstart-mobile {
+    font-size: 7px !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
   }
 
-  .fm-flowstart-book {
-    font-size: 8px;
-    padding: 5px 7px;
-  }
-
-  .fm-flowstart-back .fm-flowstart-turn {
-    font-size: 8px;
+  .fm-flowstart-back .fm-flowstart-book {
+    font-size: 7px !important;
+    line-height: 1.2 !important;
+    padding: 4px 6px !important;
+    white-space: nowrap;
+    max-width: 100%;
   }
 }
 
-/* =========================================
-   ACCESSIBILITY — REDUCED MOTION
-   ========================================= */
-
 @media (prefers-reduced-motion: reduce) {
-  .fm-flowstart-inner {
-    transition: none;
-  }
+  .fm-flowstart-inner { transition: none; }
 }
