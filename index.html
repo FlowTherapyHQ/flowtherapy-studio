@@ -4797,35 +4797,33 @@ font-weight: 650 !important;
 <div class="fm-category fm-flowstart-card" id="flowstart-card">
   <div class="fm-flowstart-inner">
 
-    <!-- FRONT -->
-    <div class="fm-flowstart-face fm-flowstart-front">
-      <img
-        src="./assets/images/greenery-glass-vase.webp"
-        alt="Green leaves in a clear glass vase"
-        loading="lazy"
-      />
+  
+<!-- FRONT -->
+<div class="fm-flowstart-face fm-flowstart-front">
+  <img
+    src="./assets/images/greenery-glass-vase.webp"
+    alt="Green leaves in a clear glass vase"
+    loading="lazy"
+  />
 
-      <div class="fm-flowstart-front-copy">
-        <span class="fm-flowstart-eyebrow">
-          NEW TO FLOWTHERAPY?
-        </span>
+  <div class="fm-flowstart-front-copy">
+    <span class="fm-flowstart-eyebrow">
+      NEW TO FLOWTHERAPY?
+    </span>
 
-        <h2>Begin with <em>FlowStart.</em></h2>
+    <h2>FlowStart.</h2>
 
-        <div class="fm-flowstart-offer">
-          <strong>$20 OFF</strong>
-          <span>YOUR FIRST SESSION</span>
-        </div>
+    <strong class="fm-flowstart-price">$20</strong>
 
-        <button
-          type="button"
-          class="fm-flowstart-turn"
-          aria-expanded="false"
-        >
-           ↻
-        </button>
-      </div>
-    </div>
+    <button
+      type="button"
+      class="fm-flowstart-turn"
+      aria-expanded="false"
+    >
+      Explore FlowStart ↻
+    </button>
+  </div>
+</div>
 
     <!-- BACK -->
     <div class="fm-flowstart-face fm-flowstart-back">
@@ -5438,7 +5436,7 @@ font-weight: 650 !important;
             href="https://square.link/u/egV3tk8K"
             target="_blank"
             rel="noopener"
-            >Tip Your Therapist ↗</a
+            >Tip Your Therapist</a
           >
         </div>
         <div>
@@ -8904,5 +8902,32 @@ font-weight: 650 !important;
         without them.
       </p>
     </dialog>
-  </body>
+  
+<script>
+(() => {
+  const card = document.getElementById("flowstart-card");
+  if (!card) return;
+  const frontButton = card.querySelector(".fm-flowstart-front .fm-flowstart-turn");
+  const backButton = card.querySelector(".fm-flowstart-return");
+  const mobile = window.matchMedia("(max-width: 480px)");
+  const flip = (showBack) => {
+    card.classList.toggle("is-flipped", showBack);
+    frontButton?.setAttribute("aria-expanded", String(showBack));
+  };
+  frontButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    flip(true);
+  });
+  backButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    flip(false);
+  });
+  card.addEventListener("click", (event) => {
+    if (!mobile.matches || event.target.closest("a, button")) return;
+    flip(!card.classList.contains("is-flipped"));
+  });
+})();
+</script>
+
+</body>
 </html>
