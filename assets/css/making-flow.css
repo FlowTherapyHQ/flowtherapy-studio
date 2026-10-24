@@ -3986,3 +3986,133 @@ body.fm-home,
   }
 
 }
+
+/* =========================================
+   FlowTherapy New Client Intake CTA
+   ========================================= */
+
+.fm-intake-cta {
+  position: relative;
+  padding: 26px 24px 20px;
+  background: linear-gradient(115deg, #f8f4ec 0%, #edf4f0 100%);
+  border-top: 1px solid rgba(23, 107, 87, 0.18);
+  border-bottom: 1px solid rgba(23, 107, 87, 0.18);
+}
+
+.fm-intake-content {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.fm-intake-icon {
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c6a56a;
+  border-radius: 50%;
+  color: #176b57;
+  font-size: 32px;
+}
+
+.fm-intake-copy {
+  flex: 1;
+}
+
+.fm-intake-eyebrow {
+  margin: 0 0 5px;
+  color: #9b7945;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.fm-intake-copy h2 {
+  margin: 0 0 7px;
+  color: #082f40;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.fm-intake-copy > p:last-child {
+  margin: 0;
+  color: #25465a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.fm-intake-button {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 21px;
+  border: 1px solid #087fae;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #087fae, #075b80);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(8, 79, 108, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fm-intake-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(8, 79, 108, 0.22);
+}
+
+.fm-intake-note {
+  max-width: 1120px;
+  margin: 14px auto 0;
+  color: #66756f;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .fm-intake-cta {
+    padding: 22px 18px 18px;
+  }
+
+  .fm-intake-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .fm-intake-copy h2 {
+    font-size: 27px;
+  }
+
+  .fm-intake-button {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .fm-intake-note {
+    max-width: 360px;
+    line-height: 1.5;
+  }
+}
+
+/* Intake button: force high-contrast white text */
+body .fm-intake-cta .fm-intake-content a.fm-intake-button,
+body .fm-intake-cta .fm-intake-content a.fm-intake-button:link,
+body .fm-intake-cta .fm-intake-content a.fm-intake-button:visited,
+body .fm-intake-cta .fm-intake-content a.fm-intake-button:hover,
+body .fm-intake-cta .fm-intake-content a.fm-intake-button:focus {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
