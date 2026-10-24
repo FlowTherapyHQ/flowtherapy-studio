@@ -1,0 +1,1808 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Client Forms & Intake | FlowTherapy Massage Co.</title>
+
+    <meta
+      name="description"
+      content="Complete FlowTherapy client intake forms, review policies, explore insurance interest, and access workplace and private event services."
+    />
+
+    <meta name="theme-color" content="#faf8f2" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Shared homepage stylesheet for the matching FlowTherapy header -->
+    <link href="../assets/css/style.css?v=5" rel="stylesheet" />
+
+    <style>
+      :root {
+        --flow-ivory: #faf8f2;
+
+        --flow-white: #ffffff;
+
+        --flow-navy: #0d2857;
+
+        --flow-blue: #079bd2;
+
+        --flow-blue-dark: #0874a7;
+
+        --flow-pale-blue: #e7f2f8;
+
+        --flow-text: #173450;
+
+        --flow-muted: #61758b;
+
+        --flow-gold: #c5a05d;
+
+        --flow-border: #dce5eb;
+
+        --flow-shadow: 0 12px 30px rgba(13, 40, 87, 0.07);
+
+        --flow-serif: "Cormorant Garamond", Georgia, serif;
+
+        --flow-sans: "DM Sans", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+
+        background: var(--flow-ivory);
+
+        color: var(--flow-text);
+
+        font-family: var(--flow-sans);
+
+        line-height: 1.65;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:focus-visible {
+        outline: 3px solid var(--flow-blue);
+
+        outline-offset: 4px;
+      }
+
+      .site-header {
+        position: relative;
+
+        z-index: 5;
+
+        background: rgba(255, 255, 255, 0.97);
+
+        border-bottom: 1px solid rgba(13, 40, 87, 0.08);
+      }
+
+      .header-inner {
+        width: min(1240px, calc(100% - 48px));
+
+        min-height: 94px;
+
+        margin: 0 auto;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 28px;
+      }
+
+      .brand {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 11px;
+
+        text-decoration: none;
+
+        flex-shrink: 0;
+      }
+
+      .brand-mark {
+        display: grid;
+
+        place-items: center;
+
+        width: 54px;
+
+        height: 54px;
+
+        border: 1px solid #dce9f1;
+
+        border-radius: 50%;
+
+        background: white;
+
+        color: var(--flow-blue);
+
+        font-family: var(--flow-serif);
+
+        font-size: 25px;
+
+        font-style: italic;
+
+        box-shadow: 0 3px 12px rgba(13, 40, 87, 0.06);
+      }
+
+      .brand-copy {
+        display: flex;
+
+        flex-direction: column;
+
+        line-height: 1.15;
+      }
+
+      .brand-name {
+        color: var(--flow-navy);
+
+        font-family: var(--flow-serif);
+
+        font-size: 23px;
+
+        font-weight: 700;
+      }
+
+      .brand-tagline {
+        margin-top: 5px;
+
+        color: var(--flow-muted);
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+      }
+
+      .main-nav {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-end;
+
+        flex-wrap: wrap;
+
+        gap: 23px;
+      }
+
+      .main-nav a {
+        color: var(--flow-navy);
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition: color 0.2s ease;
+      }
+
+      .main-nav a:hover {
+        color: var(--flow-blue);
+      }
+
+      .main-nav .nav-book {
+        padding: 12px 21px;
+
+        border-radius: 28px;
+
+        background: var(--flow-navy);
+
+        color: white;
+      }
+
+      .main-nav .nav-book:hover {
+        background: var(--flow-blue-dark);
+
+        color: white;
+      }
+
+      .hero {
+        position: relative;
+
+        overflow: hidden;
+
+        padding: 66px 24px 60px;
+
+        background:
+          radial-gradient(
+            ellipse at 85% 10%,
+
+            rgba(190, 225, 242, 0.78),
+            transparent 48%
+          ),
+          linear-gradient(115deg, #ffffff 0%, #f8f7f1 52%, #eaf4f8 100%);
+
+        text-align: center;
+      }
+
+      .hero::after {
+        position: absolute;
+
+        right: -5%;
+
+        bottom: -68px;
+
+        left: -5%;
+
+        height: 100px;
+
+        border-radius: 50% 50% 0 0;
+
+        background: var(--flow-ivory);
+
+        content: "";
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+
+        color: var(--flow-blue-dark);
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        letter-spacing: 2.5px;
+
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--flow-navy);
+
+        font-family: var(--flow-serif);
+
+        font-weight: 600;
+
+        line-height: 1.12;
+      }
+
+      h1 {
+        margin: 0;
+
+        font-size: clamp(42px, 5.2vw, 66px);
+
+        letter-spacing: -1px;
+      }
+
+      .hero-description {
+        max-width: 690px;
+
+        margin: 19px auto 0;
+
+        color: var(--flow-muted);
+
+        font-size: 15px;
+
+        line-height: 1.8;
+      }
+
+      .gold-line {
+        width: 58px;
+
+        height: 2px;
+
+        margin: 25px auto 0;
+
+        background: var(--flow-gold);
+      }
+
+      .page-content {
+        position: relative;
+
+        z-index: 1;
+
+        width: min(1040px, calc(100% - 40px));
+
+        margin: 0 auto;
+
+        padding: 12px 0 65px;
+      }
+
+      .section-heading {
+        margin: 0 0 10px;
+
+        font-size: clamp(30px, 3vw, 39px);
+
+        text-align: center;
+      }
+
+      .section-intro {
+        max-width: 650px;
+
+        margin: 0 auto 30px;
+
+        color: var(--flow-muted);
+
+        font-size: 14px;
+
+        text-align: center;
+      }
+
+      .forms-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+      }
+
+      .form-card {
+        display: flex;
+
+        flex-direction: column;
+
+        min-width: 0;
+
+        padding: 26px;
+
+        border: 1px solid var(--flow-border);
+
+        border-radius: 19px;
+
+        background: var(--flow-white);
+
+        box-shadow: var(--flow-shadow);
+
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .form-card:hover {
+        transform: translateY(-3px);
+
+        border-color: #c4dbea;
+
+        box-shadow: 0 16px 35px rgba(13, 40, 87, 0.1);
+      }
+
+      .card-top {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 12px;
+
+        margin-bottom: 17px;
+      }
+
+      .card-icon {
+        display: grid;
+
+        width: 52px;
+
+        height: 52px;
+
+        flex-shrink: 0;
+
+        place-items: center;
+
+        border: 1px solid #dceaf5;
+
+        border-radius: 15px;
+
+        background: var(--flow-pale-blue);
+
+        color: var(--flow-blue-dark);
+      }
+
+      .card-icon svg {
+        width: 25px;
+
+        height: 25px;
+
+        fill: none;
+
+        stroke: currentColor;
+
+        stroke-width: 1.7;
+
+        stroke-linecap: round;
+
+        stroke-linejoin: round;
+      }
+
+      .card-label {
+        padding: 6px 10px;
+
+        border-radius: 20px;
+
+        background: #f0f5f8;
+
+        color: #476580;
+
+        font-size: 9px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.7px;
+
+        text-align: center;
+
+        text-transform: uppercase;
+      }
+
+      .form-card h3 {
+        margin: 0 0 9px;
+
+        font-size: 29px;
+      }
+
+      .form-card p {
+        flex: 1;
+
+        margin: 0 0 23px;
+
+        color: var(--flow-muted);
+
+        font-size: 13px;
+
+        line-height: 1.8;
+      }
+
+      .button {
+        display: inline-flex;
+
+        min-height: 45px;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        padding: 12px 17px;
+
+        border: 1px solid var(--flow-navy);
+
+        border-radius: 7px;
+
+        background: var(--flow-navy);
+
+        color: white;
+
+        font-family: var(--flow-sans);
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        text-align: center;
+
+        text-decoration: none;
+
+        transition:
+          background 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .button:hover {
+        border-color: var(--flow-blue-dark);
+
+        background: var(--flow-blue-dark);
+
+        color: white;
+      }
+
+      .button-outline {
+        background: white;
+
+        color: var(--flow-navy);
+      }
+
+      .button-outline:hover {
+        background: #edf6fb;
+
+        color: var(--flow-navy);
+      }
+
+      .button-blue {
+        border-color: var(--flow-blue);
+
+        background: var(--flow-blue);
+      }
+
+      .button-blue:hover {
+        border-color: var(--flow-blue-dark);
+
+        background: var(--flow-blue-dark);
+      }
+
+      .button-disabled {
+        border-color: #d7e0e7;
+
+        background: #f3f5f6;
+
+        color: #64778a;
+
+        cursor: default;
+      }
+
+      .button-disabled:hover {
+        border-color: #d7e0e7;
+
+        background: #f3f5f6;
+
+        color: #64778a;
+      }
+
+      .insurance-section {
+        margin-top: 46px;
+
+        padding: 32px;
+
+        border: 1px solid #cbdfea;
+
+        border-radius: 20px;
+
+        background: linear-gradient(120deg, #ffffff 0%, #f0f7fb 100%);
+
+        box-shadow: var(--flow-shadow);
+      }
+
+      .insurance-heading {
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 18px;
+      }
+
+      .insurance-heading .card-icon {
+        flex-shrink: 0;
+      }
+
+      .insurance-heading h2 {
+        margin: 0 0 8px;
+
+        font-size: 34px;
+      }
+
+      .insurance-heading p {
+        margin: 0;
+
+        color: var(--flow-muted);
+
+        font-size: 14px;
+
+        line-height: 1.8;
+      }
+
+      .insurance-details {
+        margin: 21px 0 23px;
+
+        padding: 18px 20px;
+
+        border-left: 3px solid var(--flow-gold);
+
+        border-radius: 0 9px 9px 0;
+
+        background: rgba(255, 255, 255, 0.8);
+
+        color: var(--flow-text);
+
+        font-size: 13px;
+
+        line-height: 1.8;
+      }
+
+      .insurance-disclaimer {
+        display: block;
+
+        margin-top: 10px;
+
+        color: var(--flow-muted);
+
+        font-size: 11px;
+      }
+
+      .more-ways {
+        margin-top: 55px;
+      }
+
+      .more-ways .section-heading {
+        margin-bottom: 10px;
+      }
+
+      .ways-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+
+        margin-top: 25px;
+      }
+
+      .way-card {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+
+        border: 1px solid #e6dccb;
+
+        border-radius: 17px;
+
+        background: #fffdf8;
+      }
+
+      .way-card .way-eyebrow {
+        margin: 0 0 7px;
+
+        color: #9b773b;
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        letter-spacing: 1.5px;
+
+        text-transform: uppercase;
+      }
+
+      .way-card h3 {
+        margin: 0 0 9px;
+
+        font-size: 29px;
+      }
+
+      .way-card p {
+        flex: 1;
+
+        margin: 0 0 20px;
+
+        color: var(--flow-muted);
+
+        font-size: 13px;
+
+        line-height: 1.8;
+      }
+
+      .privacy-note {
+        display: flex;
+
+        max-width: 690px;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 13px;
+
+        margin: 43px auto 0;
+
+        padding: 23px 16px 0;
+
+        border-top: 1px solid var(--flow-border);
+
+        color: var(--flow-muted);
+
+        font-size: 12px;
+
+        text-align: center;
+      }
+
+      .privacy-note svg {
+        width: 19px;
+
+        height: 19px;
+
+        flex-shrink: 0;
+
+        stroke: var(--flow-navy);
+
+        fill: none;
+
+        stroke-width: 1.8;
+      }
+
+      .site-footer {
+        border-top: 1px solid #dce8ed;
+
+        background: linear-gradient(115deg, #ffffff 0%, #f1f7f9 100%);
+      }
+
+      .footer-inner {
+        display: grid;
+
+        width: min(1240px, calc(100% - 48px));
+
+        grid-template-columns: 1fr 1.2fr 1fr;
+
+        align-items: center;
+
+        gap: 24px;
+
+        margin: 0 auto;
+
+        padding: 30px 0;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        color: var(--flow-navy);
+
+        text-decoration: none;
+      }
+
+      .footer-brand .brand-mark {
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 23px;
+      }
+
+      .footer-motto {
+        color: var(--flow-navy);
+
+        font-family: var(--flow-serif);
+
+        font-size: 21px;
+
+        font-style: italic;
+
+        text-align: center;
+      }
+
+      .footer-links {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+
+        gap: 10px 17px;
+      }
+
+      .footer-links a {
+        color: var(--flow-navy);
+
+        font-size: 11px;
+
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--flow-blue-dark);
+
+        text-decoration: underline;
+      }
+
+      .footer-bottom {
+        padding: 12px 20px;
+
+        border-top: 1px solid #e2eaf0;
+
+        color: var(--flow-muted);
+
+        font-size: 10px;
+
+        text-align: center;
+      }
+
+      @media (max-width: 850px) {
+        .header-inner {
+          width: min(100% - 32px, 720px);
+
+          min-height: auto;
+
+          flex-direction: column;
+
+          align-items: flex-start;
+
+          gap: 16px;
+
+          padding: 18px 0;
+        }
+
+        .main-nav {
+          justify-content: flex-start;
+
+          gap: 13px 19px;
+        }
+
+        .main-nav a {
+          font-size: 12px;
+        }
+
+        .footer-inner {
+          grid-template-columns: 1fr;
+
+          justify-items: center;
+
+          text-align: center;
+        }
+
+        .footer-links {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero {
+          padding: 48px 21px 45px;
+        }
+
+        .hero-description {
+          font-size: 14px;
+        }
+
+        .page-content {
+          width: calc(100% - 30px);
+
+          padding-top: 12px;
+        }
+
+        .forms-grid,
+        .ways-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .form-card {
+          padding: 22px;
+        }
+
+        .form-card h3 {
+          font-size: 27px;
+        }
+
+        .insurance-section {
+          padding: 22px;
+        }
+
+        .insurance-heading {
+          flex-direction: column;
+
+          gap: 13px;
+        }
+
+        .insurance-heading h2 {
+          font-size: 31px;
+        }
+
+        .way-card {
+          padding: 22px;
+        }
+
+        .main-nav {
+          gap: 12px 16px;
+        }
+
+        .main-nav .nav-book {
+          padding: 10px 15px;
+        }
+
+        .brand-name {
+          font-size: 21px;
+        }
+
+        .brand-tagline {
+          font-size: 8px;
+
+          letter-spacing: 1.5px;
+        }
+
+        .privacy-note {
+          text-align: left;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition: none !important;
+        }
+      }
+    </style>
+    <style>
+      /* FlowTherapy shared header — Client Forms */
+      .fm-header {
+        position: relative;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 24px clamp(20px, 4vw, 56px);
+        background: #faf8f2;
+        border-bottom: 1px solid rgba(13, 40, 87, 0.08);
+        box-sizing: border-box;
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      .fm-header .fm-brand {
+        display: inline-flex;
+        align-items: center;
+        flex: 0 0 auto;
+        text-decoration: none;
+      }
+
+      .fm-header .fm-brand img {
+        display: block;
+        width: min(150px, 30vw);
+        max-height: 90px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .fm-header #fm-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 auto;
+        gap: clamp(12px, 1.8vw, 28px);
+        min-width: 0;
+      }
+
+      .fm-header #fm-nav a {
+        color: #0d2857;
+        font:
+          500 13px/1.5 Inter,
+          Arial,
+          sans-serif;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .fm-header #fm-nav a:hover,
+      .fm-header #fm-nav a[aria-current="page"] {
+        color: #0874a7;
+      }
+
+      .fm-header #fm-nav a[aria-current="page"] {
+        text-underline-offset: 5px;
+      }
+
+      .fm-header .fm-tools {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 0 1 auto;
+        gap: 12px;
+      }
+
+      .fm-header .fm-tools button,
+      .fm-header .fm-tools summary {
+        cursor: pointer;
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      .fm-header .fm-tools #fm-text {
+        border: 0;
+        padding: 8px 4px;
+        background: transparent;
+        color: #0d2857;
+        font-size: 12px;
+      }
+
+      .fm-header .fm-tools .soul-flow-player {
+        position: relative;
+        color: #0d2857;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .fm-header .soul-flow-panel {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        z-index: 60;
+        width: min(340px, 85vw);
+        padding: 10px;
+        border: 1px solid #dce5eb;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 12px 30px rgba(13, 40, 87, 0.14);
+      }
+
+      .fm-header .fm-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 44px;
+        padding: 0 22px;
+        border-radius: 999px;
+        background: #079bd2;
+        color: #fff;
+        font:
+          600 12px/1 Inter,
+          Arial,
+          sans-serif;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .fm-header .fm-btn:hover {
+        background: #0874a7;
+      }
+
+      .fm-header .fm-menu-toggle {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid #dce5eb;
+        border-radius: 8px;
+        background: #fff;
+        color: #0d2857;
+        font-size: 21px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 1000px) {
+        .fm-header {
+          gap: 16px;
+          padding: 20px 24px;
+        }
+
+        .fm-header #fm-nav {
+          gap: 14px;
+        }
+
+        .fm-header #fm-nav a {
+          font-size: 12px;
+        }
+
+        .fm-header .fm-tools {
+          gap: 9px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .fm-header {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: 14px;
+          padding: 16px 20px;
+        }
+
+        .fm-header .fm-brand img {
+          width: min(140px, 42vw);
+          max-height: 72px;
+        }
+
+        .fm-header .fm-menu-toggle {
+          display: inline-flex;
+          grid-column: 2;
+          grid-row: 1;
+        }
+
+        .fm-header #fm-nav,
+        .fm-header #fm-nav.is-open {
+          grid-column: 1 / -1;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          width: 100%;
+          padding: 8px 0;
+        }
+
+        .fm-header #fm-nav:not(.is-open) {
+          display: none;
+        }
+
+        .fm-header #fm-nav.is-open {
+          display: flex;
+        }
+
+        .fm-header #fm-nav a {
+          padding: 11px 4px;
+          white-space: normal;
+          border-bottom: 1px solid rgba(13, 40, 87, 0.08);
+          font-size: 14px;
+        }
+
+        .fm-header .fm-tools {
+          grid-column: 1 / -1;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 12px;
+        }
+      }
+
+      /* FlowTherapy branded footer — Client Forms only */
+      #client-forms-footer.fm-footer {
+        position: relative;
+        box-sizing: border-box;
+        padding: 34px clamp(20px, 4vw, 48px) 20px;
+        background: linear-gradient(125deg, #f8f0e4 65%, #e3eef6);
+        color: #06283e;
+        border-top: 1px solid #dce8ed;
+        font-family: "DM Sans", Arial, sans-serif;
+      }
+
+      #client-forms-footer *,
+      #client-forms-footer *::before,
+      #client-forms-footer *::after {
+        box-sizing: border-box;
+      }
+
+      #client-forms-footer .fm-footer-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr 1.3fr 0.8fr;
+        gap: 24px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      #client-forms-footer .fm-footer-grid > div {
+        min-width: 0;
+      }
+
+      #client-forms-footer .fm-footer-grid > div + div {
+        border-left: 1px solid #d6d4cd;
+        padding-left: 22px;
+      }
+
+      #client-forms-footer .fm-footer-brand img {
+        display: block;
+        width: min(215px, 100%);
+        height: 80px;
+        object-fit: contain;
+        object-position: left center;
+      }
+
+      #client-forms-footer .fm-footer-brand p:first-of-type {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 21px;
+      }
+
+      #client-forms-footer .fm-footer-brand p:last-of-type {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 20px;
+        font-style: italic;
+      }
+
+      #client-forms-footer h3 {
+        margin: 0 0 10px;
+        color: #06283e;
+        font:
+          600 13px/1.4 "DM Sans",
+          Arial,
+          sans-serif;
+      }
+
+      #client-forms-footer .fm-footer-grid a,
+      #client-forms-footer .fm-footer-grid p {
+        display: block;
+        margin: 0 0 6px;
+        color: #06283e;
+        font-size: 11px;
+        line-height: 1.6;
+        text-decoration: none;
+        overflow-wrap: anywhere;
+      }
+
+      #client-forms-footer .fm-footer-grid a:hover {
+        text-decoration: underline;
+      }
+
+      #client-forms-footer .fm-footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1400px;
+        margin: 24px auto 0;
+        padding-top: 14px;
+        border-top: 1px solid rgba(13, 40, 87, 0.1);
+      }
+
+      #client-forms-footer .fm-footer-bottom p {
+        margin: 0;
+        color: #06283e;
+        font-size: 10px;
+        line-height: 1.6;
+      }
+
+      #client-forms-footer .fm-footer-bottom .fm-btn {
+        display: inline-flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 42px;
+        padding: 0 22px;
+        border-radius: 999px;
+        background: #079bd2;
+        color: #fff;
+        font:
+          600 12px/1.2 "DM Sans",
+          Arial,
+          sans-serif;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      #client-forms-footer .fm-footer-bottom .fm-btn:hover {
+        background: #0874a7;
+      }
+
+      @media (max-width: 760px) {
+        #client-forms-footer.fm-footer {
+          padding: 30px 22px 18px;
+        }
+
+        #client-forms-footer .fm-footer-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 24px 18px;
+          align-items: start;
+        }
+
+        #client-forms-footer .fm-footer-grid > div + div {
+          border-left: 0;
+          padding-left: 0;
+        }
+
+        #client-forms-footer .fm-footer-brand {
+          grid-column: 1 / -1;
+          text-align: center;
+        }
+
+        #client-forms-footer .fm-footer-brand img {
+          width: 190px;
+          height: 76px;
+          margin: 0 auto;
+          object-position: center;
+        }
+
+        #client-forms-footer .fm-footer-grid > div:nth-child(2) {
+          grid-column: 1;
+        }
+
+        #client-forms-footer .fm-footer-grid > div:nth-child(3) {
+          grid-column: 2;
+          grid-row: 2;
+        }
+
+        #client-forms-footer .fm-footer-grid > div:nth-child(4) {
+          grid-column: 1 / -1;
+          grid-row: 3;
+        }
+
+        #client-forms-footer .fm-footer-bottom {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+        }
+
+        #client-forms-footer .fm-footer-bottom p {
+          max-width: 65%;
+        }
+      }
+
+      @media (max-width: 420px) {
+        #client-forms-footer .fm-footer-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 22px 14px;
+        }
+
+        #client-forms-footer .fm-footer-brand {
+          grid-column: 1 / -1;
+        }
+
+        #client-forms-footer .fm-footer-grid > div:nth-child(2) {
+          grid-column: 1;
+        }
+
+        #client-forms-footer .fm-footer-grid > div:nth-child(3) {
+          grid-column: 2;
+          grid-row: 2;
+        }
+
+        #client-forms-footer .fm-footer-grid > div:nth-child(4) {
+          grid-column: 1 / -1;
+          grid-row: 3;
+        }
+
+        #client-forms-footer .fm-footer-bottom {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        #client-forms-footer .fm-footer-bottom p {
+          max-width: 100%;
+        }
+      }
+      body.fm-large-text {
+        font-size: 112.5%;
+      }
+
+      body.fm-large-text p,
+      body.fm-large-text li,
+      body.fm-large-text a,
+      body.fm-large-text button,
+      body.fm-large-text label {
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="fm-header">
+      <a
+        class="fm-brand"
+        href="../index.html#top"
+        aria-label="FlowTherapy Massage Co. home"
+      >
+        <img
+          src="../assets/images/flowtherapy-logo.png"
+          alt="FlowTherapy Massage Co."
+        />
+      </a>
+      <button
+        class="fm-menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="fm-nav"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+      <nav id="fm-nav" aria-label="Primary navigation">
+        <a href="../index.html#ways">More Ways to Flow</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#flowhub">Resources</a>
+        <a href="./client-forms.html" aria-current="page">Client Forms</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="fm-tools">
+        <button
+          id="fm-text"
+          type="button"
+          aria-label="Increase text size"
+          aria-pressed="false"
+        >
+          A A A
+        </button>
+
+        <a
+          class="fm-btn"
+          href="https://flowtherapy.noterro.com/"
+          target="_blank"
+          rel="noopener"
+          >Book Now <span aria-hidden="true">→</span></a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">FlowTherapy</p>
+
+        <h1>Client Forms &amp; Intake</h1>
+
+        <p class="hero-description">
+          A few simple steps before your FlowTherapy session. Complete the forms
+          relevant to your appointment, review important policies, and explore
+          additional ways to experience FlowTherapy.
+        </p>
+
+        <div class="gold-line" aria-hidden="true"></div>
+      </section>
+
+      <div class="page-content">
+        <section aria-labelledby="forms-heading">
+          <h2 class="section-heading" id="forms-heading">Your Next Steps</h2>
+
+          <p class="section-intro">
+            Choose the option that fits your visit or service. If you are unsure
+            which form you need, please contact us.
+          </p>
+
+          <div class="forms-grid">
+            <!-- 1. New Client Intake -->
+
+            <article class="form-card">
+              <div class="card-top">
+                <span class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="5" y="3" width="14" height="18" rx="2"></rect>
+
+                    <path d="M9 8h6M9 12h6M9 16h4"></path>
+                  </svg>
+                </span>
+
+                <span class="card-label">Before your first visit</span>
+              </div>
+
+              <h3>New Client Intake</h3>
+
+              <p>
+                **For New Clients** Help us personalize your care by sharing
+                your health history, current concerns, and wellness goals. Your
+                information is handled by the form platform in accordance with
+                its strict privacy practices. Please complete this form before
+                your first appointment. **Submitting the intake form does not
+                schedule or confirm an appointment.**
+              </p>
+
+              <a
+                class="button"
+                href="https://app.noterro.com/clinicForms/completeNow/54f1e510-3618-4c3b-900f-8961f2789148"
+                target="\_blank"
+                rel="noopener noreferrer"
+              >
+                Complete Client Intake <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- 2. FlowTherapy Policies & FAQs -->
+
+            <article class="form-card">
+              <div class="card-top">
+                <span class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v18H7.5A2.5 2.5 0 0 0 5 22z"
+                    ></path>
+
+                    <path d="M5 4.5V22M9 7h7M9 11h7"></path>
+                  </svg>
+                </span>
+
+                <span class="card-label">Helpful information</span>
+              </div>
+
+              <h3>FlowTherapy Policies &amp; FAQs</h3>
+
+              <p>
+                Review booking and cancellation policies, FlowPass membership
+                information, FlowPack guidelines, and helpful answers before
+                your appointment.
+              </p>
+
+              <a class="button button-outline" href="../index.html#flowhub">
+                Explore Policies &amp; FAQs <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- 3. FlowChair Consultation & Consent -->
+
+            <article class="form-card">
+              <div class="card-top">
+                <span class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7 4v5a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3V4"></path>
+
+                    <path d="M10 12v3a4 4 0 0 0 4 4h1"></path>
+
+                    <path d="M6 4h3M15 4h3M15 19h4M8 19h3"></path>
+                  </svg>
+                </span>
+
+                <span class="card-label">Workplace chair massage</span>
+              </div>
+
+              <h3>FlowChair Consultation &amp; Consent</h3>
+
+              <p>
+                Complete the consultation and consent form for FlowChair
+                workplace chair massage. Provide session expectations,
+                preferences, and relevant event information.
+              </p>
+
+              <a
+                class="button"
+                href="https://app.noterro.com/clinicForms/completeNow/1d0256ac-5fd5-4c43-ac47-acddfedf9f76"
+                target="\_blank"
+                rel="noopener noreferrer"
+              >
+                Complete FlowChair Form <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <!-- 4. VeteranFlow Authorization -->
+
+            <article class="form-card">
+              <div class="card-top">
+                <span class="card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"
+                    ></path>
+                  </svg>
+                </span>
+
+                <span class="card-label">Veteran Community Care</span>
+              </div>
+
+              <h3>VeteranFlow Authorization</h3>
+
+              <p>
+                For eligible VA Community Care appointments. Authorization and
+                referral requirements must be confirmed before treatment.
+                Complete this only when requested.
+              </p>
+
+              <span
+                class="button button-disabled"
+                aria-label="VeteranFlow form link is not yet available"
+              >
+                Form link coming soon
+              </span>
+            </article>
+          </div>
+        </section>
+
+        <!-- 5. Insurance Interest Form -->
+
+        <section class="insurance-section" aria-labelledby="insurance-heading">
+          <div class="insurance-heading">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path>
+
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </span>
+
+            <div>
+              <p class="eyebrow">Exploring coverage options</p>
+
+              <h2 id="insurance-heading">Insurance Interest Form</h2>
+
+              <p>
+                Interested in using your insurance benefits for massage therapy?
+                Share your insurance carrier and specific plan information.
+                FlowTherapy will use the details provided to determine whether
+                we can pursue a provider contract with your insurance carrier.
+              </p>
+            </div>
+          </div>
+
+          <div class="insurance-details">
+            <strong>What happens next?</strong>
+
+            <br />
+
+            Submit your interest so FlowTherapy can identify the carrier and
+            plan you are interested in. This helps us explore potential provider
+            contracting opportunities.
+
+            <span class="insurance-disclaimer">
+              Submitting this form does not guarantee insurance acceptance,
+              coverage, reimbursement, or a provider contract. Please do not
+              submit insurance member ID numbers or other sensitive information
+              unless specifically requested through an appropriate secure
+              process.
+            </span>
+          </div>
+
+          <a
+            class="button button-blue"
+            href="https://app.noterro.com/clinicForms/completeNow/d9546dba-e0c2-4354-b08c-49fece09b86f"
+            target="\_blank"
+            rel="noopener noreferrer"
+          >
+            Submit Insurance Interest <span aria-hidden="true">→</span>
+          </a>
+        </section>
+
+        <!-- Dedicated service pages -->
+
+        <section class="more-ways" aria-labelledby="more-ways-heading">
+          <p class="eyebrow" style="text-align: center">More Ways to Flow</p>
+
+          <h2 class="section-heading" id="more-ways-heading">
+            Wellness, Your Way
+          </h2>
+
+          <p class="section-intro">
+            Explore workplace wellness and private event experiences through
+            their dedicated FlowTherapy pages.
+          </p>
+
+          <div class="ways-grid">
+            <article class="way-card">
+              <p class="way-eyebrow">Workplace &amp; Team Wellness</p>
+
+              <h3>CorporateFlow</h3>
+
+              <p>
+                Bring professional chair massage and workplace wellness
+                experiences to your team, office, or organization.
+              </p>
+
+              <a class="button" href="corporate.html">
+                Explore CorporateFlow <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="way-card">
+              <p class="way-eyebrow">Private Gatherings</p>
+
+              <h3>Private Flow Events</h3>
+
+              <p>
+                Explore private massage events for gatherings, celebrations, and
+                special occasions. Visit the dedicated page to learn more and
+                inquire.
+              </p>
+
+              <a class="button button-outline" href="private-events.html">
+                Explore Private Events <span aria-hidden="true">→</span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <div class="privacy-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="5" y="10" width="14" height="11" rx="2"></rect>
+
+            <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"></path>
+          </svg>
+
+          <span>
+            Please complete only the forms relevant to your appointment.
+            Information submitted through linked forms is handled by the
+            respective form platform and subject to its applicable privacy
+            practices. For assistance, please use the
+
+            <a href="contact.html">FlowTherapy contact page</a>.
+          </span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="fm-footer" id="client-forms-footer">
+      <div class="fm-footer-grid">
+        <div class="fm-footer-brand">
+          <img
+            src="../assets/images/flowtherapy-logo.png"
+            alt="FlowTherapy Massage Co."
+          />
+          <p>FlowTherapy Massage Co.</p>
+          <p>Discover the Rhythm of Relaxation.</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <a href="../index.html#top">Home</a>
+          <a href="../index.html#flowpass">FlowPass</a>
+          <a href="../index.html#flowpack">FlowPack</a>
+          <a
+            href="https://app.squareup.com/gift/MLV560DXHSF4H/order"
+            target="_blank"
+            rel="noopener"
+            >FlowGift</a
+          >
+          <a href="./private-events.html">Private Events</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="./client-forms.html">Client Forms</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <a href="tel:5127903569">512-790-FLOW</a>
+          <a href="fax:5122331764">512-233-1764 (fax)</a>
+          <a href="mailto:hello@discoverflowtherapy.com">
+            hello@discoverflowtherapy.com
+          </a>
+          <p>1805 Florence Rd. Suite 10, Killeen, TX 76541</p>
+          <p>Serving Bell, Williamson &amp; Travis Co. Texas</p>
+        </div>
+
+        <div>
+          <h3>Policies</h3>
+          <a
+            href="../documents/office-policies.pdf"
+            target="_blank"
+            rel="noopener"
+            >Booking &amp; Cancellation</a
+          >
+          <a href="../index.html#respect">Respect Massage</a>
+          <a href="../index.html#privacy">Privacy</a>
+          <a href="../index.html#accessibility">Accessibility</a>
+        </div>
+      </div>
+
+      <div class="fm-footer-bottom">
+        <p>
+          © <span id="footer-year">2026</span> FlowTherapy Massage Co. &nbsp; |
+          &nbsp; Personalized. Therapeutic. Restorative.
+        </p>
+        <a
+          class="fm-btn"
+          href="https://flowtherapy.noterro.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Book Now <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+
+    <script>
+      (() => {
+        const toggle = document.querySelector(".fm-menu-toggle");
+        const nav = document.getElementById("fm-nav");
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", String(!isOpen));
+            toggle.setAttribute(
+              "aria-label",
+              isOpen ? "Open navigation" : "Close navigation",
+            );
+            nav.classList.toggle("is-open", !isOpen);
+          });
+          nav.addEventListener("click", (event) => {
+            if (event.target.closest("a")) {
+              toggle.setAttribute("aria-expanded", "false");
+              toggle.setAttribute("aria-label", "Open navigation");
+              nav.classList.remove("is-open");
+            }
+          });
+        }
+        const textButton = document.getElementById("fm-text");
+
+        if (textButton) {
+          textButton.addEventListener("click", () => {
+            const enabled = document.body.classList.toggle("fm-large-text");
+            textButton.setAttribute("aria-pressed", String(enabled));
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
