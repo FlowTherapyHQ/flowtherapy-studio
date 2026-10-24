@@ -3497,7 +3497,7 @@ body.fm-home,
 
   margin: 0;
 
-  font: 700 11px/1.2 Inter, Arial, sans-serif;
+  font: 700 13px/1.2 Inter, Arial, sans-serif;
 
   letter-spacing: .07em;
 
@@ -3673,7 +3673,7 @@ body.fm-home,
 
   .fm-categories .fm-flowstart-card { aspect-ratio: 1.6; }
 
-  .fm-flowstart-front h2 { font-size: clamp(17px, 2.7vw, 24px); }
+  .fm-flowstart-front h2 { font-size: clamp(20px, 2.7vw, 24px); }
 
   .fm-flowstart-front .fm-flowstart-eyebrow { font-size: 9px; }
 
@@ -3705,7 +3705,7 @@ body.fm-home,
 
     right: 5%;
 
-    font-size: 7px !important;
+    font-size: 10px !important;
 
     line-height: 1.1;
 
@@ -3721,7 +3721,7 @@ body.fm-home,
 
     right: 4%;
 
-    font-size: 14px !important;
+    font-size: 25px !important;
 
     line-height: 1 !important;
 
@@ -3737,7 +3737,7 @@ body.fm-home,
 
     right: 5%;
 
-    font-size: 19px !important;
+    font-size: 23px !important;
 
     line-height: 1;
 
@@ -4116,32 +4116,4 @@ body .fm-intake-cta .fm-intake-content a.fm-intake-button:focus {
   -webkit-text-fill-color: #ffffff !important;
 }
 
-/* FlowStart front only — improve text readability */
-.fm-flowstart-front .fm-flowstart-eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.08em;
-}
-
-.fm-flowstart-front h2 {
-  font-size: clamp(22px, 2vw, 28px);
-}
-
-.fm-flowstart-front .fm-flowstart-price {
-  font-size: clamp(25px, 2.4vw, 32px);
-}
-
-@media (max-width: 480px) {
-  .fm-flowstart-front .fm-flowstart-eyebrow {
-    font-size: 10px !important;
-    letter-spacing: 0.03em;
-  }
-
-  .fm-flowstart-front h2 {
-    font-size: 19px !important;
-  }
-
-  .fm-flowstart-front .fm-flowstart-price {
-    font-size: 23px !important;
-  }
-}
 
