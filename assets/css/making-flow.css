@@ -1214,15 +1214,13 @@
 }
 
 .fm-footer-brand img {
-
-  width: 215px;
-
-  height: 80px;
-
+  display: block;
+  width: 100px;
+  height: 56px;
   object-fit: contain;
-
+  margin-left: auto;
+  margin-right: auto;
 }
-
 .fm-footer-brand p {
 
   font-size: 21px !important;
@@ -1871,6 +1869,9 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 150px;
+  height: 56px;
+  object-fit: contain;
 }
 
   .fm-footer-grid > div + div {
@@ -2585,18 +2586,11 @@ body.fm-home,
 
 }
 
-/* Larger Flow logos */
-
-.fm-header img[src*="flowtherapy-logo"],
-
+/* Footer logo size */
 .fm-footer img[src*="flowtherapy-logo"] {
-
-  width: 150px;
-
+  width: 100px;
   height: auto;
-
   max-height: none;
-
 }
 
 /* FlowPass and FlowPack details */
