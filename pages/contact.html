@@ -806,11 +806,220 @@
           width: 100%;
         }
       }
+      /* CONTACT PAGE — FLOWTHERAPY PREMIUM HEADER */
+      .fm-header {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        background: #faf6ee;
+        border-bottom: 1px solid #e6dfd3;
+        box-sizing: border-box;
+      }
+
+      .fm-header-inner {
+        width: 100%;
+        max-width: 1440px;
+        min-height: 132px;
+        margin: 0 auto;
+        padding: 20px clamp(24px, 4vw, 56px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        box-sizing: border-box;
+      }
+
+      .fm-brand {
+        display: flex;
+        align-items: center;
+        flex: 0 0 175px;
+        text-decoration: none;
+      }
+
+      .fm-brand img {
+        display: block;
+        width: 175px;
+        height: 90px;
+        object-fit: contain;
+        object-position: left center;
+      }
+
+      .fm-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(16px, 2vw, 30px);
+        flex: 1;
+      }
+
+      .fm-nav a {
+        color: #06283e;
+        font-family: "DM Sans", Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: color 180ms ease;
+      }
+
+      .fm-nav a:hover,
+      .fm-nav a[aria-current="page"] {
+        color: #008fca;
+      }
+
+      .fm-header-actions {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      .fm-book-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 54px;
+        padding: 0 25px;
+        border-radius: 999px;
+        background: #0099cf;
+        color: #fff;
+        font-family: "DM Sans", Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+        transition:
+          background 180ms ease,
+          transform 180ms ease;
+      }
+
+      .fm-book-button:hover {
+        background: #073cba;
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 1050px) {
+        .fm-header-inner {
+          gap: 20px;
+          padding-inline: 24px;
+        }
+
+        .fm-brand {
+          flex-basis: 130px;
+        }
+
+        .fm-brand img {
+          width: 130px;
+          height: 76px;
+        }
+
+        .fm-nav {
+          gap: 14px;
+        }
+
+        .fm-nav a {
+          font-size: 12px;
+        }
+
+        .fm-book-button {
+          padding-inline: 18px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .fm-header-inner {
+          min-height: auto;
+          padding: 14px 18px 18px;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 12px;
+        }
+
+        .fm-brand {
+          flex: 0 0 125px;
+        }
+
+        .fm-brand img {
+          width: 125px;
+          height: 65px;
+        }
+
+        .fm-header-actions {
+          margin-left: auto;
+        }
+
+        .fm-book-button {
+          min-height: 44px;
+          padding-inline: 19px;
+        }
+
+        .fm-nav {
+          order: 3;
+          flex: 0 0 100%;
+          justify-content: flex-start;
+          gap: 20px;
+          overflow-x: auto;
+          padding: 8px 0 4px;
+          scrollbar-width: thin;
+        }
+
+        .fm-nav a {
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .fm-header-inner {
+          padding-inline: 14px;
+        }
+
+        .fm-brand {
+          flex-basis: 105px;
+        }
+
+        .fm-brand img {
+          width: 105px;
+          height: 56px;
+        }
+
+        .fm-nav {
+          gap: 16px;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <div id="site-header"></div>
+    <header class="fm-header">
+      <div class="fm-header-inner">
+        <a class="fm-brand" href="../index.html" aria-label="FlowTherapy home">
+          <img
+            src="../assets/images/flowtherapy-logo.png"
+            alt="FlowTherapy Massage Co."
+          />
+        </a>
+
+        <nav class="fm-nav" aria-label="Main navigation">
+          <a href="../index.html#services">Services</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#flowhub">Resources</a>
+          <a href="./client-forms.html">Client Forms</a>
+          <a href="./policies-faqs.html">Policies &amp; FAQs</a>
+          <a href="./contact.html" aria-current="page">Contact</a>
+        </nav>
+
+        <div class="fm-header-actions">
+          <a
+            class="fm-book-button"
+            href="https://flowtherapy.noterro.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Now <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </header>
 
     <main class="contact-shell">
       <!-- ===================================================
@@ -1280,7 +1489,10 @@
                   Review Aftercare
                 </a>
 
-                <a class="quick-link" href="https://hub.discoverflowtherapy.com/pages/wellness-programs.html">
+                <a
+                  class="quick-link"
+                  href="https://hub.discoverflowtherapy.com/pages/wellness-programs.html"
+                >
                   Explore Wellness Programs
                 </a>
               </div>
