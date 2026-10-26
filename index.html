@@ -4646,36 +4646,37 @@ body.flowtherapy-home #ft-soul-button {
     line-height: 1.45 !important;
   }
 
-  #ways .fm-way-grid > article > a.fm-btn {
+ #ways .fm-way-grid > article > a.fm-btn {
     grid-area: button !important;
     display: inline-flex !important;
-    justify-self: start !important;
-    align-self: start !important;
     align-items: center !important;
-    justify-content: center !important;
-    gap: 7px !important;
-    box-sizing: border-box !important;
+    justify-self: end !important;
     width: auto !important;
-    max-width: 100% !important;
-    min-height: 40px !important;
-    margin: 7px 0 0 !important;
-    padding: 9px 15px !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 2px 0 !important;
 
-    background: linear-gradient(115deg, #13618b, #103b62) !important;
-    color: #fff !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 999px !important;
-    box-shadow: 0 3px 9px rgba(17, 63, 97, 0.12) !important;
+    background: transparent !important;
+    color: #183153 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 
     font-family: inherit !important;
-    font-size: 0.82rem !important;
+    font-size: 12px !important;
     font-weight: 700 !important;
-    line-height: 1.25 !important;
-    text-align: center !important;
+    line-height: 1.4 !important;
+    text-align: right !important;
     text-decoration: none !important;
     white-space: normal !important;
-  }
-
+}
+#ways .fm-way-grid > article > a.fm-btn:hover {
+    background: transparent !important;
+    color: #007bad !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
   #ways .fm-way-grid > article > a.fm-btn:hover {
     background: #103b62 !important;
     color: #fff !important;
@@ -4754,24 +4755,23 @@ body.flowtherapy-home #ft-soul-button {
         </div>
       </section>
       
-<section class="fm-intake-cta" aria-labelledby="fm-intake-title">
-  <div class="fm-intake-content">
-    <div class="fm-intake-icon" aria-hidden="true">✧</div>
-    <div class="fm-intake-copy">
-      <p class="fm-intake-eyebrow">NEW TO FLOWTHERAPY?</p>
-      <h2 id="fm-intake-title">Your First Flow Starts Here</h2>
-      <p>Help us personalize your care. Please complete your new client intake before your first appointment.</p>
-    </div>
-    <a
-      class="fm-intake-button"
-      href="https://app.noterro.com/clinicForms/completeNow/54f1e510-3618-4c3b-900f-8961f2789148"
-      target="_blank"
-      rel="noopener noreferrer"
-    >Complete New Client Intake Now! <span aria-hidden="true">→</span></a>
-  </div>
-  <p class="fm-intake-note">Intake form hosted by Noterro. Completing this form does not book an appointment.</p>
-</section>
 
+<section class="fm-intake-link" aria-label="New client intake">
+  <p class="fm-intake-eyebrow">NEW TO FLOWTHERAPY?</p>
+  <h2>Your First Flow Starts Here.</h2>
+
+  <a
+    class="fm-intake-button"
+    href="https://app.noterro.com/clinicForms/completeNow/54f1e510-3618-4c3b-900f-8961f2789148"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    New Client Intake <span aria-hidden="true">→</span>
+  </a>
+  <p class="fm-intake-disclaimer">
+  Completing the FlowTherapy intake form does not schedule or confirm an appointment.
+</p>
+</section>
       <section class="fm-category-wrap" aria-label="Explore FlowTherapy">
         <div class="fm-categories">
           <a

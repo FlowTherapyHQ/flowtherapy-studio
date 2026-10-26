@@ -276,32 +276,19 @@
 
 }
 
-
-
-
 .fm-hero {
+
   position: relative;
+
   min-height: 405px;
-  background-color: #e9dccb;
+
+  background: #e9dccb url("../images/home/signature.jpg") right center/70% auto
+
+    no-repeat;
+
   isolation: isolate;
-  overflow: hidden;
+
 }
-
-.fm-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    90deg,
-    #faf5ec 0%,
-    rgba(250, 245, 236, 0.98) 24%,
-    rgba(250, 245, 236, 0.76) 38%,
-    transparent 64%
-  );
-}
-
-
 
 .fm-hero:before {
 
@@ -914,15 +901,29 @@
 }
 
 .fm-way-grid .fm-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    min-height: auto;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #183153;
+    font-size: 13px !important;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
 
-  padding: 6px 7px;
-
-  min-height: 28px;
-
-  font-size: 9px !important;
-
-  gap: 4px;
-
+.fm-way-grid .fm-btn:hover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: #008bd1;
+    transform: none;
+    gap: 12px;
 }
 
 .fm-way-grid article:nth-child(2) .fm-btn,
@@ -1143,144 +1144,204 @@
 
 }
 
-.fm-footer {
-
+/* FLOWTHERAPY HOMEPAGE FOOTER — MATCH CLIENT FORMS */
+.fm-home .fm-footer#contact {
   position: relative;
-
+  box-sizing: border-box;
+  padding: 34px clamp(20px, 4vw, 48px) 20px;
   background: linear-gradient(125deg, #f8f0e4 65%, #e3eef6);
-
-  padding: 26px 3.5% 18px;
-
+  color: #06283e;
+  border-top: 1px solid #dce8ed;
+  font-family: "DM Sans", Arial, sans-serif;
 }
 
-.fm-footer:before {
-
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-
-  right: 0;
-
-  top: -17px;
-
-  height: 19px;
-
-  background: #f8f0e4;
-
-  clip-path: polygon(
-
-    0 10%,
-
-    16% 65%,
-
-    35% 35%,
-
-    58% 90%,
-
-    78% 25%,
-
-    100% 70%,
-
-    100% 100%,
-
-    0 100%
-
-  );
-
+.fm-home .fm-footer#contact *,
+.fm-home .fm-footer#contact *::before,
+.fm-home .fm-footer#contact *::after {
+  box-sizing: border-box;
 }
 
-.fm-footer-grid {
-
+.fm-home .fm-footer#contact .fm-footer-grid {
   display: grid;
-
-  grid-template-columns: 1.5fr 0.8fr 1.45fr 0.7fr 1fr;
-
+  grid-template-columns: 1.2fr 0.8fr 1.3fr 0.8fr;
   gap: 24px;
-
   max-width: 1400px;
-
-  margin: auto;
-
+  margin: 0 auto;
 }
 
-.fm-footer-grid > div + div {
+.fm-home .fm-footer#contact .fm-footer-grid > div {
+  min-width: 0;
+}
 
+.fm-home .fm-footer#contact .fm-footer-grid > div + div {
   border-left: 1px solid #d6d4cd;
-
   padding-left: 22px;
-
 }
 
-.fm-footer-brand img {
+.fm-home .fm-footer#contact .fm-footer-brand img {
   display: block;
-  width: 100px;
-  height: 56px;
+  width: min(215px, 100%);
+  height: 80px;
   object-fit: contain;
-  margin-left: auto;
-  margin-right: auto;
+  object-position: left center;
 }
-.fm-footer-brand p {
 
-  font-size: 21px !important;
+.fm-home .fm-footer#contact .fm-footer-brand p:first-of-type {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 21px;
+}
 
+.fm-home .fm-footer#contact .fm-footer-brand p:last-of-type {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 20px;
   font-style: italic;
-
-  margin: 4px 0;
-
 }
 
-.fm-footer h3 {
-
-  font:
-
-    600 12px Inter,
-
-    Arial,
-
-    sans-serif;
-
-  margin: 0 0 9px;
-
+.fm-home .fm-footer#contact h3 {
+  margin: 0 0 10px;
+  color: #06283e;
+  font: 600 13px/1.4 "DM Sans", Arial, sans-serif;
 }
 
-.fm-footer a,
-
-.fm-footer p {
-
+.fm-home .fm-footer#contact .fm-footer-grid a,
+.fm-home .fm-footer#contact .fm-footer-grid p {
   display: block;
-
+  margin: 0 0 6px;
+  color: #06283e;
   font-size: 11px;
-
-  line-height: 1.5;
-
-  margin: 0 0 3px;
-
+  line-height: 1.6;
+  text-decoration: none;
   overflow-wrap: anywhere;
-
 }
 
-.fm-footer-bottom {
+.fm-home .fm-footer#contact .fm-footer-grid a:hover {
+  text-decoration: underline;
+}
 
+.fm-home .fm-footer#contact .fm-footer-bottom {
   display: flex;
-
-  justify-content: space-between;
-
   align-items: center;
-
+  justify-content: space-between;
   gap: 20px;
-
   max-width: 1400px;
-
-  margin: 20px auto 0;
-
+  margin: 24px auto 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(13, 40, 87, 0.1);
 }
 
-.fm-footer-bottom p {
-
+.fm-home .fm-footer#contact .fm-footer-bottom p {
+  margin: 0;
+  color: #06283e;
   font-size: 10px;
+  line-height: 1.6;
+}
 
+.fm-home .fm-footer#contact .fm-footer-bottom .fm-btn {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: #079bd2;
+  color: #fff;
+  font: 600 12px/1.2 "DM Sans", Arial, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.fm-home .fm-footer#contact .fm-footer-bottom .fm-btn:hover {
+  background: #0874a7;
+}
+
+@media (max-width: 760px) {
+  .fm-home .fm-footer#contact {
+    padding: 30px 22px 18px;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+    align-items: start;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-grid > div + div {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-brand {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-brand img {
+    width: 190px;
+    height: 76px;
+    margin: 0 auto;
+    object-position: center;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-grid > div:nth-child(2) {
+    grid-column: 1;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-grid > div:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-grid > div:nth-child(4) {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-bottom p {
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 420px) {
+  .fm-home .fm-footer#contact .fm-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 14px;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-grid > div:nth-child(2) {
+    grid-column: 1;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-grid > div:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-grid > div:nth-child(4) {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .fm-home .fm-footer#contact .fm-footer-bottom p {
+    max-width: 100%;
+  }
 }
 
 .fm-legacy {
@@ -1456,12 +1517,9 @@
 }
 
 .fm-plan-dialog .ft-plan-explore {
+
   margin: 0 !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  max-width: none !important;
-  width: 100% !important;
+
 }
 
 .fm-info-dialog {
@@ -1480,22 +1538,29 @@
 
 }
 
-
 @media (min-width: 1600px) {
+
   .fm-hero {
-    background-size: 50% auto;
-    min-height: 405px;
+
+    background-size: 65% auto;
+
+    min-height: 480px;
+
   }
 
   .fm-hero-copy {
-    padding-top: 45px;
+
+    padding-top: 65px;
+
   }
 
   .fm-hero h1 {
-    font-size: clamp(48px, 4.8vw, 69px);
-  }
-}
 
+    font-size: 78px;
+
+  }
+
+}
 
 @media (max-width: 1150px) {
 
@@ -1821,12 +1886,6 @@
 
   }
 
-  .fm-way-grid .fm-btn {
-
-    font-size: 10px !important;
-
-  }
-
   .fm-about {
 
     grid-template-columns: 1fr 1.3fr;
@@ -1856,23 +1915,16 @@
   }
 
   .fm-footer-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
 
-.fm-footer-brand {
-  grid-column: 1 / -1;
-  text-align: center;
-}
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-.fm-footer-brand img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 150px;
-  height: 56px;
-  object-fit: contain;
-}
+  }
+
+  .fm-footer-brand {
+
+    grid-column: 1 / -1;
+
+  }
 
   .fm-footer-grid > div + div {
 
@@ -1881,25 +1933,7 @@
     border: 0;
 
   }
-.fm-footer-grid > div:nth-child(2) {
-  grid-column: 1;
-  grid-row: 2;
-}
 
-.fm-footer-grid > div:nth-child(3) {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.fm-footer-grid > div:nth-child(4) {
-  grid-column: 1 / -1;
-  grid-row: 3;
-}
-
-.fm-footer-grid > div + div {
-  border-left: 0;
-  padding-left: 0;
-}
 }
 
 @media (max-width: 480px) {
@@ -2074,15 +2108,21 @@
 
   }
 
- .fm-footer-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
+  .fm-footer-grid {
 
-.fm-footer-grid > div:nth-child(3) {
-  grid-column: auto;
-  grid-row: auto;
-}
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+
+  }
+
+  .fm-footer-grid > div:nth-child(3) {
+
+    grid-column: 1 / -1;
+
+    grid-row: 3;
+
+  }
 
   .fm-footer-bottom {
 
@@ -2586,11 +2626,18 @@ body.fm-home,
 
 }
 
-/* Footer logo size */
+/* Larger Flow logos */
+
+.fm-header img[src*="flowtherapy-logo"],
+
 .fm-footer img[src*="flowtherapy-logo"] {
-  width: 100px;
+
+  width: 150px;
+
   height: auto;
+
   max-height: none;
+
 }
 
 /* FlowPass and FlowPack details */
@@ -2605,7 +2652,7 @@ body.fm-home,
 
   color: #06283e;
 
-  padding: 12px;
+  padding: 24px;
 
   border: 1px solid #c9b897;
 
@@ -2993,16 +3040,6 @@ body.fm-home,
 
 }
 
-.fm-way-grid .fm-btn {
-
-  font-size: 14px !important;
-
-  padding: 10px 16px;
-
-  min-height: 42px;
-
-}
-
 .fm-way-grid article {
 
   min-height: 230px;
@@ -3010,33 +3047,35 @@ body.fm-home,
 }
 
 @media (max-width: 600px) {
-
-  .fm-way-grid .fm-btn {
-
-    background: #008fca !important;
-
-    color: #fff !important;
-
+   .fm-ways .fm-way-grid .fm-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 0;
+    min-height: auto;
+    background: transparent !important;
+    color: #183153 !important;
     border: 0 !important;
-
-    border-radius: 999px;
-
-    padding: 8px 13px;
-
-    min-height: 36px;
-
+    border-radius: 0;
+    box-shadow: none !important;
     font-size: 12px !important;
-
-    font-weight: 600;
-
+    font-weight: 700;
     width: auto;
+    align-self: flex-start;
+    text-decoration: none;
+}
 
-    align-self: center;
+    .fm-ways .fm-way-grid .fm-btn:hover {
+    background: transparent !important;
+    color: #007bad !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    transform: none;
+}
 
-    box-shadow: 0 3px 12px rgba(0, 143, 202, 0.22) !important;
-
-  }
-
+    .fm-ways .fm-way-grid article {
+        padding-bottom: 12px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -3209,9 +3248,11 @@ body.fm-home,
 
   /* Music player: keep both edges on screen */
 
- .soul-flow-player {
-  position: relative;
-}
+  .soul-flow-player {
+
+    position: static;
+
+  }
 
   .fm-header {
 
@@ -3382,738 +3423,347 @@ body.fm-home,
 }
 
 /* FLOWSTART — SINGLE SOURCE OF TRUTH
-
    Flip card styles. Responsive rules are grouped below. */
 
 .fm-categories .fm-flowstart-card {
-
   position: relative;
-
   display: block;
-
   grid-column: auto;
-
   aspect-ratio: 1.44;
-
   min-width: 0;
-
   overflow: hidden;
-
   border: 2px solid #315c46;
-
   border-radius: 6px;
-
   background: #f9f8f4;
-
   box-shadow: 0 0 0 1px rgba(49, 92, 70, .18), 0 2px 9px rgba(24, 65, 46, .22);
-
   perspective: 1200px;
-
   color: #092c42 !important;
-
 }
 
 .fm-categories .fm-flowstart-card::after { content: none; }
 
 .fm-flowstart-inner {
-
   position: absolute;
-
   inset: 0;
-
   width: 100%;
-
   height: 100%;
-
   transform-style: preserve-3d;
-
   transition: transform .7s ease;
-
 }
 
 .fm-flowstart-card.is-flipped .fm-flowstart-inner {
-
   transform: rotateY(180deg);
-
 }
 
 .fm-flowstart-face {
-
   position: absolute;
-
   inset: 0;
-
   overflow: hidden;
-
   backface-visibility: hidden;
-
   -webkit-backface-visibility: hidden;
-
 }
 
 .fm-flowstart-front {
-
   background: #f9f8f4;
-
   transform: rotateY(0deg);
-
 }
 
 .fm-flowstart-front > img {
-
   position: absolute;
-
   inset: 0;
-
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
-
   object-position: center;
-
 }
 
 .fm-flowstart-front-copy {
-
   position: absolute;
-
   inset: 0;
-
   z-index: 2;
-
 }
 
 .fm-flowstart-front .fm-flowstart-eyebrow {
-
   position: absolute;
-
   top: 8%;
-
   left: 7%;
-
   right: 4%;
-
   margin: 0;
-
-  font: 700 13px/1.2 Inter, Arial, sans-serif;
-
+  font: 700 11px/1.2 Inter, Arial, sans-serif;
   letter-spacing: .07em;
-
   color: #a88659;
-
 }
 
 .fm-flowstart-front h2 {
-
   position: absolute;
-
   top: 34%;
-
   left: 43%;
-
   right: 5%;
-
   margin: 0;
-
   font: 500 clamp(20px, 2.1vw, 30px)/1.05 "Cormorant Garamond", Georgia, serif;
-
   color: #092c42 !important;
-
   white-space: normal;
-
 }
 
 .fm-flowstart-front .fm-flowstart-price {
-
   position: absolute;
-
   top: 52%;
-
   right: 7%;
-
   margin: 0;
-
   font: 600 clamp(22px, 2.8vw, 40px)/1 "Cormorant Garamond", Georgia, serif;
-
   color: #092c42;
-
   white-space: nowrap;
-
 }
 
 .fm-flowstart-turn {
-
   border: 0;
-
   border-bottom: 1px solid #a88659;
-
   border-radius: 0;
-
   padding: 0 0 3px;
-
   background: transparent;
-
   color: #175477;
-
   font: 700 10px/1.3 Inter, Arial, sans-serif;
-
   cursor: pointer;
-
 }
 
 .fm-flowstart-front .fm-flowstart-turn { display: none !important; }
 
 .fm-flowstart-back {
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: flex-start;
-
   gap: 12px;
-
   padding: 20px;
-
   box-sizing: border-box;
-
   transform: rotateY(180deg);
-
   background: #092c42;
-
   color: #f9f8f4;
-
 }
 
 .fm-flowstart-back-icon {
-
   position: absolute;
-
   top: 12px;
-
   right: 14px;
-
   color: #d8bb8c;
-
   font-size: 20px;
-
   line-height: 1;
-
   pointer-events: none;
-
 }
 
 .fm-flowstart-back .fm-flowstart-eyebrow {
-
   margin: 0;
-
   color: #d8bb8c;
-
   font: 700 10px/1.2 Inter, Arial, sans-serif;
-
   letter-spacing: .07em;
-
 }
 
 .fm-flowstart-back h2 {
-
   margin: 0;
-
   font: 500 26px/1.1 "Cormorant Garamond", Georgia, serif;
-
   color: #f9f8f4 !important;
-
   white-space: normal;
-
 }
 
 .fm-flowstart-back p {
-
   margin: 0;
-
   font: 400 11px/1.5 Inter, Arial, sans-serif;
-
   color: #e1eaf0;
-
 }
 
 .fm-flowstart-book {
-
   display: inline-block;
-
   padding: 8px 13px;
-
   border: 1px solid #c9a978;
-
   border-radius: 20px;
-
   color: #fff !important;
-
   text-decoration: none;
-
   font: 700 11px/1.3 Inter, Arial, sans-serif;
-
 }
 
 .fm-flowstart-back .fm-flowstart-turn { color: #d8bb8c; }
 
 /* Desktop/tablet use desktop wording; mobile wording is opt-in only below 480px. */
-
 .fm-flowstart-back .fm-flowstart-mobile { display: none !important; }
-
 .fm-flowstart-back .fm-flowstart-desktop { display: block !important; }
 
 /* Tablet */
-
 @media (min-width: 481px) and (max-width: 800px) {
-
   .fm-categories .fm-flowstart-card { aspect-ratio: 1.6; }
-
-  .fm-flowstart-front h2 { font-size: clamp(20px, 2.7vw, 24px); }
-
+  .fm-flowstart-front h2 { font-size: clamp(17px, 2.7vw, 24px); }
   .fm-flowstart-front .fm-flowstart-eyebrow { font-size: 9px; }
-
   .fm-flowstart-front .fm-flowstart-price { font-size: clamp(20px, 3vw, 28px); }
-
   .fm-flowstart-back { padding: 8px; gap: 5px; }
-
   .fm-flowstart-back .fm-flowstart-eyebrow { font-size: 7px; }
-
   .fm-flowstart-back h2 { font-size: 14px; line-height: 1.05; }
-
   .fm-flowstart-back p { font-size: 8px; line-height: 1.2; }
-
   .fm-flowstart-back .fm-flowstart-book { padding: 5px 7px; font-size: 8px; }
-
 }
 
 /* Mobile */
-
 @media (max-width: 480px) {
-
   .fm-categories .fm-flowstart-card { grid-column: auto; aspect-ratio: 1.6; }
 
   .fm-flowstart-front .fm-flowstart-eyebrow {
-
     top: 7%;
-
     left: 7%;
-
     right: 5%;
-
-    font-size: 10px !important;
-
+    font-size: 7px !important;
     line-height: 1.1;
-
     letter-spacing: .01em;
-
   }
 
   .fm-flowstart-front h2 {
-
     top: 34%;
-
     left: 43%;
-
     right: 4%;
-
-    font-size: 25px !important;
-
+    font-size: 14px !important;
     line-height: 1 !important;
-
     text-align: right;
-
   }
 
   .fm-flowstart-front .fm-flowstart-price {
-
     top: auto;
-
     bottom: 16%;
-
     right: 5%;
-
-    font-size: 23px !important;
-
+    font-size: 19px !important;
     line-height: 1;
-
   }
 
   .fm-flowstart-front .fm-flowstart-turn { display: none !important; }
 
   .fm-flowstart-back {
-
     gap: 5px !important;
-
     padding: 8px !important;
-
     justify-content: center;
-
     overflow: hidden;
-
   }
 
   .fm-flowstart-back .fm-flowstart-desktop { display: none !important; }
-
   .fm-flowstart-back .fm-flowstart-mobile { display: block !important; }
 
   .fm-flowstart-back .fm-flowstart-eyebrow {
-
     font-size: 6px !important;
-
     line-height: 1.2 !important;
-
     letter-spacing: .04em !important;
-
   }
 
   .fm-flowstart-back h2.fm-flowstart-mobile {
-
     font-size: 11px;
-
     line-height: 1.05;
-
   }
 
   .fm-flowstart-back p.fm-flowstart-mobile {
-
     font-size: 7px !important;
-
     line-height: 1.2 !important;
-
     margin: 0 !important;
-
   }
 
   .fm-flowstart-back .fm-flowstart-book {
-
     font-size: 7px !important;
-
     line-height: 1.2 !important;
-
     padding: 4px 6px !important;
-
     white-space: nowrap;
-
     max-width: 100%;
-
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   .fm-flowstart-inner { transition: none; }
-
 }
-
-@media (max-width: 640px) {
-
-  #ways.fm-ways .fm-way-grid > article > a.fm-btn,
-
-  #ways.fm-ways .fm-way-grid > article > a.fm-btn span {
-
-    display: none !important;
-
-  }
-
-}
-
-/* CATEGORY GRID — TABLET + MOBILE ONLY */
-
-@media (max-width: 800px) {
-
-  .fm-categories {
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 10px;
-
-    padding-inline: 12px;
-
-    box-sizing: border-box;
-
-  }
-
-  .fm-category {
-
-    min-width: 0;
-
-    aspect-ratio: 1.25;
-
-  }
-
-  .fm-category h2 {
-
-    font-size: clamp(18px, 3.2vw, 25px);
-
-    white-space: normal;
-
-    overflow-wrap: break-word;
-
-  }
-
-  .fm-category:not(.fm-flowstart-card) > div {
-
-    bottom: 10px;
-
-    left: 12px;
-
-    right: 12px;
-
-  }
-
-  /* Keep the FlowStart promotion contained */
-
-  .fm-categories .fm-flowstart-card {
-
-    aspect-ratio: 1.25;
-
-    min-width: 0;
-
-    overflow: hidden;
-
-  }
-
-  .fm-flowstart-card .fm-flowstart-inner {
-
-    width: 100%;
-
-    height: 100%;
-
-  }
-
-  .fm-flowstart-card .fm-flowstart-front,
-
-  .fm-flowstart-card .fm-flowstart-back {
-
-    box-sizing: border-box;
-
-    min-width: 0;
-
-    max-width: 100%;
-
-    overflow: hidden;
-
-  }
-
-  .fm-flowstart-card h2 {
-
-    font-size: clamp(17px, 2.8vw, 23px) !important;
-
-    line-height: 1.15 !important;
-
-    overflow-wrap: anywhere;
-
-  }
-
-}
-
-@media (max-width: 480px) {
-
-  .fm-categories {
-
-    gap: 8px;
-
-    padding-inline: 8px;
-
-  }
-
-  .fm-category {
-
-    aspect-ratio: 1.08;
-
-  }
-
-  .fm-category:not(.fm-flowstart-card) > div {
-
-    bottom: 9px;
-
-    left: 10px;
-
-    right: 10px;
-
-  }
-
-  .fm-category h2 {
-
-    font-size: clamp(16px, 4.5vw, 21px);
-
-    line-height: 1.1;
-
-  }
-
-  .fm-category p {
-
-    font-size: 0.82rem;
-
-    line-height: 1.25;
-
-  }
-
-  .fm-categories .fm-flowstart-card {
-
-    aspect-ratio: 1.08;
-
-  }
-
-  .fm-flowstart-card h2 {
-
-    font-size: clamp(16px, 4vw, 19px) !important;
-
-  }
-
-}
-
-/* SIGNATURE SERVICES — TABLET SPACING */
-
-@media (min-width: 641px) and (max-width: 800px) {
-
-  .fm-signatures {
-
-    padding: 28px 24px 36px;
-
-  }
-
-  .fm-signatures > .fm-section-intro {
-
-    margin-bottom: 20px;
-
-  }
-
-}
-
-/* =========================================
-   FlowTherapy New Client Intake CTA
-   ========================================= */
+/* FlowTherapy — First Flow Intake Section */
 
 .fm-intake-cta {
-  position: relative;
-  padding: 26px 24px 20px;
-  background: linear-gradient(115deg, #f8f4ec 0%, #edf4f0 100%);
-  border-top: 1px solid rgba(23, 107, 87, 0.18);
-  border-bottom: 1px solid rgba(23, 107, 87, 0.18);
+    background: #e8f3f8;
+    color: #183153;
 }
 
-.fm-intake-content {
-  max-width: 1120px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 22px;
+.fm-intake-cta .fm-intake-eyebrow {
+    color: #a77b43;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+    margin: 0 0 12px;
+    text-transform: uppercase;
 }
 
-.fm-intake-icon {
-  flex: 0 0 58px;
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #c6a56a;
-  border-radius: 50%;
-  color: #176b57;
-  font-size: 32px;
+.fm-intake-cta .fm-intake-copy h2 {
+    color: #06283e;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.15;
+    margin: 0 0 12px;
 }
 
-.fm-intake-copy {
-  flex: 1;
+.fm-intake-cta .fm-intake-copy > p:not(.fm-intake-eyebrow) {
+    color: #183153;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.fm-intake-eyebrow {
-  margin: 0 0 5px;
-  color: #9b7945;
+.fm-intake-cta .fm-intake-note {
+    color: #183153;
+    font-size: 14px;
+    line-height: 1.6;
+}
+/* FlowTherapy Premium — Client Intake Link */
+.fm-intake-link {
+  padding: 16px 24px 20px;
+  text-align: center;
+  background: #faf5ec;
+  color: #183153;
+  border-top: 1px solid rgba(212, 163, 105, 0.35);
+}
+.fm-intake-link .fm-intake-eyebrow {
+  color: #a77b43;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
 }
 
-.fm-intake-copy h2 {
-  margin: 0 0 7px;
-  color: #082f40;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(24px, 3vw, 34px);
-  font-weight: 400;
-  line-height: 1.15;
-}
-
-.fm-intake-copy > p:last-child {
-  margin: 0;
-  color: #25465a;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.fm-intake-button {
-  flex: 0 0 auto;
+.fm-intake-link a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 15px 21px;
-  border: 1px solid #087fae;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #087fae, #075b80);
+  gap: 8px;
+  padding: 12px 24px;
+  border: 1px solid #183153;
+  border-radius: 4px;
+  background: #183153;
   color: #ffffff;
   font-size: 14px;
-  font-weight: 700;
-  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   text-decoration: none;
-  box-shadow: 0 5px 14px rgba(8, 79, 108, 0.16);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease,
+              transform 0.2s ease;
 }
 
-.fm-intake-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(8, 79, 108, 0.22);
+.fm-intake-link a:hover {
+  background: #008bd1;
+  border-color: #008bd1;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
-.fm-intake-note {
-  max-width: 1120px;
-  margin: 14px auto 0;
-  color: #66756f;
-  font-size: 11px;
-  text-align: center;
+.fm-intake-link p {
+  margin: 10px 0 0;
+  color: #183153;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-@media (max-width: 760px) {
-  .fm-intake-cta {
-    padding: 22px 18px 18px;
+@media (prefers-reduced-motion: reduce) {
+  .fm-intake-link a {
+    transition: none;
   }
-
-  .fm-intake-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    text-align: center;
-  }
-
-  .fm-intake-copy h2 {
-    font-size: 27px;
-  }
-
-  .fm-intake-button {
-    width: 100%;
-    max-width: 360px;
-  }
-
-  .fm-intake-note {
-    max-width: 360px;
+}
+.fm-intake-disclaimer {
+    margin: 12px 0 0;
+    color: #183153;
+    font-size: 13px;
     line-height: 1.5;
-  }
+    text-align: center;
 }
-
-/* Intake button: force high-contrast white text */
-body .fm-intake-cta .fm-intake-content a.fm-intake-button,
-body .fm-intake-cta .fm-intake-content a.fm-intake-button:link,
-body .fm-intake-cta .fm-intake-content a.fm-intake-button:visited,
-body .fm-intake-cta .fm-intake-content a.fm-intake-button:hover,
-body .fm-intake-cta .fm-intake-content a.fm-intake-button:focus {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-
-
