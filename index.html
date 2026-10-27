@@ -4689,6 +4689,126 @@ body.flowtherapy-home #ft-soul-button {
 }
 
 </style>
+
+<style id="ft-privacy-accessibility-dialog-fix">
+  /* DIALOG CONTAINERS */
+  #privacy-dialog.fm-info-dialog,
+  #accessibility-dialog.fm-info-dialog {
+    box-sizing: border-box;
+    width: min(620px, calc(100vw - 32px));
+    max-width: 620px;
+    max-height: min(85vh, 820px);
+    padding: 0;
+    border: 1px solid #D8C5A3;
+    border-radius: 22px;
+    overflow: auto;
+    color: #103C55;
+    background: #F5EBDD;
+  }
+
+  /* BACKDROP */
+  #privacy-dialog.fm-info-dialog::backdrop,
+  #accessibility-dialog.fm-info-dialog::backdrop {
+    background: rgba(7, 35, 51, 0.66);
+    backdrop-filter: blur(4px);
+  }
+
+  /* HEADER */
+  #privacy-dialog .fm-dialog-heading,
+  #accessibility-dialog .fm-dialog-heading {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 24px;
+    background: #F5EBDD;
+    border-bottom: 0;
+  }
+
+  /* TITLE */
+  #privacy-dialog .fm-dialog-heading h2,
+  #accessibility-dialog .fm-dialog-heading h2 {
+    margin: 0;
+    color: #103C55;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  /* INDIVIDUAL CLOSE BUTTONS */
+  #privacy-dialog .privacy-close,
+  #accessibility-dialog .accessibility-close {
+    display: inline-flex;
+    flex: 0 0 36px;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent !important;
+    color: #103C55 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  #privacy-dialog .privacy-close:focus-visible,
+  #accessibility-dialog .accessibility-close:focus-visible {
+    outline: 2px solid #103C55;
+    outline-offset: 3px;
+  }
+
+  /* CONTENT */
+  #privacy-dialog .fm-dialog-content,
+  #accessibility-dialog .fm-dialog-content {
+    box-sizing: border-box;
+    padding: 8px 24px 22px;
+    color: #103C55;
+  }
+
+  #privacy-dialog .fm-dialog-content > :first-child,
+  #accessibility-dialog .fm-dialog-content > :first-child {
+    margin-top: 0;
+  }
+
+  #privacy-dialog .fm-dialog-content > :last-child,
+  #accessibility-dialog .fm-dialog-content > :last-child {
+    margin-bottom: 0;
+  }
+
+  /* MOBILE */
+  @media (max-width: 600px) {
+    #privacy-dialog.fm-info-dialog,
+    #accessibility-dialog.fm-info-dialog {
+      width: calc(100vw - 24px);
+      max-height: 88vh;
+      border-radius: 14px;
+    }
+
+    #privacy-dialog .fm-dialog-heading,
+    #accessibility-dialog .fm-dialog-heading {
+      padding: 15px 16px;
+      gap: 12px;
+    }
+
+    #privacy-dialog .fm-dialog-heading h2,
+    #accessibility-dialog .fm-dialog-heading h2 {
+      font-size: 25px;
+    }
+
+    #privacy-dialog .fm-dialog-content,
+    #accessibility-dialog .fm-dialog-content {
+      padding: 8px 16px 18px;
+    }
+  }
+</style>
+
 </head>
   <body class="flowtherapy-home fm-home">
     <a class="fm-skip" href="#fm-main">Skip to content</a>
@@ -8936,7 +9056,13 @@ body.flowtherapy-home #ft-soul-button {
 >
   <div class="fm-dialog-heading">
     <h2 id="privacy-dialog-title">Your Privacy Matters</h2>
-    <button type="button" aria-label="Close privacy dialog" onclick="this.closest('dialog').close()">×</button>
+    <button
+  type="button"
+  class="privacy-close"
+  aria-label="Close privacy dialog"
+>
+  ×
+</button>
   </div>
 
   <div class="fm-dialog-content">
@@ -8978,6 +9104,7 @@ body.flowtherapy-home #ft-soul-button {
   </div>
 </dialog>
 
+
 <!-- ACCESSIBILITY DIALOG -->
 <dialog
   class="fm-dialog fm-info-dialog"
@@ -8986,7 +9113,13 @@ body.flowtherapy-home #ft-soul-button {
 >
   <div class="fm-dialog-heading">
     <h2 id="accessibility-dialog-title">Accessibility at FlowTherapy</h2>
-    <button type="button" aria-label="Close accessibility dialog" onclick="this.closest('dialog').close()">×</button>
+    <button
+  type="button"
+  class="accessibility-close"
+  aria-label="Close accessibility dialog"
+>
+  ×
+</button>
   </div>
 
   <div class="fm-dialog-content">
@@ -9019,7 +9152,19 @@ body.flowtherapy-home #ft-soul-button {
     </p>
   </div>
 </dialog>
+<script>
+  document
+    .querySelector(".privacy-close")
+    ?.addEventListener("click", () => {
+      document.getElementById("privacy-dialog")?.close();
+    });
 
+  document
+    .querySelector(".accessibility-close")
+    ?.addEventListener("click", () => {
+      document.getElementById("accessibility-dialog")?.close();
+    });
+</script>
   
 <script>
 (() => {
