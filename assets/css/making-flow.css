@@ -3506,12 +3506,28 @@ body.fm-home,
 
 .fm-flowstart-front .fm-flowstart-price {
   position: absolute;
-  top: 52%;
-  right: 7%;
+  top: 49%;
+  right: 5%;
+  width: 43%;
+  max-width: 43%;
   margin: 0;
-  font: 600 clamp(22px, 2.8vw, 40px)/1 "Cormorant Garamond", Georgia, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font: 600 clamp(18px, 2.2vw, 30px)/1.12 "Cormorant Garamond", Georgia, serif;
   color: #092c42;
-  white-space: nowrap;
+  text-align: center;
+  white-space: normal;
+}
+
+.fm-flowstart-front .fm-flowstart-sale-price {
+  font-size: 1.2em;
+}
+
+.fm-flowstart-front .fm-flowstart-regular-price {
+  font: 600 .52em/1.2 Inter, Arial, sans-serif;
+  letter-spacing: .01em;
 }
 
 .fm-flowstart-turn {
@@ -3591,7 +3607,7 @@ body.fm-home,
   .fm-categories .fm-flowstart-card { aspect-ratio: 1.6; }
   .fm-flowstart-front h2 { font-size: clamp(17px, 2.7vw, 24px); }
   .fm-flowstart-front .fm-flowstart-eyebrow { font-size: 9px; }
-  .fm-flowstart-front .fm-flowstart-price { font-size: clamp(20px, 3vw, 28px); }
+  .fm-flowstart-front .fm-flowstart-price { font-size: clamp(16px, 2.3vw, 20px); }
   .fm-flowstart-back { padding: 8px; gap: 5px; }
   .fm-flowstart-back .fm-flowstart-eyebrow { font-size: 7px; }
   .fm-flowstart-back h2 { font-size: 14px; line-height: 1.05; }
@@ -3623,11 +3639,15 @@ body.fm-home,
 
   .fm-flowstart-front .fm-flowstart-price {
     top: auto;
-    bottom: 16%;
+    bottom: 12%;
     right: 5%;
-    font-size: 19px !important;
-    line-height: 1;
+    width: 43%;
+    max-width: 43%;
+    font-size: 15px !important;
+    line-height: 1.15;
   }
+
+  .fm-flowstart-front .fm-flowstart-regular-price { font-size: .56em; }
 
   .fm-flowstart-front .fm-flowstart-turn { display: none !important; }
 
