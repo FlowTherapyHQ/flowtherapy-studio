@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdfaf5">
+  <meta name="description" content="Read FlowTherapy Massage Co. booking, deposit, cancellation, arrival, and care policies.">
+  <title>Booking &amp; Cancellation | FlowTherapy Massage Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../assets/css/style.css?v=5" rel="stylesheet">
+  <link href="../assets/css/making-flow.css" rel="stylesheet">
+  <style>
+    .booking-policy{min-height:70vh;padding:clamp(2rem,6vw,5rem) 1.2rem;background:#fdfaf5;color:#17364a}
+    .booking-policy-shell{width:min(100%,900px);margin:0 auto}
+    .booking-policy-crumb{margin:0 0 1.5rem;color:#536b76;font:600 .75rem/1.5 "DM Sans",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+    .booking-policy-crumb a{color:#12647a;text-underline-offset:.2em}
+    .booking-policy-hero{padding:clamp(1.8rem,5vw,3.6rem);border:1px solid #e6ddd0;border-radius:1.4rem;background:linear-gradient(135deg,#fffefa 0%,#f4eee4 100%)}
+    .booking-policy-eyebrow{margin:0 0 .9rem;color:#287681;font:700 .72rem/1.5 "DM Sans",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+    .booking-policy h1{margin:0;color:#082d42;font:600 clamp(2.6rem,7vw,4.5rem)/.98 "Cormorant Garamond",Georgia,serif}
+    .booking-policy-lede{max-width:62ch;margin:1rem 0 0;color:#405b68;font:400 1rem/1.8 "DM Sans",Arial,sans-serif}
+    .booking-policy-sections{margin-top:1.15rem;padding:clamp(1.2rem,4vw,2.8rem);border:1px solid #e6ddd0;border-radius:1.4rem;background:#fffefa}
+    .booking-policy-sections section{padding:1.3rem 0;border-bottom:1px solid #e9e2d8}
+    .booking-policy-sections section:first-child{padding-top:0}
+    .booking-policy-sections section:last-child{padding-bottom:0;border:0}
+    .booking-policy-sections h2{margin:0 0 .45rem;color:#0a3b50;font:600 clamp(1.5rem,3vw,1.85rem)/1.15 "Cormorant Garamond",Georgia,serif}
+    .booking-policy-sections p{max-width:72ch;margin:0;color:#3f5661;font:400 .97rem/1.8 "DM Sans",Arial,sans-serif}
+    .booking-policy-contact{margin-top:1.15rem;padding:1.45rem clamp(1.2rem,4vw,2.3rem);border-radius:1rem;background:#eaf2ef}
+    .booking-policy-contact h2{margin:0 0 .3rem;color:#0a3b50;font:600 1.7rem/1.2 "Cormorant Garamond",Georgia,serif}
+    .booking-policy-contact p{margin:.25rem 0;color:#334f5d;font:400 .95rem/1.7 "DM Sans",Arial,sans-serif}
+    .booking-policy-contact a{color:#075e72;text-underline-offset:.2em}
+    .booking-policy a:focus-visible{outline:3px solid #147b88;outline-offset:4px;border-radius:2px}
+    .booking-policy-skip{position:absolute;left:-10000px;top:1rem;padding:.7rem 1rem;background:#fff;color:#06354b;z-index:9999}
+    .booking-policy-skip:focus{left:1rem}
+    @media(max-width:600px){.booking-policy{padding-inline:1rem}.booking-policy-hero,.booking-policy-sections{border-radius:1rem}}
+    #client-forms-footer.fm-footer{position:relative;box-sizing:border-box;width:100%;padding:34px clamp(20px,4vw,48px) 20px;background:linear-gradient(125deg,#f8f0e4 65%,#e3eef6);color:#06283e;font-family:"DM Sans",Arial,sans-serif}
+    #client-forms-footer .fm-footer-grid{display:grid;grid-template-columns:1.2fr .8fr 1.3fr .8fr;gap:24px;max-width:1400px;margin:0 auto}
+    #client-forms-footer .fm-footer-grid>div{min-width:0}
+    #client-forms-footer .fm-footer-grid>div+div{border-left:1px solid #d6d4cd;padding-left:22px}
+    #client-forms-footer .fm-footer-brand{display:flex;flex-direction:column;align-items:center;text-align:center}
+    #client-forms-footer .fm-footer-brand img{display:block;width:190px;max-width:100%;height:76px;object-fit:contain;object-position:center;margin:0 auto 12px}
+    #client-forms-footer .fm-footer-brand p{margin:5px 0;color:#06283e;font:600 40px/1.35 "Cormorant Garamond",Georgia,serif;letter-spacing:.2px}
+    #client-forms-footer .fm-footer-brand p:last-child{margin-top:8px;font:italic 500 21px/1.5 "Cormorant Garamond",Georgia,serif;letter-spacing:.15px}
+    #client-forms-footer .fm-footer-grid h3{margin:0 0 12px;color:#06283e;font:700 13px/1.5 "DM Sans",Arial,sans-serif}
+    #client-forms-footer .fm-footer-grid a{display:block;margin:0 0 9px;color:#06283e;font:400 12px/1.65 "DM Sans",Arial,sans-serif;text-decoration:none;overflow-wrap:anywhere}
+    #client-forms-footer .fm-footer-grid a:hover{color:#087da8;text-decoration:underline;text-underline-offset:3px}
+    #client-forms-footer .fm-footer-grid p{margin:0 0 9px;color:#06283e;font:400 12px/1.65 "DM Sans",Arial,sans-serif;overflow-wrap:anywhere}
+    #client-forms-footer .fm-footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1400px;margin:22px auto 0;padding-top:16px;border-top:1px solid #d6d4cd}
+    #client-forms-footer .fm-footer-bottom p{margin:0;color:#06283e;font:400 11px/1.7 "DM Sans",Arial,sans-serif}
+    #client-forms-footer .fm-footer-bottom .fm-btn{display:inline-flex;flex:0 0 auto;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:11px 22px;border:0;border-radius:999px;background:#0798cf;color:#fff;font:600 12px/1.4 "DM Sans",Arial,sans-serif;text-decoration:none}
+    #client-forms-footer .fm-footer-bottom .fm-btn:hover{background:#087da8}
+    @media(max-width:760px){#client-forms-footer.fm-footer{padding:30px 22px 18px}#client-forms-footer .fm-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 18px}#client-forms-footer .fm-footer-grid>div+div{border-left:0;padding-left:0}#client-forms-footer .fm-footer-brand{grid-column:1/-1}#client-forms-footer .fm-footer-grid>div:nth-child(2){grid-column:1}#client-forms-footer .fm-footer-grid>div:nth-child(3){grid-column:2;grid-row:2}#client-forms-footer .fm-footer-grid>div:nth-child(4){grid-column:1/-1;grid-row:3}#client-forms-footer .fm-footer-bottom{gap:12px}#client-forms-footer .fm-footer-bottom p{max-width:65%}}
+    @media(max-width:420px){#client-forms-footer .fm-footer-grid{gap:22px 14px}#client-forms-footer .fm-footer-bottom{align-items:flex-start;flex-direction:column}#client-forms-footer .fm-footer-bottom p{max-width:100%}}
+  </style>
+</head>
+<body>
+  <a class="booking-policy-skip" href="#main-content">Skip to policy content</a>
+  <header class="fm-header">
+    <a class="fm-brand" href="../index.html#top" aria-label="FlowTherapy Massage Co. home"><img src="../assets/images/flowtherapy-logo.png" alt="FlowTherapy Massage Co."></a>
+    <button class="fm-menu-toggle" type="button" aria-expanded="false" aria-controls="fm-nav" aria-label="Open navigation">☰</button>
+    <nav id="fm-nav" aria-label="Primary navigation">
+      <a href="../index.html#ways">More Ways to Flow</a><a href="../index.html#about">About</a><a href="../index.html#flowhub">Resources</a><a href="./client-forms.html">Client Forms</a><a href="./policies-faqs.html">Policies &amp; FAQs</a><a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="fm-tools"><a class="fm-btn" href="https://flowtherapy.noterro.com/" target="_blank" rel="noopener">Book Now <span aria-hidden="true">→</span></a></div>
+  </header>
+  <main id="main-content" class="booking-policy">
+    <div class="booking-policy-shell">
+      <p class="booking-policy-crumb"><a href="../index.html">FlowTherapy</a> &nbsp;/&nbsp; Booking &amp; Cancellation</p>
+      <header class="booking-policy-hero">
+        <p class="booking-policy-eyebrow">Personalized · Therapeutic · Restorative</p>
+        <h1>Booking &amp; Cancellation</h1>
+        <p class="booking-policy-lede">Clear expectations help us protect your appointment time and provide thoughtful, personalized care. Please review these policies before booking.</p>
+      </header>
+      <div class="booking-policy-sections">
+        <section><h2>Booking &amp; deposits</h2><p>Appointments are booked through Noterro. A $50 deposit is required for services with a deposit requirement and is applied toward your session total. Any deposit requirement is shown during booking.</p></section>
+        <section><h2>Cancellations &amp; no-shows</h2><p>Please provide at least 24 hours’ notice to cancel or reschedule. Cancellations with less than 24 hours’ notice and missed appointments result in forfeiture of your deposit. Contact FlowTherapy as soon as you know you cannot attend.</p></section>
+        <section><h2>Arrival &amp; appointment time</h2><p>Please arrive on time and complete your intake forms before your appointment. Late arrivals may shorten your session so the next appointment can begin on time. Your appointment will end at its scheduled time.</p></section>
+        <section><h2>Illness &amp; rescheduling</h2><p>Please contact FlowTherapy promptly if you are experiencing a contagious illness or symptoms that could affect a safe session. Please do not attend while contagious. Late-cancellation exceptions for illness may be considered individually.</p></section>
+        <section><h2>Comfort, consent &amp; professional boundaries</h2><p>Your comfort and consent guide each session. You may decline a technique, request changes, or stop treatment at any time. All services are professional and therapeutic. Sexual requests, harassment, and inappropriate behavior are not accepted.</p></section>
+        <section><h2>Payment &amp; VA Community Care</h2><p>FlowTherapy currently offers private-pay services. VA Community Care participation is pending certification; VA-covered appointments are not yet available. Please do not assume VA coverage until participation and your required authorization have been confirmed. Other insurance is not accepted at this time.</p></section>
+        <section><h2>FlowPass &amp; FlowPack</h2><p>Membership and package terms, including rollover, transferability, validity, and cancellation requirements, are provided separately. Please review your selected plan’s terms before enrolling or purchasing.</p></section>
+      </div>
+      <aside class="booking-policy-contact" aria-labelledby="booking-policy-contact-title">
+        <h2 id="booking-policy-contact-title">Questions?</h2>
+        <p>Call or text <a href="tel:5127903569">512-790-FLOW</a></p>
+        <p><a href="mailto:hello@discoverflowtherapy.com">hello@discoverflowtherapy.com</a></p>
+      </aside>
+    </div>
+  </main>
+  <footer class="fm-footer" id="client-forms-footer">
+    <div class="fm-footer-grid">
+      <div class="fm-footer-brand">
+        <img src="../assets/images/flowtherapy-logo.png" alt="FlowTherapy Massage Co.">
+        <p>FlowTherapy Massage Co.</p>
+        <p>Discover the Rhythm of Relaxation.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="../index.html#top">Home</a>
+        <a href="../index.html#flowpass">FlowPass</a>
+        <a href="../index.html#flowpack">FlowPack</a>
+        <a href="https://app.squareup.com/gift/MLV560DXHSF4H/order">FlowGift</a>
+        <a href="./client-forms.html">Client Forms</a>
+        <a href="./private-events.html">Private Events</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:5127903569">512-790-FLOW</a>
+        <a href="fax:5122331764">512-233-1764 (fax)</a>
+        <a href="mailto:hello@discoverflowtherapy.com">hello@discoverflowtherapy.com</a>
+        <p>1805 Florence Rd. Suite 10, Killeen, TX 76541</p>
+        <p>Serving Bell, Williamson &amp; Travis Co. Texas</p>
+      </div>
+      <div>
+        <h3>Policies</h3>
+        <a href="./booking-cancellation.html" aria-current="page">Booking &amp; Cancellation</a>
+        <a href="../index.html#respect">Respect Massage</a>
+        <a href="../index.html#privacy">Privacy</a>
+        <a href="../index.html#accessibility">Accessibility</a>
+      </div>
+    </div>
+    <div class="fm-footer-bottom">
+      <p>© <span id="footer-year">2026</span> FlowTherapy Massage Co. &nbsp;|&nbsp; Personalized. Therapeutic. Restorative.</p>
+      <a class="fm-btn" href="https://flowtherapy.noterro.com/">Book Now <span aria-hidden="true">→</span></a>
+    </div>
+  </footer>
+  <script src="../assets/js/making-flow.js" defer></script>
+  <script>document.querySelector('#footer-year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
+
