@@ -3508,10 +3508,13 @@ body.fm-home,
   position: absolute;
   top: 52%;
   right: 7%;
+  max-width: 48%;
   margin: 0;
-  font: 600 clamp(22px, 2.8vw, 40px)/1 "Cormorant Garamond", Georgia, serif;
+  font: 600 clamp(18px, 2.2vw, 30px)/1.12 "Cormorant Garamond", Georgia, serif;
   color: #092c42;
-  white-space: nowrap;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .fm-flowstart-turn {
@@ -3591,7 +3594,7 @@ body.fm-home,
   .fm-categories .fm-flowstart-card { aspect-ratio: 1.6; }
   .fm-flowstart-front h2 { font-size: clamp(17px, 2.7vw, 24px); }
   .fm-flowstart-front .fm-flowstart-eyebrow { font-size: 9px; }
-  .fm-flowstart-front .fm-flowstart-price { font-size: clamp(20px, 3vw, 28px); }
+  .fm-flowstart-front .fm-flowstart-price { font-size: clamp(17px, 2.5vw, 21px); }
   .fm-flowstart-back { padding: 8px; gap: 5px; }
   .fm-flowstart-back .fm-flowstart-eyebrow { font-size: 7px; }
   .fm-flowstart-back h2 { font-size: 14px; line-height: 1.05; }
@@ -3625,8 +3628,9 @@ body.fm-home,
     top: auto;
     bottom: 16%;
     right: 5%;
-    font-size: 19px !important;
-    line-height: 1;
+    max-width: 48%;
+    font-size: 15px !important;
+    line-height: 1.15;
   }
 
   .fm-flowstart-front .fm-flowstart-turn { display: none !important; }
