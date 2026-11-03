@@ -53,7 +53,7 @@ if (currentPath.includes("/body-map.html")) {
       currentPath.includes("/flowpass.html") ||
       currentPath.includes("/spaflow.html") ||
       currentPath.includes("/veterans.html") ||
-      currentPath.includes("/corporate.html")
+      currentPath.includes("/corporate-wellness.html")
     ) {
       return "programs";
     }

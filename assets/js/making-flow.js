@@ -36,7 +36,8 @@
  document.querySelectorAll('[data-info]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const entry=descriptions[a.dataset.info];if(!entry)return;const [title,text]=entry;$('#fm-info-title').textContent=title;$('#fm-info-copy').textContent=text;open(info);}));
  const toggle=$('.fm-menu-toggle'),nav=$('#fm-nav');toggle?.addEventListener('click',()=>{const yes=nav?.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(Boolean(yes)));});nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');toggle?.setAttribute('aria-expanded','false');}));
  let textLevel=0;$('#fm-text')?.addEventListener('click',()=>{textLevel=(textLevel+1)%3;document.querySelectorAll('.fm-main,.fm-footer').forEach(el=>el.style.zoom=String(1+textLevel*.1));});
- function hash(){if(location.hash==='#flowpass')showPlan('flowpass-explore');else if(location.hash==='#flowpack')showPlan('flowpack-explore');else if(location.hash==='#services')showMenu('all');}
+ const wasReload=performance.getEntriesByType('navigation')[0]?.type==='reload';
+ function hash(){if(location.hash==='#flowpass')showPlan('flowpass-explore');else if(location.hash==='#flowpack')showPlan('flowpack-explore');else if(location.hash==='#services'){if(!wasReload)showMenu('all');history.replaceState(null,'',location.pathname+location.search);}}
  window.addEventListener('hashchange',hash);hash();
 })();
 
