@@ -96,7 +96,7 @@ FlowHub.articles = [
     "featured": false,
     "image": "",
     "excerpt": "A practical guide to monitor placement, keyboard and mouse position, chair support, lighting, reach, movement, and recovery.",
-    "url": "/articles/building-a-better-workstation.html",
+    "url": "/articles/building-a-better-workstation2.html",
     "tags": [
       "building",
       "better",
