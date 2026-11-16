@@ -15,6 +15,7 @@
     <meta name="twitter:title" content="FlowChair Anywhere | FlowTherapy Massage Co." />
     <meta name="twitter:description" content="Professional chair massage for workplaces, communities, and events across Central Texas." />
     <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/making-flow.css" />
     <link rel="icon" href="../assets/icons/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png" />
     <style>
@@ -224,26 +225,32 @@
       }
     </script>
   </head>
-  <body>
-    <header class="site-header">
-      <div class="wrap nav-row">
-        <a class="brand" href="../index.html" aria-label="FlowTherapy Massage Co. home">
-          <img src="../assets/images/flowtherapy-logo.png" alt="FlowTherapy Massage Co." />
-        </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-          <span aria-hidden="true">☰</span> Menu
-        </button>
-        <nav class="primary-nav" id="primary-nav" aria-label="FlowChair Anywhere">
-          <a href="#top" aria-current="page">FlowChair Anywhere</a>
-          <a href="#workplace">Workplace</a>
-          <a href="#community">Community</a>
-          <a href="#events">Events</a>
-          <a href="#pricing">Pricing</a>
-        </nav>
-        <a class="nav-cta" href="#inquiry">Plan Your Experience</a>
+  <body class="fm-home">
+    <a class="fm-skip" href="#top">Skip to content</a>
+    <header class="fm-header" aria-label="FlowTherapy main site navigation">
+      <a class="fm-brand" href="../index.html#top" aria-label="FlowTherapy Massage Co. home">
+        <img src="../assets/images/flowtherapy-logo.png" alt="FlowTherapy Massage Co." />
+      </a>
+      <button class="fm-menu-toggle" type="button" aria-expanded="false" aria-controls="fm-nav" aria-label="Open navigation">☰</button>
+      <nav id="fm-nav" aria-label="Primary navigation">
+        <a href="../index.html#ways">More Ways to Flow</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#flowhub">Resources</a>
+        <a href="client-forms.html">Client Forms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="fm-tools">
+        <button id="fm-text" type="button" aria-label="Increase text size">A A A</button>
+        <details class="soul-flow-player">
+          <summary>♫ Soul Flow</summary>
+          <div class="soul-flow-panel">
+            <iframe title="Soul Flow playlist" src="https://open.spotify.com/embed/playlist/35kOQC6udy7D7cbl1kyhpG?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </details>
+        <a class="fm-btn" href="https://flowtherapy.noterro.com/">Book Now <span aria-hidden="true">→</span></a>
       </div>
     </header>
-    <main id="top">
+    <main id="top" class="flowchair-main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="wrap hero-grid">
           <div class="hero-copy">
@@ -368,20 +375,47 @@
         </div>
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="wrap footer-row">
-        <a class="footer-brand" href="../index.html" aria-label="FlowTherapy Massage Co. home"><img src="../assets/images/flowtherapy-logo.png" alt="FlowTherapy Massage Co." loading="lazy" /></a>
-        <div class="footer-details">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Central Texas</span>
-          <a href="tel:7373873569">737-387-FLOW</a>
-          <a href="mailto:hello@discoverflowtherapy.com">hello@discoverflowtherapy.com</a>
-          <a href="https://discoverflowtherapy.com">discoverflowtherapy.com</a>
+    <footer class="fm-footer" id="contact">
+      <div class="fm-footer-grid">
+        <div class="fm-footer-brand">
+          <img src="../assets/images/flowtherapy-logo.png" alt="FlowTherapy Massage Co." />
+          <p>FlowTherapy Massage Co.</p>
+          <p>Discover the Rhythm of Relaxation.</p>
         </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="../index.html#top">Home</a>
+          <a href="../index.html#flowpass">FlowPass</a>
+          <a href="../index.html#flowpack">FlowPack</a>
+          <a href="https://app.squareup.com/gift/MLV560DXHSF4H/order">FlowGift</a>
+          <a href="client-forms.html">Client Forms</a>
+          <a href="private-events.html">Private Events</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <a href="tel:7373873569">737-387-FLOW</a>
+          <a href="fax:5122331764">512-233-1764 (fax)</a>
+          <a href="mailto:hello@discoverflowtherapy.com">hello@discoverflowtherapy.com</a>
+          <p>1805 Florence Rd. Suite 10, Killeen, TX 76541</p>
+          <p>Serving Bell, Williamson &amp; Travis Co. Texas</p>
+        </div>
+        <div>
+          <h3>Policies</h3>
+          <a href="booking-cancellation.html">Booking &amp; Cancellation</a>
+          <a href="../index.html#respect">Respect Massage</a>
+          <a href="../index.html#privacy">Privacy</a>
+          <a href="../index.html#accessibility">Accessibility</a>
+        </div>
+      </div>
+      <div class="fm-footer-bottom">
+        <p>© <span id="footer-year">2026</span> FlowTherapy Massage Co. &nbsp; | &nbsp; Personalized. Therapeutic. Restorative.</p>
+        <a class="fm-btn" href="https://flowtherapy.noterro.com/">Book Now <span aria-hidden="true">→</span></a>
       </div>
     </footer>
     <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const primaryNav = document.getElementById("primary-nav");
+      const menuToggle = document.querySelector(".fm-menu-toggle");
+      const primaryNav = document.getElementById("fm-nav");
       menuToggle.addEventListener("click", () => {
         const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
         menuToggle.setAttribute("aria-expanded", String(!isOpen));
@@ -392,6 +426,13 @@
           primaryNav.classList.remove("is-open");
           menuToggle.setAttribute("aria-expanded", "false");
         }
+      });
+      let textLevel = 0;
+      document.getElementById("fm-text").addEventListener("click", () => {
+        textLevel = (textLevel + 1) % 3;
+        document.querySelectorAll(".flowchair-main, .fm-footer").forEach((element) => {
+          element.style.zoom = String(1 + textLevel * 0.1);
+        });
       });
       const inquiryForm = document.querySelector(".inquiry-form");
       const formStatus = document.getElementById("form-status");
