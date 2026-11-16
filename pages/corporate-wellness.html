@@ -20,6 +20,9 @@
     content="Professional chair massage for workplaces, communities, and events across Central Texas." />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/making-flow.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
   <link rel="icon" href="../assets/icons/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png" />
   <style>
@@ -222,14 +225,47 @@
       font-family: Georgia, "Times New Roman", serif;
     }
 
-    h1 {
+    .hero-copy h1 {
       max-width: 560px;
-      margin-bottom: 9px;
+      margin-bottom: 12px;
       color: var(--navy);
-      font-size: clamp(2.7rem, 5.2vw, 4.3rem);
-      font-style: italic;
-      line-height: .98;
-      letter-spacing: -.045em;
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-style: normal;
+      line-height: .96;
+      letter-spacing: 0;
+    }
+
+    .flowchair-word {
+      display: block;
+      font-size: clamp(2.15rem, 4vw, 3.5rem);
+      font-weight: 600;
+      letter-spacing: .075em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .anywhere-word {
+      position: relative;
+      display: inline-block;
+      margin: 2px 0 10px;
+      color: #d48d16;
+      font-family: "Great Vibes", "Brush Script MT", cursive;
+      font-size: clamp(3.8rem, 6.5vw, 5.4rem);
+      font-weight: 400;
+      line-height: .9;
+      letter-spacing: 0;
+    }
+
+    .anywhere-word::after {
+      position: absolute;
+      content: "";
+      left: 12%;
+      right: 3%;
+      bottom: -7px;
+      height: 10px;
+      border-top: 2px solid currentColor;
+      border-radius: 50%;
+      transform: rotate(-3deg);
     }
 
     .hero-lede {
@@ -242,10 +278,11 @@
 
     .hero-tagline {
       margin: 0 0 22px;
-      color: #a66b12;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.13rem;
+      color: var(--navy);
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: clamp(1.35rem, 2.3vw, 1.75rem);
       font-style: italic;
+      font-weight: 500;
     }
 
     .hero-note {
@@ -1152,7 +1189,7 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">FlowTherapy brings wellness to you</p>
-          <h1 id="hero-title">FlowChair Anywhere</h1>
+          <h1 id="hero-title"><span class="flowchair-word">FLOWCHAIR</span><span class="anywhere-word">Anywhere</span></h1>
           <p class="hero-lede">Workplace. Community. Events.</p>
           <p class="hero-tagline">Wellness, Within Reach.</p>
           <p class="hero-note">Professional chair massage for the people who make your workplace, gathering, or
