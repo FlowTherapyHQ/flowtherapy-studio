@@ -799,12 +799,14 @@
       .preview-cta { display:inline-flex; align-items:center; gap:12px; min-height:44px; padding:0 20px; border-radius:999px; color:#fff; background:#0099c9; font-size:.9rem; font-weight:700; text-decoration:none; white-space:nowrap; }
       .private-events-hero { max-width:none; min-height:500px; background-size:auto,70% 120%; background-position:center,calc(100% + 72px) center; margin:0 0 76px; padding:68px clamp(32px,6vw,88px); display:flex; flex-direction:column; align-items:flex-start; justify-content:center; text-align:left; border:0; border-radius:0 0 0 100px; box-shadow:none; background:linear-gradient(90deg,#fbf8f0 0%,#fbf8f0 38%,rgba(251,248,240,.9) 48%,rgba(251,248,240,.14) 71%,rgba(251,248,240,0) 100%),url("../assets/images/private-flow-events-hero.png") right center/58% 100% no-repeat,#fbf8f0; }
       .private-events-hero { background-size:auto,70% 120%; background-position:center,calc(100% + 72px) center; }
-      .private-events-hero::after { left:clamp(32px,6vw,88px); bottom:38px; width:90px; transform:none; background:linear-gradient(90deg,#c58b25,rgba(197,139,37,.08)); }
+      .private-events-hero::after { content: none; }
       .private-events-hero .eyebrow { color:#b47a18; }
       .private-events-hero h1 { max-width:560px; margin:0 0 18px; color:#082d42; font-family:"Playfair Display",Georgia,serif; font-size:clamp(2.7rem,5.4vw,4.65rem); font-weight:600; line-height:1.06; letter-spacing:-.035em; }
       .private-events-hero h2 { max-width:530px; margin:0 0 14px; color:#123b54; font-family:"Playfair Display",Georgia,serif; font-size:clamp(1.25rem,2.15vw,1.65rem); line-height:1.35; }
       .private-events-hero .hero-copy { max-width:510px; margin:0 0 22px; color:#536978; font-size:1.02rem; line-height:1.7; }
       .private-events-page .button { min-height:48px; padding:12px 24px; color:#092f47; background:linear-gradient(135deg,#f5cd70,#d79c34); border:0; box-shadow:0 8px 18px rgba(113,73,9,.16); }
+      .private-events-hero-action { display:flex; align-items:center; gap:14px; }
+      .private-events-hero-glint { display:block; flex:0 0 3px; width:3px; height:52px; border-radius:999px; background:linear-gradient(180deg,transparent,#c58b25 25%,#c58b25 75%,transparent); }
       .private-events-section { margin-bottom:76px; }
       .section-heading { max-width:760px; margin:0 auto 32px; text-align:center; }
       .section-heading .eyebrow { color:#b47a18; text-shadow:none; }
@@ -877,9 +879,10 @@
             brief, focused massage experiences designed around your event.
           </p>
 
-          <a class="button" href="#private-event-inquiry">
-            Plan Your Private Event
-          </a>
+          <div class="private-events-hero-action">
+            <span class="private-events-hero-glint" aria-hidden="true"></span>
+            <a class="button" href="#private-event-inquiry">Plan Your Private Event</a>
+          </div>
         </section>
 
         <section class="studio-option" aria-labelledby="studio-option-title">

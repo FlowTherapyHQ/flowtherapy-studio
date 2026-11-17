@@ -316,12 +316,19 @@
       background: linear-gradient(90deg, rgba(251, 248, 240, .18), transparent 32%), linear-gradient(0deg, rgba(8, 45, 66, .12), transparent 32%);
     }
 
+    .hero-action {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
     .gold-rule {
-      width: 102px;
-      height: 3px;
-      margin-top: 28px;
-      border-radius: 100%;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      flex: 0 0 3px;
+      width: 3px;
+      height: 48px;
+      margin: 0;
+      border-radius: 999px;
+      background: linear-gradient(180deg, transparent, var(--gold) 25%, var(--gold) 75%, transparent);
     }
 
     .section {
@@ -953,9 +960,7 @@
         max-width: 500px;
       }
 
-      .gold-rule {
-        margin-top: 20px;
-      }
+      .gold-rule { height: 44px; }
 
       .hero-photo {
         min-height: 230px;
@@ -1195,8 +1200,10 @@
           <p class="hero-tagline">Wellness, Within Reach.</p>
           <p class="hero-note">Professional chair massage for the people who make your workplace, gathering, or
             celebration special.</p>
-          <a class="button" href="#inquiry">Plan Your Experience <span aria-hidden="true">→</span></a>
-          <span class="gold-rule" aria-hidden="true"></span>
+          <div class="hero-action">
+            <span class="gold-rule" aria-hidden="true"></span>
+            <a class="button" href="#inquiry">Plan Your Experience <span aria-hidden="true">→</span></a>
+          </div>
         </div>
         <div class="hero-photo">
           <img src="../assets/images/flowchair-anywhere-black-silver.webp"
@@ -1268,7 +1275,7 @@
               </svg></span>
             <div>
               <h3 id="individual-title">Choose Your Flow</h3>
-              <p>Individual sessions · Employee-paid</p>
+              <p>Individual sessions </p>
             </div>
           </div>
           <ul class="price-list">
@@ -1396,7 +1403,7 @@
                 <option>Workplace wellness</option>
                 <option>Community gathering</option>
                 <option>Private event or conference</option>
-                <option>Employee-paid individual sessions</option>
+                <option> Individual sessions</option>
                 <option>Organization-paid experience — 90 minutes ($225)</option>
                 <option>Organization-paid experience — 2 hours ($325)</option>
                 <option>Organization-paid experience — 4 hours ($575)</option>
