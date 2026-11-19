@@ -3931,3 +3931,10 @@ body.fm-home,
 #fm-plan-dialog .ft-enroll-drawer-header p {
   color: #36566b !important;
 }
+/* Separate selected-plan label from plan details */
+#fm-plan-dialog .ft-enroll-selected {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
