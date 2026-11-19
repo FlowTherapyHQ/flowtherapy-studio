@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your First Massage Guide | FlowTherapy Massage Co.</title>
+    <meta
+      name="description"
+      content="A free first massage guide from FlowTherapy Massage Co. Learn how to prepare, complete your consultation forms, arrive on time, and speak up during your massage."
+    />
+    <link rel="canonical" href="https://discoverflowtherapy.com/pages/first-massage-guide.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your First Massage, Made Easier | FlowTherapy" />
+    <meta
+      property="og:description"
+      content="Download a free guide to help you feel prepared, comfortable, and confident at your first massage."
+    />
+    <meta property="og:url" content="https://discoverflowtherapy.com/pages/first-massage-guide.html" />
+    <meta
+      property="og:image"
+      content="https://discoverflowtherapy.com/assets/images/flowresources/first-massage-checklist.png"
+    />
+    <meta name="theme-color" content="#faf8f2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/style.css?v=5" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/making-flow.css" />
+    <style>
+      body.flowtherapy-home.fm-guide-page {
+        background: #faf8f2;
+        color: #173450;
+      }
+
+      .fm-guide-page main {
+        min-height: 70vh;
+        background: #faf8f2;
+      }
+
+      .fm-guide-shell {
+        width: min(1160px, calc(100% - 48px));
+        margin-inline: auto;
+      }
+
+      .fm-guide-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
+        align-items: center;
+        gap: clamp(28px, 5vw, 72px);
+        padding-block: clamp(42px, 7vw, 82px);
+      }
+
+      .fm-guide-eyebrow {
+        margin: 0 0 14px;
+        color: #b77819;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .fm-guide-hero h1,
+      .fm-guide-section h2 {
+        margin: 0;
+        color: #0b3047;
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 600;
+      }
+
+      .fm-guide-hero h1 {
+        max-width: 650px;
+        font-size: clamp(2.55rem, 5vw, 4.5rem);
+        letter-spacing: -0.04em;
+        line-height: 1.02;
+      }
+
+      .fm-guide-lead {
+        max-width: 560px;
+        margin: 20px 0 0;
+        color: #506b7e;
+        font-size: clamp(1rem, 1.5vw, 1.12rem);
+        line-height: 1.7;
+      }
+
+      .fm-guide-hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px 20px;
+        margin-top: 26px;
+      }
+
+      .fm-guide-download,
+      .fm-guide-newsletter-link {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 12px 20px;
+        font-size: 0.92rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .fm-guide-download {
+        background: linear-gradient(120deg, #f2c85e, #d99a26);
+        box-shadow: 0 10px 24px rgba(111, 74, 15, 0.16);
+        color: #122b3d;
+      }
+
+      .fm-guide-download:hover,
+      .fm-guide-newsletter-link:hover {
+        transform: translateY(-2px);
+      }
+
+      .fm-guide-download:focus-visible,
+      .fm-guide-newsletter-link:focus-visible {
+        outline: 3px solid #0874c9;
+        outline-offset: 3px;
+      }
+
+      .fm-guide-availability {
+        color: #61778a;
+        font-size: 0.85rem;
+      }
+
+      .fm-guide-preview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .fm-guide-preview figure {
+        overflow: hidden;
+        margin: 0;
+        border: 1px solid #e6ddce;
+        border-radius: 14px;
+        background: #fffefa;
+        box-shadow: 0 14px 34px rgba(20, 48, 66, 0.1);
+      }
+
+      .fm-guide-preview figure:nth-child(2) {
+        transform: translateY(22px);
+      }
+
+      .fm-guide-preview img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .fm-guide-preview figcaption {
+        padding: 10px 12px 12px;
+        color: #173450;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 0.94rem;
+        font-weight: 600;
+      }
+
+      .fm-guide-section {
+        padding-block: clamp(34px, 5vw, 58px);
+        border-top: 1px solid #e8dfd0;
+      }
+
+      .fm-guide-section h2 {
+        font-size: clamp(1.75rem, 3vw, 2.35rem);
+        letter-spacing: -0.025em;
+        line-height: 1.15;
+      }
+
+      .fm-guide-section-intro {
+        max-width: 700px;
+        margin: 10px 0 24px;
+        color: #61778a;
+        line-height: 1.6;
+      }
+
+      .fm-guide-reminders {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .fm-guide-reminder {
+        min-height: 190px;
+        padding: 20px;
+        border: 1px solid #e7dfd2;
+        border-radius: 13px;
+        background: #fffefa;
+      }
+
+      .fm-guide-reminder small {
+        color: #b77819;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .fm-guide-reminder h3 {
+        margin: 10px 0 7px;
+        color: #0b3047;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.22rem;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      .fm-guide-reminder p {
+        margin: 0;
+        color: #506b7e;
+        font-size: 0.92rem;
+        line-height: 1.58;
+      }
+
+      .fm-guide-reminder a {
+        color: #0874a7;
+        text-underline-offset: 3px;
+      }
+
+      .fm-guide-newsletter {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 24px;
+        padding: clamp(24px, 4vw, 36px);
+        border-radius: 16px;
+        background: #0b3047;
+        color: #fff;
+      }
+
+      .fm-guide-newsletter h2 {
+        color: #fff;
+        font-size: clamp(1.65rem, 3vw, 2.2rem);
+      }
+
+      .fm-guide-newsletter p {
+        max-width: 660px;
+        margin: 9px 0 0;
+        color: #e1ebf0;
+        line-height: 1.55;
+      }
+
+      .fm-guide-newsletter-link {
+        flex-shrink: 0;
+        background: #fff;
+        color: #10334a;
+      }
+
+      .fm-guide-footer {
+        margin-top: clamp(42px, 6vw, 72px);
+      }
+
+      @media (max-width: 760px) {
+        .fm-guide-shell {
+          width: min(100% - 32px, 580px);
+        }
+
+        .fm-guide-hero {
+          grid-template-columns: 1fr;
+          gap: 34px;
+          padding-block: 40px;
+        }
+
+        .fm-guide-preview {
+          max-width: 560px;
+          margin: 0 auto;
+        }
+
+        .fm-guide-reminders {
+          grid-template-columns: 1fr;
+        }
+
+        .fm-guide-reminder {
+          min-height: 0;
+        }
+
+        .fm-guide-newsletter {
+          grid-template-columns: 1fr;
+          align-items: start;
+        }
+      }
+
+      @media (max-width: 440px) {
+        .fm-guide-preview {
+          grid-template-columns: 1fr;
+          max-width: 330px;
+        }
+
+        .fm-guide-preview figure:nth-child(2) {
+          transform: none;
+        }
+
+        .fm-guide-hero-actions {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .fm-guide-download,
+        .fm-guide-newsletter-link {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="flowtherapy-home fm-home fm-guide-page">
+        <a class="fm-skip" href="#fm-guide-title">Skip to content</a>
+    <header class="fm-header">
+      <a class="fm-brand" href="../index.html#top" aria-label="FlowTherapy Massage Co. home">
+        <img src="../assets/images/flowtherapy-logo.png" alt="FlowTherapy Massage Co." />
+      </a>
+      <button
+        class="fm-menu-toggle"
+        aria-expanded="false"
+        aria-controls="fm-nav"
+        aria-label="Open navigation"
+        type="button"
+      >☰</button>
+      <nav id="fm-nav" aria-label="Primary navigation">
+        <a href="../index.html#ways">More Ways to Flow</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#flowhub">Resources</a>
+        <a href="./client-forms.html">Client Forms</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <div class="fm-tools">
+        <button id="fm-text" aria-label="Increase text size" type="button">A A A</button>
+        <details class="soul-flow-player">
+          <summary>♫ Soul Flow</summary>
+          <div class="soul-flow-panel">
+            <iframe
+              title="Soul Flow playlist"
+              src="https://open.spotify.com/embed/playlist/35kOQC6udy7D7cbl1kyhpG?utm_source=generator"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </details>
+        <a class="fm-btn" href="https://flowtherapy.noterro.com/" target="_blank" rel="noopener noreferrer">
+          Book Now <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="fm-guide-shell fm-guide-hero" aria-labelledby="fm-guide-title">
+        <div>
+          <p class="fm-guide-eyebrow">A free FlowResource</p>
+          <h1 id="fm-guide-title">Your first massage, made easier.</h1>
+          <p class="fm-guide-lead">
+            Feel prepared, know what to expect, and remember that you can speak up. This practical guide brings together the First Massage Checklist and SPEAK UP resources.
+          </p>
+          <div class="fm-guide-hero-actions">
+            <a class="fm-guide-download" href="../documents/first-massage-guide.pdf" download>
+              Download the free guide <span aria-hidden="true">&nbsp;↓</span>
+            </a>
+            <span class="fm-guide-availability">Three-page PDF · Save or print</span>
+          </div>
+        </div>
+        <div class="fm-guide-preview" aria-label="Previews of the included guides">
+          <figure>
+            <img src="../assets/images/flowresources/first-massage-checklist.png" alt="First Massage Checklist: preparation, communication, aftercare, and next steps" />
+            <figcaption>First Massage Checklist</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/flowresources/speak-up-get-the-most.png" alt="SPEAK UP: ways to share preferences and feedback during massage" />
+            <figcaption>SPEAK UP: Your comfort matters</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="fm-guide-section" aria-labelledby="fm-guide-prepare-title">
+        <div class="fm-guide-shell">
+          <p class="fm-guide-eyebrow">Before you arrive</p>
+          <h2 id="fm-guide-prepare-title">A smoother session starts with a little preparation.</h2>
+          <p class="fm-guide-section-intro">
+            The written introduction in your guide explains why forms and timing matter, then the checklists offer simple reminders for before, during, and after your massage.
+          </p>
+          <div class="fm-guide-reminders">
+            <article class="fm-guide-reminder">
+              <small>Forms · Before your first massage</small>
+              <h3>Complete your consultation forms ahead of time.</h3>
+              <p>
+                Texas TDLR requires an initial consultation and a signed consultation document before your first massage. Completing FlowTherapy's forms before your appointment also gives your therapist time to review your goals, relevant health information, and preferences so the session can be prepared for you. <a href="https://www.tdlr.texas.gov/mas/forms/Consultation.pdf" target="_blank" rel="noopener noreferrer">Read TDLR's consultation guidance</a>.
+              </p>
+            </article>
+            <article class="fm-guide-reminder">
+              <small>Timing · Your appointment</small>
+              <h3>Please arrive on time.</h3>
+              <p>
+                Appointments are scheduled closely. If you arrive late, your massage may need to be shortened so the next appointment can begin on time. Your session will still end at its scheduled time.
+              </p>
+            </article>
+            <article class="fm-guide-reminder">
+              <small>Communication · During your massage</small>
+              <h3>Your comfort matters.</h3>
+              <p>
+                You can ask for a pressure adjustment, a position change, a quieter session, or a different focus at any time. Your feedback helps your therapist adapt the session to you.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="fm-guide-section" aria-labelledby="fm-guide-newsletter-title">
+        <div class="fm-guide-shell fm-guide-newsletter">
+          <div>
+            <p class="fm-guide-eyebrow">One helpful email each month</p>
+            <h2 id="fm-guide-newsletter-title">Stay in the Flow.</h2>
+            <p>
+              FlowNotes brings wellness ideas, new FlowResources, practice updates, and occasional offers to your inbox. The guide is available to download without signing up.
+            </p>
+          </div>
+          <a
+            class="fm-guide-newsletter-link"
+            href="https://squareup.com/customer-programs/enroll/wVzBEQMsip6B?utm_medium=copied-link&amp;utm_source=online"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Join monthly FlowNotes <span aria-hidden="true">&nbsp;→</span></a>
+        </div>
+      </section>
+    </main>
+
+        <footer class="fm-footer fm-guide-footer" id="contact">
+      <div class="fm-footer-grid">
+        <div class="fm-footer-brand">
+          <img src="../assets/images/flowtherapy-logo.png" alt="FlowTherapy Massage Co." />
+          <p>FlowTherapy Massage Co.</p>
+          <p>Discover the Rhythm of Relaxation.</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <a href="../index.html#top">Home</a>
+          <a href="../index.html#ways">More Ways to Flow</a>
+          <a href="../index.html#flowhub">FlowLibrary &amp; FlowNotes</a>
+          <a href="./client-forms.html">Client Forms</a>
+          <a href="./private-events.html">Private Events</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <a href="tel:7373873569">737-387-FLOW</a>
+          <a href="mailto:hello@discoverflowtherapy.com">hello@discoverflowtherapy.com</a>
+          <p>1805 Florence Rd. Suite 10, Killeen, TX 76541</p>
+          <p>Serving Bell, Williamson &amp; Travis Counties, Texas</p>
+        </div>
+
+        <div>
+          <h3>Helpful Information</h3>
+          <a href="./booking-cancellation.html">Booking &amp; Cancellation</a>
+          <a href="./policies-faqs.html">Policies &amp; FAQs</a>
+        </div>
+      </div>
+
+      <div class="fm-footer-bottom">
+        <p>© <span id="footer-year">2026</span> FlowTherapy Massage Co. &nbsp; | &nbsp; Personalized. Therapeutic. Restorative.</p>
+        <a class="fm-btn" href="https://flowtherapy.noterro.com/" target="_blank" rel="noopener noreferrer">
+          Book Now <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </footer>
+    <script src="../assets/js/making-flow.js" defer></script>
+    <script>
+      (() => {
+        let level = 0;
+        document.getElementById("fm-text")?.addEventListener("click", () => {
+          level = (level + 1) % 3;
+          document.querySelector(".fm-guide-page main").style.zoom = String(1 + level * 0.1);
+        });
+        const year = document.getElementById("footer-year");
+        if (year) year.textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>

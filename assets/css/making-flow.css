@@ -3575,15 +3575,21 @@ body.fm-home,
 
 .fm-flowstart-back h2 {
   margin: 0;
-  font: 500 26px/1.1 "Cormorant Garamond", Georgia, serif;
+  font: 500 30px/1.1 "Cormorant Garamond", Georgia, serif;
   color: #f9f8f4 !important;
   white-space: normal;
 }
 
 .fm-flowstart-back p {
   margin: 0;
-  font: 400 11px/1.5 Inter, Arial, sans-serif;
+  font: 400 16px/1.5 Inter, Arial, sans-serif;
   color: #e1eaf0;
+}
+/* FLOWSTART — DESKTOP EYEBROW */
+@media (min-width: 801px) {
+  .fm-flowstart-card .fm-flowstart-front-copy .fm-flowstart-eyebrow {
+    font-size: 16px;
+  }
 }
 
 .fm-flowstart-book {
