@@ -3938,3 +3938,65 @@ body.fm-home,
   gap: 6px;
   flex-wrap: wrap;
 }
+
+/* =========================================
+   FLOWPASS / FLOWPACK — MOBILE OVERFLOW FIX
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  /* Consistent width calculations */
+  #fm-plan-dialog,
+  #fm-plan-dialog * {
+    box-sizing: border-box;
+  }
+
+  /* Keep the modal inside the viewport */
+  #fm-plan-dialog {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+    overflow-x: hidden;
+  }
+
+  /* Enrollment stage */
+  #fm-plan-dialog #fm-enrollment-stage {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  /* Enrollment header */
+  #fm-plan-dialog .ft-enroll-drawer-header {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Selected plan banner */
+  #fm-plan-dialog .ft-enroll-selected {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* Form and its children */
+  #fm-plan-dialog form {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  #fm-plan-dialog input,
+  #fm-plan-dialog textarea,
+  #fm-plan-dialog select {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+}
