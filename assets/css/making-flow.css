@@ -3991,12 +3991,19 @@ body.fm-home,
     min-width: 0;
   }
 
-  #fm-plan-dialog input,
-  #fm-plan-dialog textarea,
-  #fm-plan-dialog select {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
+ 
+#fm-plan-dialog input:not([type="checkbox"]):not([type="radio"]),
+#fm-plan-dialog textarea,
+#fm-plan-dialog select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
 
+#fm-plan-dialog input[type="checkbox"],
+#fm-plan-dialog input[type="radio"] {
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+}
 }
