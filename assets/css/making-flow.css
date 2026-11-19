@@ -1515,10 +1515,15 @@ background: #087EA4 !important;
 
 }
 
-.fm-plan-dialog .ft-plan-explore {
-
+#fm-plan-dialog .ft-plan-explore {
   margin: 0 !important;
-
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  max-width: none !important;
 }
 
 .fm-info-dialog {
@@ -3903,4 +3908,26 @@ body.fm-home,
   .fm-client-start-card {
     padding: 22px;
   }
+}
+/* FlowPass / FlowPack enrollment selected-plan bar */
+#fm-plan-dialog .ft-enroll-selected {
+  background: #e8f2f8 !important;
+  color: #06283e !important;
+  border: 1px solid #b8d5e5 !important;
+  border-radius: 18px;
+}
+/* FlowPass / FlowPack enrollment header */
+#fm-plan-dialog .ft-enroll-drawer-header {
+  background: #e8f2f8 !important;
+  color: #06283e !important;
+  padding: 24px 26px !important;
+}
+
+#fm-plan-dialog .ft-enroll-drawer-header h1,
+#fm-plan-dialog .ft-enroll-drawer-header h2 {
+  color: #06283e !important;
+}
+
+#fm-plan-dialog .ft-enroll-drawer-header p {
+  color: #36566b !important;
 }
