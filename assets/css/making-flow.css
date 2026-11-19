@@ -2647,21 +2647,32 @@ body.fm-home,
 /* FlowPass and FlowPack details */
 
 #fm-plan-dialog {
-
-  width: min(740px, 94vw);
-
+  box-sizing: border-box;
+  width: min(740px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
   max-height: 88vh;
-
+  max-height: calc(100dvh - 32px);
+  overflow-x: hidden;
+  overflow-y: auto;
   background: #f5edde;
-
   color: #06283e;
-
-  padding: 24px;
-
+  padding: clamp(16px, 4vw, 24px);
   border: 1px solid #c9b897;
-
   border-radius: 18px;
+}
 
+#fm-plan-dialog *,
+#fm-plan-dialog *::before,
+#fm-plan-dialog *::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+#fm-plan-dialog .ft-plan-explore,
+#fm-plan-dialog .ft-plan-explore-inner {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 #fm-plan-dialog .fm-dialog-heading {
@@ -2761,13 +2772,12 @@ body.fm-home,
 }
 
 #fm-plan-dialog .fm-plan-options {
-
   display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 260px), 1fr)
+  );
   gap: 12px;
-
 }
 
 #fm-plan-dialog .ft-plan-choice {
@@ -2937,29 +2947,6 @@ body.fm-home,
   font-size: 13px !important;
 
 }
-
-@media (max-width: 480px) {
-
-  #fm-plan-dialog {
-
-    padding: 18px;
-
-  }
-
-  #fm-plan-dialog .fm-plan-options {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  #fm-plan-dialog .fm-plan-content h2 {
-
-    font-size: 30px;
-
-  }
-
-}
-
 /* Selected FlowPass / FlowPack option */
 
 #fm-plan-dialog .ft-plan-choice[aria-pressed="true"] {
