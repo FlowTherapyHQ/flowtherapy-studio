@@ -985,10 +985,27 @@ body.fm-page .fm-hero::after {
 @media (max-width: 760px) {
   /* Keep the mobile header compact and keep its controls on one row. */
   body.fm-page .fm-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
     min-height: 76px !important;
     gap: 10px !important;
     padding: 8px 16px !important;
     align-items: center !important;
+    background: var(--fm-ivory) !important;
+    box-shadow: 0 3px 12px rgba(3, 29, 45, .10);
+  }
+  body.fm-page .fm-header nav:not(.is-open) {
+    display: none !important;
+  }
+  body.fm-page .fm-header nav.is-open {
+    display: flex !important;
+    flex-basis: 100%;
+    padding: 8px 0 4px;
+    border-top: 1px solid rgba(187, 112, 22, .22);
+  }
+  body.fm-page .fm-header nav.is-open a {
+    padding: 12px 10px;
   }
   body.fm-page .fm-header .fm-brand,
   body.fm-page .fm-header .fm-brand img[src*="flowtherapy-logo"] {
@@ -1233,7 +1250,7 @@ body.fm-page .fm-hero::after {
 
 @media (max-width: 1000px) {
   .fm-page .fm-footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     row-gap: 26px;
   }
 
@@ -1242,7 +1259,8 @@ body.fm-page .fm-hero::after {
   }
 
   .fm-page .fm-footer-grid > div:nth-child(4) {
-    grid-column: 2 / 3;
+    display: block;
+    grid-column: 3 / 4;
   }
 }
 
@@ -1252,7 +1270,7 @@ body.fm-page .fm-hero::after {
   }
 
   .fm-page .fm-footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px 14px;
   }
 
@@ -1296,20 +1314,15 @@ body.fm-page .fm-hero::after {
   }
 
   .fm-page .fm-footer-grid > div:nth-child(4) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 12px;
-    grid-column: 1 / -1;
-  }
-
-  .fm-page .fm-footer-grid > div:nth-child(4) h3 {
-    flex-basis: 100%;
+    display: block;
+    grid-column: 3 / 4;
   }
 
   .fm-page .fm-footer-grid > div:nth-child(4) a {
-    display: inline-block;
-    width: auto;
-    margin-bottom: 4px;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
   }
 
   .fm-page .fm-footer h3 {
@@ -1357,6 +1370,13 @@ body.fm-page .fm-hero::after {
     body.fm-page .fm-service-area {
       align-items: center;
       text-align: center;
+    }
+  }
+  /* Mobile only: suppress inherited link underlines throughout the clickable service cards. */
+  @media (max-width: 760px) {
+    body.fm-page a.fm-service-card,
+    body.fm-page a.fm-service-card * {
+      text-decoration: none !important;
     }
   }
 </style>
@@ -1809,7 +1829,39 @@ body.fm-page .fm-hero::after {
   </div>
 </footer>
 
-<script>
+<script>  // Mobile navigation: toggle the menu and keep its state accessible.
+  const menuButton = document.querySelector(".fm-menu-toggle");
+  const primaryNav = document.getElementById("fm-nav");
+
+  if (menuButton && primaryNav) {
+    function setMobileMenuOpen(open) {
+      primaryNav.classList.toggle("is-open", open);
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      menuButton.textContent = open ? "×" : "☰";
+      menuButton.closest(".fm-header")?.classList.toggle("fm-menu-open", open);
+    }
+
+    menuButton.addEventListener("click", () => {
+      setMobileMenuOpen(menuButton.getAttribute("aria-expanded") !== "true");
+    });
+
+    primaryNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setMobileMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setMobileMenuOpen(false);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (window.matchMedia("(max-width: 760px)").matches &&
+          !event.target.closest(".fm-header")) {
+        setMobileMenuOpen(false);
+      }
+    });
+  }
+
   // Shared header: text-size control
   const textSizeButton = document.getElementById("fm-text");
 
