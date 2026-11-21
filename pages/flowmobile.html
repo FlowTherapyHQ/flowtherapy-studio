@@ -1111,10 +1111,23 @@ body.fm-page .fm-hero::after {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .fm-details-image,
-  .fm-details-image img {
+  /* Show the full square photo on phones so the steam remains in frame. */
+  .fm-details-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: min(80vw, 360px);
     min-height: 0;
-    height: 230px;
+    background: var(--fm-navy);
+  }
+  .fm-details-image img {
+    width: min(80vw, 360px);
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center;
   }
 
   .fm-details-copy {
@@ -1236,20 +1249,6 @@ body.fm-page .fm-hero::after {
   line-height: 1.5;
 }
 
-@media (max-width: 760px) {
-  .fm-page .fm-footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 26px;
-  }
-
-  .fm-page .fm-footer-grid > div:nth-child(3) {
-    grid-column: 1 / 2;
-  }
-
-  .fm-page .fm-footer-grid > div:nth-child(4) {
-    grid-column: 2 / 3;
-  }
-}
 
 
 @media (max-width: 760px) {
@@ -1258,8 +1257,8 @@ body.fm-page .fm-hero::after {
   }
 
   .fm-page .fm-footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 10px;
   }
 
   .fm-page .fm-footer-brand {
@@ -1302,20 +1301,19 @@ body.fm-page .fm-hero::after {
   }
 
   .fm-page .fm-footer-grid > div:nth-child(4) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 12px;
-    grid-column: 1 / -1;
-  }
-
-  .fm-page .fm-footer-grid > div:nth-child(4) h3 {
-    flex-basis: 100%;
+    display: block;
+    min-width: 0;
+    grid-column: 3 / 4;
   }
 
   .fm-page .fm-footer-grid > div:nth-child(4) a {
-    display: inline-block;
+    display: block;
     width: auto;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+  }
+
+  .fm-page .fm-footer-grid > div a {
+    overflow-wrap: anywhere;
   }
 
   .fm-page .fm-footer h3 {
@@ -1376,6 +1374,7 @@ body.fm-page .fm-hero::after {
   <button
     class="fm-menu-toggle"
     aria-expanded="false"
+    type="button"
     aria-controls="fm-nav"
     aria-label="Open navigation"
   >
@@ -1810,6 +1809,19 @@ body.fm-page .fm-hero::after {
 </footer>
 
 <script>
+  // Mobile navigation toggle
+  const menuToggle = document.querySelector(".fm-menu-toggle");
+  const primaryNav = document.getElementById("fm-nav");
+
+  if (menuToggle && primaryNav) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      primaryNav.classList.toggle("is-open", !isOpen);
+    });
+  }
+
   // Shared header: text-size control
   const textSizeButton = document.getElementById("fm-text");
 
