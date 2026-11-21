@@ -184,10 +184,10 @@ body.fm-page .fm-hero-image img {
   transform: none;
 }
 
-/* Desktop-only branded vehicle accent. Hidden at mobile and tablet sizes. */
+/* Desktop-only branded vehicle accent. Hidden only on mobile sizes. */
 body.fm-page .fm-hero-car { display: none; }
 
-@media (min-width: 1001px) {
+@media (min-width: 761px) {
   body.fm-page .fm-hero {
     height: 500px !important;
     min-height: 500px !important;
@@ -963,7 +963,7 @@ body.fm-page .fm-hero::after {
   transform: translateY(-2px);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 760px) {
   .fm-details {
     grid-template-columns: minmax(280px, 38%) minmax(0, 62%);
   }
@@ -1236,7 +1236,7 @@ body.fm-page .fm-hero::after {
   line-height: 1.5;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 760px) {
   .fm-page .fm-footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 26px;
@@ -1346,7 +1346,7 @@ body.fm-page .fm-hero::after {
 }
 
   /* Desktop-only service-area alignment and service-card link styling. */
-  @media (min-width: 1001px) {
+  @media (min-width: 761px) {
     body.fm-page .fm-service-area {
       align-items: center;
       text-align: center;
