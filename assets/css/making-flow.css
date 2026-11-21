@@ -512,6 +512,33 @@
 
 }
 
+.fm-category.fm-flowmobile-category {
+  background: #082a27;
+}
+
+.fm-category.fm-flowmobile-category .fm-flowmobile-media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.fm-category.fm-flowmobile-category .fm-flowmobile-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+@media (min-width: 801px) {
+  .fm-category.fm-flowmobile-category .fm-flowmobile-media img {
+    object-fit: contain;
+    object-position: center;
+    padding: 8px 0 40px;
+    box-sizing: border-box;
+  }
+}
 .fm-category:not(.fm-flowstart-card) > div {
 
   position: absolute;
@@ -1670,13 +1697,21 @@ background: #087EA4 !important;
 
   .fm-brand {
 
-    width: 170px;
+    width: 112px;
 
   }
 
   .fm-brand img {
 
-    height: 56px;
+    height: auto;
+
+  }
+
+  .fm-header .fm-brand img[src*="flowtherapy-logo"] {
+
+    width: 112px;
+
+    height: auto;
 
   }
 
@@ -2020,7 +2055,8 @@ background: #087EA4 !important;
 
   }
 
-  .fm-category:not(.fm-flowstart-card) > div {
+  
+.fm-category:not(.fm-flowstart-card) > div {
 
     left: 10px;
 
@@ -2198,11 +2234,6 @@ body.fm-home,
 
 .fm-tools a:not(.fm-btn),
 
-.fm-hero-copy,
-
-.fm-hero-copy h1,
-
-.fm-hero-copy p,
 
 .fm-signatures h2,
 
@@ -3993,4 +4024,11 @@ body.fm-home,
   max-width: none;
   flex: 0 0 auto;
 }
+}
+
+/* Mobile: keep the five service-card subtitles; hide only their titles. */
+@media (max-width: 800px) {
+  .fm-category:not(.fm-flowstart-card) > div > h2 {
+    display: none !important;
+  }
 }

@@ -1,0 +1,1871 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#031d2d">
+
+  <title>FlowMobile | Premium Mobile Massage | FlowTherapy</title>
+  <meta name="description" content="FlowMobile brings professional therapeutic massage to your home, office, or  setting. Discover the Rhythm of Relaxation with FlowTherapy Massage Co.">
+
+  <link rel="canonical" href="https://discoverflowtherapy.com/pages/flowmobile.html">
+  <meta property="og:title" content="FlowMobile | FlowTherapy Massage Co.">
+  <meta property="og:description" content="Professional therapeutic massage, brought to your space.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://discoverflowtherapy.com/pages/flowmobile.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/making-flow.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="../assets/icons/favicon.ico">
+
+  <style>
+    :root {
+      --fm-navy: #031d2d;
+      --fm-deep: #041c2b;
+      --fm-blue: #0876a7;
+      --fm-amber: #f5a623;
+      --fm-ivory: #fbf3e7;
+      --fm-cream: #f5ecdf;
+      --fm-ink: #071f36;
+      --fm-muted: #596b78;
+      --fm-line: rgba(8, 45, 66, .15);
+      --fm-shadow: 0 12px 32px rgba(8, 45, 66, .09);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body.fm-page {
+      margin: 0;
+      background: var(--fm-ivory);
+      color: var(--fm-ink);
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .fm-page *,
+    .fm-page *::before,
+    .fm-page *::after {
+      box-sizing: border-box;
+    }
+
+    .fm-page img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .fm-page a {
+      color: inherit;
+    }
+
+    .fm-shell {
+      width: min(1160px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .fm-skip {
+      position: absolute;
+      top: -100px;
+      left: 12px;
+      z-index: 999;
+      padding: 10px 14px;
+      background: #fff;
+      color: var(--fm-navy);
+    }
+
+    .fm-skip:focus {
+      top: 12px;
+    }
+
+    .fm-eyebrow {
+      margin: 0 0 10px;
+      color: var(--fm-amber);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .fm-page h1,
+    .fm-page h2,
+    .fm-page h3 {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    .fm-page h2 {
+      margin: 0 0 12px;
+      color: var(--fm-navy);
+      font-size: clamp(2rem, 3.4vw, 3.1rem);
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+    .fm-intro {
+      max-width: 650px;
+      margin: 0 auto 26px;
+      color: #e7edf0;
+      font-size: .9rem;
+      line-height: 1.65;
+    }
+
+    .fm-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 25px;
+      border: 0;
+      border-radius: 30px;
+      background: var(--fm-amber);
+      color: #071b2d !important;
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .fm-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(8, 45, 66, .2);
+    }
+
+    
+
+/* FLOWMOBILE HERO — REFERENCE LAYOUT */
+
+body.fm-page .fm-hero {
+  position: relative;
+  display: block !important;
+  width: 100%;
+  height: 460px !important;
+  min-height: 460px !important;
+  overflow: hidden;
+  isolation: isolate;
+  background: #031d2d;
+  color: #fff;
+}
+
+/* IMAGE — RIGHT SIDE, REDUCED VISUAL SCALE */
+body.fm-page .fm-hero-image {
+  position: absolute !important;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  display: block;
+  width: 58%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body.fm-page .fm-hero-image::before {
+  content: none !important;
+}
+
+body.fm-page .fm-hero-image img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 80% center;
+  transform: none;
+}
+
+/* Desktop-only branded vehicle accent. Hidden at mobile and tablet sizes. */
+body.fm-page .fm-hero-car { display: none; }
+
+@media (min-width: 1001px) {
+  body.fm-page .fm-hero {
+    height: 500px !important;
+    min-height: 500px !important;
+  }
+  body.fm-page .fm-hero-car {
+    display: block;
+    width: min(390px, 90%);
+    height: auto;
+    max-height: 168px;
+    margin: 0;
+    object-fit: contain;
+    object-position: left center;
+    filter: drop-shadow(0 10px 12px rgba(0, 0, 0, .22));
+  }
+}
+
+/* NAVY TEXT PANEL AND IMAGE BLEND */
+body.fm-page .fm-hero-copy {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 62%;
+  height: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0;
+  padding: 25px 7% 48px 6%;
+  background: transparent;
+}
+
+body.fm-page .fm-hero .fm-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  color: #f5a623;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+}
+
+body.fm-page .fm-hero h1 {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 0;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -.035em;
+}
+
+body.fm-page .fm-hero-subtitle {
+  max-width: 440px;
+  margin: 13px 0 17px;
+  color: #fff;
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+body.fm-page .fm-hero-description {
+  display: none;
+}
+
+body.fm-page .fm-hero .fm-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 32px;
+  border: 1px solid rgba(255, 218, 151, .7);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f8b43c 0%, #e99516 100%);
+  color: #071d2c;
+  font-size: .96rem;
+  font-weight: 700;
+  letter-spacing: .015em;
+  box-shadow:
+    0 5px 16px rgba(0, 0, 0, .22),
+    inset 0 1px 0 rgba(255, 255, 255, .35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+body.fm-page .fm-hero .fm-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, .28),
+    inset 0 1px 0 rgba(255, 255, 255, .4);
+}
+
+/* BLUE AND AMBER FLOW ACCENT */
+body.fm-page .fm-hero::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  z-index: 1;
+  inset: 0 auto 0 44%;
+  width: 19%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #031d2d 0%,
+    rgba(3, 29, 45, .98) 25%,
+    rgba(3, 29, 45, .72) 55%,
+    rgba(3, 29, 45, .28) 82%,
+    transparent 100%
+  );
+}
+/* IVORY LOWER EDGE */
+body.fm-page .fm-hero::after {
+  content: "" !important;
+  position: absolute !important;
+  z-index: 4;
+  right: -2%;
+  bottom: -1px;
+  left: -2%;
+  height: 13px;
+  background: var(--fm-ivory);
+  clip-path: polygon(
+    0 20%, 15% 65%, 32% 55%,
+    48% 5%, 65% 35%, 82% 75%,
+    100% 25%, 100% 100%, 0 100%
+  );
+  pointer-events: none;
+}
+
+    /* FOUR-POINT FEATURE STRIP */
+    .fm-experience {
+      padding: 12px 4.2%;
+      border: 0;
+      background: var(--fm-ivory);
+    }
+    .fm-experience .fm-section-heading { display: none; }
+    .fm-experience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: center;
+      gap: 0;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .fm-experience-card {
+      position: relative;
+      display: flex;
+      min-height: 94px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      padding: 5px 14px;
+      border: 0;
+      border-right: 1px solid rgba(187,112,22,.30);
+      background: transparent;
+      text-align: center;
+    }
+    .fm-experience-card:last-child { border-right: 0; }
+    .fm-experience-card img { display: none; }
+    .fm-experience-card-copy {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+        .fm-feature-icon {
+      display: block;
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      margin: 0 auto 4px;
+      color: #d97700;
+    }
+    .fm-experience-card h3 {
+      margin: 0 0 2px;
+      color: var(--fm-ink);
+      font-family: Inter, Arial, sans-serif;
+      font-size: .91rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .fm-experience-card p {
+      margin: 0;
+      color: #14283a;
+      font-size: .69rem;
+      line-height: 1.35;
+    }
+
+    /* EDITORIAL */
+.fm-editorial {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+.fm-editorial-image {
+  width: 100%;
+  height: 410px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.fm-editorial-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* EDITORIAL — THE ART OF THERAPEUTIC TOUCH */
+
+.fm-editorial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  background: var(--fm-ivory);
+}
+
+.fm-editorial-image {
+  height: 340px;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.fm-editorial-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.fm-editorial-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px clamp(28px, 4vw, 58px);
+}
+
+.fm-editorial-copy h2 {
+  max-width: 520px;
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 3vw, 2.65rem);
+  line-height: 1.08;
+}
+
+.fm-editorial-copy h2 em {
+  color: var(--fm-ink);
+  font-weight: 500;
+}
+
+.fm-editorial-copy p:not(.fm-eyebrow) {
+  max-width: 510px;
+  margin: 0 0 10px;
+  color: var(--fm-muted);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.fm-signature {
+  margin-top: 10px;
+  color: #a96f19;
+  font-size: .69rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+    /* SERVICES */
+    .fm-services {
+      padding: 22px 0 24px;
+      background: var(--fm-navy);
+      color: #fff;
+    }
+    .fm-services .fm-shell {
+  width: min(1160px, calc(100% - 64px));
+}
+    .fm-services .fm-section-heading {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas: "eyebrow note" "title note" "intro note";
+      align-items: center;
+      column-gap: 24px;
+      margin: 0 auto 16px;
+      text-align: left;
+    }
+    .fm-services .fm-section-heading .fm-eyebrow { grid-area: eyebrow; margin: 0 0 5px; }
+    .fm-services .fm-section-heading h2 {
+      grid-area: title;
+      margin: 0;
+      color: #fff;
+      font-size: clamp(1.9rem, 3vw, 2.45rem);
+      line-height: 1.05;
+    }
+    .fm-services .fm-intro {
+      grid-area: note;
+      max-width: 250px;
+      margin: 0;
+      color: #fff;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+.fm-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* FLOWMOBILE — PREMIUM SERVICE CARDS */
+
+.fm-service-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 48% minmax(0, 1fr);
+  min-width: 0;
+  height: 158px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 218, 164, .65);
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    #fffaf1 0%,
+    var(--fm-ivory) 55%,
+    #f1e6d5 100%
+  );
+  color: var(--fm-ink);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, .18),
+    0 8px 18px rgba(0, 0, 0, .22),
+    0 0 14px rgba(24, 126, 177, .10),
+    inset 0 1px 0 rgba(255, 255, 255, .95);
+  transform: perspective(900px) translateZ(0);
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+/* IMAGE — RICHER PRESENCE */
+.fm-service-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.08) contrast(1.04);
+  transition: transform .5s ease, filter .4s ease;
+}
+
+/* SUBTLE GLASS HIGHLIGHT */
+.fm-service-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    rgba(255,255,255,.22) 0%,
+    rgba(255,255,255,.06) 18%,
+    transparent 38%,
+    transparent 78%,
+    rgba(255,255,255,.12) 100%
+  );
+  opacity: .65;
+}
+
+/* AMBER EDGE GLINT */
+.fm-service-card::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: -75%;
+  width: 45%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255,255,255,.48),
+    rgba(255,215,150,.22),
+    transparent
+  );
+  transform: skewX(-18deg);
+  opacity: 0;
+}
+
+/* TEXT AREA */
+.fm-service-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-items: start;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 13px 15px;
+}
+
+/* PREMIUM HOVER DEPTH */
+@media (hover: hover) {
+  .fm-service-card:hover {
+    transform: perspective(900px) translateY(-5px) rotateX(1deg);
+    border-color: rgba(245, 174, 62, .95);
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, .20),
+      0 14px 28px rgba(0, 0, 0, .28),
+      0 0 22px rgba(21, 151, 207, .24),
+      0 0 12px rgba(245, 174, 62, .18),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+  }
+
+  .fm-service-card:hover img {
+    transform: scale(1.045);
+    filter: saturate(1.16) contrast(1.06);
+  }
+
+  .fm-service-card:hover::after {
+    opacity: 1;
+    animation: fm-card-glint .8s ease forwards;
+  }
+}
+
+@keyframes fm-card-glint {
+  from { left: -75%; }
+  to { left: 140%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fm-service-card,
+  .fm-service-card img {
+    transition: none;
+  }
+
+  .fm-service-card:hover::after {
+    animation: none;
+  }
+}
+.fm-service-content h3 {
+  margin: 0 0 7px;
+  color: var(--fm-ink);
+  font-family: Inter, Arial, sans-serif;
+  font-size: .76rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+}
+
+.fm-service-content p {
+  margin: 0;
+  color: #354b5b;
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+/* PREMIUM PRICE PRESENTATION */
+.fm-service-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 10px;
+  border: 0;
+}
+
+.fm-service-price span {
+  color: #354b5b;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .025em;
+}
+
+.fm-service-price strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid rgba(198, 160, 99, .88);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #0a3045 0%, #061f2e 100%);
+  color: #fff4df;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(0, 20, 32, .16), inset 0 1px 0 rgba(255, 255, 255, .12);
+}
+/* PREMIUM CARD FINISH */
+.fm-service-card {
+  border-color: rgba(239, 190, 112, .9);
+  box-shadow:
+    0 3px 6px rgba(0,0,0,.2),
+    0 9px 20px rgba(0,0,0,.2),
+    0 0 15px rgba(16,139,190,.16),
+    inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+@media (hover: hover) {
+  .fm-service-card:hover .fm-service-price strong {
+    border-color: rgba(245, 174, 62, .95);
+    box-shadow: 0 4px 10px rgba(0, 20, 32, .22), 0 0 12px rgba(245, 174, 62, .18);
+  }
+}
+
+
+@keyframes fm-card-glint {
+  from { left: -75%; }
+  to { left: 140%; }
+}
+
+/* MOBILE CARD LAYOUT */
+
+@media (max-width: 760px) {
+  .fm-service-card {
+    grid-template-columns: 38% minmax(0, 1fr);
+    align-items: stretch;
+    min-height: 190px;
+    height: auto;
+    text-decoration: none !important;
+  }
+
+  .fm-service-card img {
+    min-height: 190px;
+  }
+
+  .fm-service-card,
+  .fm-service-card * {
+    text-decoration: none !important;
+  }
+
+  .fm-service-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    height: auto;
+    min-height: 0;
+    padding: 12px 13px;
+  }
+
+  .fm-service-content h3 {
+    margin: 0;
+    font-size: .95rem;
+  }
+
+  .fm-service-content p {
+    margin: 0;
+    font-size: .78rem;
+    line-height: 1.45;
+  }
+
+  .fm-service-price {
+    margin-top: 0;
+    padding-top: 0;
+    text-decoration: none !important;
+  }
+
+  .fm-service-price span {
+    font-size: .72rem;
+  }
+
+  .fm-service-price strong {
+    min-width: 70px;
+    min-height: 36px;
+    padding: 0 12px;
+    font-size: .96rem;
+    text-decoration: none !important;
+  }
+}
+/* NARROW PHONES */
+
+@media (max-width: 390px) {
+  .fm-service-card {
+    grid-template-columns: 31% minmax(0, 1fr);
+  }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .fm-service-card,
+  .fm-service-card img {
+    transition: none;
+  }
+
+  .fm-service-card:hover::after {
+    animation: none;
+  }
+}
+
+/* WHAT TO EXPECT — THREE-COLUMN DESKTOP LAYOUT */
+.fm-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.55fr) minmax(220px, .9fr);
+  align-items: stretch;
+  width: 100%;
+  overflow: hidden;
+  background: var(--fm-ivory);
+  color: var(--fm-ink);
+}
+
+.fm-details-image {
+  min-width: 0;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.fm-details-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.fm-details-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 38px clamp(28px, 3.2vw, 54px);
+}
+
+.fm-details-copy > .fm-eyebrow {
+  margin-bottom: 12px;
+}
+
+.fm-details-copy h2 {
+  max-width: 620px;
+  margin: 0 0 14px;
+  color: var(--fm-navy);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.fm-details-intro {
+  max-width: 560px;
+  margin: 0 0 20px;
+  color: var(--fm-muted);
+  font-size: .96rem;
+  line-height: 1.5;
+}
+
+.fm-details-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fm-details-list li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+}
+
+.fm-details-list li > span {
+  padding-top: 2px;
+  color: #c77909;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.fm-details-list li p {
+  margin: 0;
+  color: var(--fm-ink);
+  font-size: .92rem;
+  line-height: 1.45;
+}
+
+.fm-service-area {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  margin: 32px 0;
+  padding: 26px 28px;
+  border-left: 1px solid rgba(187, 112, 22, .3);
+}
+
+.fm-service-area .fm-eyebrow {
+  margin-bottom: 10px;
+}
+
+.fm-service-area h3 {
+  margin: 0 0 14px;
+  color: var(--fm-navy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.fm-service-area > p:not(.fm-eyebrow) {
+  margin: 0 0 14px;
+  color: var(--fm-ink);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.fm-service-area > p span {
+  color: #d97700;
+  padding: 0 3px;
+}
+
+.fm-area-note {
+  color: var(--fm-muted);
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+.fm-final {
+  position: relative;
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px 24px 34px;
+  background: radial-gradient(ellipse at 50% 100%, #075d83 0%, #042c40 54%, #031d2d 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.fm-final .fm-eyebrow {
+  margin: 0;
+}
+
+.fm-final h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.9rem, 3vw, 2.45rem);
+  line-height: 1.1;
+}
+
+.fm-final .fm-final-link {
+  display: inline-block;
+  padding: 2px 8px;
+  color: #fff4df;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.fm-final .fm-final-link:hover {
+  color: #f5ae3e;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1000px) {
+  .fm-details {
+    grid-template-columns: minmax(280px, 38%) minmax(0, 62%);
+  }
+
+  .fm-details-image,
+  .fm-details-image img {
+    min-height: 360px;
+  }
+
+  .fm-details-copy {
+    padding: 32px 26px;
+  }
+
+  .fm-service-area {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 28px 24px;
+    border-top: 1px solid rgba(187, 112, 22, .3);
+    border-left: 0;
+  }
+}
+
+
+@media (max-width: 760px) {
+  /* Keep the mobile header compact and keep its controls on one row. */
+  body.fm-page .fm-header {
+    min-height: 76px !important;
+    gap: 10px !important;
+    padding: 8px 16px !important;
+    align-items: center !important;
+  }
+  body.fm-page .fm-header .fm-brand,
+  body.fm-page .fm-header .fm-brand img[src*="flowtherapy-logo"] {
+    width: 96px !important;
+    flex: 0 0 96px;
+  }
+  body.fm-page .fm-header .fm-brand img[src*="flowtherapy-logo"] {
+    height: auto !important;
+    max-height: 58px;
+  }
+  body.fm-page .fm-header .fm-menu-toggle {
+    flex: 0 0 auto;
+    padding: 6px 10px;
+    font-size: 20px;
+  }
+  body.fm-page .fm-header .fm-tools {
+    flex: 0 1 auto;
+    gap: 7px;
+    margin-left: auto;
+    font-size: 10px;
+  }
+
+  /* Stack hero copy above the complete collage instead of overlaying it. */
+  body.fm-page .fm-hero {
+    display: flex !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  body.fm-page .fm-hero-copy {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 30px 24px 26px !important;
+    justify-content: center;
+  }
+  body.fm-page .fm-hero h1 {
+    max-width: 15ch;
+    font-size: clamp(2.1rem, 9vw, 2.8rem) !important;
+    line-height: 1.04;
+  }
+  body.fm-page .fm-hero-subtitle {
+    max-width: 34ch;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+  body.fm-page .fm-hero-image {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 2;
+  }
+  body.fm-page .fm-hero-image img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center;
+  }
+  body.fm-page .fm-hero::before { display: none !important; }
+  body.fm-page .fm-hero::after { height: 8px; }
+
+  /* Four benefits become a readable two-by-two grid. */
+  body.fm-page .fm-experience { padding: 12px 18px; }
+  body.fm-page .fm-experience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+  body.fm-page .fm-experience-card {
+    min-width: 0;
+    min-height: 132px;
+    padding: 12px 10px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(187,112,22,.30);
+  }
+  body.fm-page .fm-experience-card:nth-child(odd) {
+    border-right: 1px solid rgba(187,112,22,.30);
+  }
+  body.fm-page .fm-experience-card:nth-last-child(-n + 2) { border-bottom: 0; }
+  body.fm-page .fm-experience-card h3 { font-size: .9rem; }
+  body.fm-page .fm-experience-card p { font-size: .78rem; line-height: 1.4; }
+
+  /* Give editorial copy the full phone width. */
+  body.fm-page .fm-editorial { grid-template-columns: minmax(0, 1fr); }
+  body.fm-page .fm-editorial-image,
+  body.fm-page .fm-editorial-image img {
+    width: 100%;
+    height: 230px;
+    min-height: 0;
+  }
+  body.fm-page .fm-editorial-copy { padding: 28px 24px 30px; }
+  body.fm-page .fm-editorial-copy h2 { font-size: clamp(2rem, 8vw, 2.5rem); }
+
+  /* Show each service as a full-width card with room for its description. */
+  body.fm-page .fm-services .fm-shell { width: calc(100% - 32px); }
+  body.fm-page .fm-services .fm-section-heading {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "eyebrow" "title" "note";
+    align-items: start;
+    row-gap: 8px;
+    padding: 0;
+  }
+  body.fm-page .fm-services .fm-intro { max-width: 38ch; }
+  body.fm-page .fm-service-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  body.fm-page .fm-service-card { grid-template-columns: 36% minmax(0, 1fr); }
+  body.fm-page .fm-service-content { min-width: 0; }
+  .fm-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fm-details-image,
+  .fm-details-image img {
+    min-height: 0;
+    height: 230px;
+  }
+
+  .fm-details-copy {
+    padding: 30px 24px;
+  }
+
+  .fm-details-list {
+    gap: 14px;
+  }
+
+  .fm-service-area {
+    align-items: center;
+    padding: 26px 24px;
+    text-align: center;
+  }
+
+  .fm-final {
+    min-height: 170px;
+    padding: 28px 20px 32px;
+  }
+}
+/* FLOWMOBILE FOOTER — IVORY TO PALE BLUE */
+.fm-page .fm-footer {
+  width: 100%;
+  padding: 28px 5% 18px;
+  background: linear-gradient(110deg, #fbf3e7 0%, #f7f2eb 48%, #e4f0f6 100%) !important;
+  color: #08213a !important;
+}
+
+.fm-page .fm-footer-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 1.4fr 1fr;
+  gap: 0;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.fm-page .fm-footer-brand {
+  padding-right: 28px;
+}
+
+.fm-page .fm-footer-brand img {
+  display: block;
+  width: 88px;
+  height: auto;
+  margin: 0 0 10px;
+}
+
+.fm-page .fm-footer .fm-footer-brand p:first-of-type {
+  margin: 0 0 10px;
+  color: #08213a !important;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.fm-page .fm-footer .fm-footer-brand p:last-of-type {
+  margin: 0;
+  color: #334b5e !important;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: .84rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.fm-page .fm-footer-grid > div:not(:first-child) {
+  padding: 0 20px;
+  border-left: 1px solid rgba(8, 33, 58, .16);
+}
+
+.fm-page .fm-footer h3 {
+  margin: 0 0 10px;
+  color: #08213a !important;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .86rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+.fm-page .fm-footer .fm-footer-grid a {
+  display: block;
+  width: fit-content;
+  margin: 0 0 6px;
+  color: #17364f !important;
+  font-size: .78rem;
+  line-height: 1.55;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color .2s ease;
+}
+
+.fm-page .fm-footer .fm-footer-grid a:hover {
+  color: #078dcc !important;
+}
+
+.fm-page .fm-footer .fm-footer-grid p {
+  margin: 0 0 6px;
+  color: #334b5e !important;
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.fm-page .fm-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  max-width: 1250px;
+  margin: 20px auto 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(8, 33, 58, .16);
+}
+
+.fm-page .fm-footer .fm-footer-bottom p {
+  margin: 0;
+  color: #40576a !important;
+  font-size: .74rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .fm-page .fm-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 26px;
+  }
+
+  .fm-page .fm-footer-grid > div:nth-child(3) {
+    grid-column: 1 / 2;
+  }
+
+  .fm-page .fm-footer-grid > div:nth-child(4) {
+    grid-column: 2 / 3;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .fm-page .fm-footer {
+    padding: 20px 20px 16px;
+  }
+
+  .fm-page .fm-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 14px;
+  }
+
+  .fm-page .fm-footer-brand {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 12px;
+    grid-column: 1 / -1;
+    padding: 0;
+  }
+
+  .fm-page .fm-footer-brand img {
+    grid-row: 1 / 3;
+    width: 64px;
+    margin: 0;
+  }
+
+  .fm-page .fm-footer .fm-footer-brand p:first-of-type {
+    margin: 0 0 3px;
+    font-size: .98rem;
+  }
+
+  .fm-page .fm-footer .fm-footer-brand p:last-of-type {
+    font-size: .76rem;
+    line-height: 1.35;
+  }
+
+  .fm-page .fm-footer-grid > div:not(:first-child) {
+    padding: 0;
+    border: 0;
+  }
+
+  .fm-page .fm-footer-grid > div:nth-child(2) {
+    grid-column: 1 / 2;
+  }
+
+  .fm-page .fm-footer-grid > div:nth-child(3) {
+    grid-column: 2 / 3;
+  }
+
+  .fm-page .fm-footer-grid > div:nth-child(4) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 12px;
+    grid-column: 1 / -1;
+  }
+
+  .fm-page .fm-footer-grid > div:nth-child(4) h3 {
+    flex-basis: 100%;
+  }
+
+  .fm-page .fm-footer-grid > div:nth-child(4) a {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 4px;
+  }
+
+  .fm-page .fm-footer h3 {
+    margin-bottom: 7px;
+    font-size: .8rem;
+  }
+
+  .fm-page .fm-footer .fm-footer-grid a,
+  .fm-page .fm-footer .fm-footer-grid p {
+    margin-bottom: 5px;
+    font-size: .72rem;
+    line-height: 1.4;
+  }
+
+  .fm-page .fm-footer-bottom {
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 10px;
+  }
+
+  .fm-page .fm-footer .fm-footer-bottom p {
+    font-size: .66rem;
+    line-height: 1.35;
+  }
+
+  /* Desktop-only service-area alignment and service-card link styling. */
+  @media (min-width: 1001px) {
+    body.fm-page .fm-service-area {
+      align-items: center;
+      text-align: center;
+    }
+
+    body.fm-page .fm-service-card,
+    body.fm-page .fm-service-card * {
+      text-decoration: none !important;
+    }
+  }
+  </style>
+</head>
+
+<body class="fm-page">
+
+<a class="fm-skip" href="#fm-main">Skip to content</a>
+
+
+<header class="fm-header">
+  <a class="fm-brand" href="../index.html#top" aria-label="FlowTherapy Massage Co. home">
+    <img
+      src="../assets/images/flowtherapy-logo.png"
+      alt="FlowTherapy Massage Co."
+    />
+  </a>
+
+  <button
+    class="fm-menu-toggle"
+    aria-expanded="false"
+    aria-controls="fm-nav"
+    aria-label="Open navigation"
+  >
+    ☰
+  </button>
+
+  <nav id="fm-nav" aria-label="Primary navigation">
+    <a href="../index.html#ways">More Ways to Flow</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#flowhub">Resources</a>
+    <a href="./client-forms.html">Client Forms</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+
+  <div class="fm-tools">
+    <button id="fm-text" aria-label="Increase text size">A A A</button>
+
+    <details class="soul-flow-player">
+      <summary>♫ Soul Flow</summary>
+      <div class="soul-flow-panel">
+        <iframe
+          title="Soul Flow playlist"
+          src="https://open.spotify.com/embed/playlist/35kOQC6udy7D7cbl1kyhpG?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture;"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </details>
+  </div>
+</header>
+
+<!-- SOUL FLOW PLAYER -->
+<div class="ft-soul-panel" hidden id="ft-soul-panel">
+  <div class="ft-soul-panel-head">
+    <span>Soul Flow · FlowTherapy</span>
+    <button
+      aria-label="Hide music player"
+      class="ft-soul-close"
+      type="button"
+    >×</button>
+  </div>
+
+  <div class="ft-soul-embed" id="ft-soul-embed">
+    <iframe
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      data-src="https://open.spotify.com/embed/playlist/35kOQC6udy7D7cbl1kyhpG?utm_source=generator"
+      height="152"
+      loading="lazy"
+      title="Soul Flow playlist on Spotify"
+      width="100%"
+    ></iframe>
+  </div>
+
+  <a
+    href="https://open.spotify.com/playlist/35kOQC6udy7D7cbl1kyhpG"
+    rel="noopener noreferrer"
+    target="_blank"
+  >Listen on Spotify ↗</a>
+</div>
+
+<main id="fm-main">
+
+  <!-- HERO -->
+  <section class="fm-hero">
+    <div class="fm-hero-copy">
+      <p class="fm-eyebrow">— FlowMobile —</p>
+
+      <h1>Massage,<br>Wherever You Are.</h1>
+
+      <p class="fm-hero-subtitle">
+        In the comfort of your home, office, or suite.
+      </p>
+
+      <img
+        class="fm-hero-car"
+        src="../assets/images/home/flowmobile-suv-cutout.png"
+        alt="FlowMobile service SUV"
+        aria-hidden="true"
+      >
+
+      <p class="fm-hero-description">
+        Leave the drive, the waiting room, and the outside world behind.
+        FlowMobile brings professional therapeutic massage to your home,
+        office, or  setting.
+      </p>
+
+</div>
+
+    <div class="fm-hero-image">
+      <img
+        src="../assets/images/gallery/massage-quad.png"
+        alt="Premium FlowMobile therapeutic massage experience"
+        fetchpriority="high"
+      >
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="fm-experience">
+    <div class="fm-shell">
+      <div class="fm-section-heading">
+        <p class="fm-eyebrow">The FlowMobile Experience</p>
+        <h2>FlowMobile at a Glance</h2>
+        <p class="fm-intro">
+          Professional therapeutic massage in the setting that works
+          best for your day.
+        </p>
+      </div>
+
+      <div class="fm-experience-grid">
+        <article class="fm-experience-card">
+          <img
+            src="../assets/images/gallery/flowmobile-60.png"
+            alt="Therapeutic massage in a home setting"
+            loading="lazy"
+          >
+          <div class="fm-experience-card-copy"><svg class="fm-feature-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19 20 5l16 14"></path><path d="M9 17v18h22V17M16 35V23h8v12"></path></svg>
+            <h3>At Home</h3>
+            <p>
+              Stay in your comfort zone — we bring the tools so you can stay relaxed long after we pack up.
+            </p>
+          </div>
+        </article>
+
+        <article class="fm-experience-card">
+          <img
+            src="../assets/images/gallery/flowtools.jpg"
+            alt="Professional massage equipment"
+            loading="lazy"
+          >
+          <div class="fm-experience-card-copy"><svg class="fm-feature-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 34C8 28 5 17 9 8c7 1 11 6 11 13 0-7 4-12 11-13 4 9 1 20-11 26Z"></path><path d="M20 34V20M4 23c6 0 11 2 16 11 5-9 10-11 16-11"></path></svg>
+            <h3>At Your Office</h3>
+            <p>
+              Step away from the inbox and melt away stiff shoulders with a midday reset.
+            </p>
+          </div>
+        </article>
+
+        <article class="fm-experience-card">
+          <img
+            src="../assets/images/gallery/flowtouch.png"
+            alt="Professional therapeutic massage in a  setting"
+            loading="lazy"
+          >
+          <div class="fm-experience-card-copy"><svg class="fm-feature-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="10" r="6"></circle><path d="M8 31c0-7 5-11 12-11s12 4 12 11c0 3-4 5-12 5S8 34 8 31Z"></path></svg>
+            <h3>At Your Suite</h3>
+            <p>
+              Turn your private space into a quiet sanctuary with therapeutic relief on your schedule.
+            </p>
+          </div>
+        </article>
+
+        <article class="fm-experience-card">
+          
+          <div class="fm-experience-card-copy"><svg class="fm-feature-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="17" width="22" height="18" rx="4"></rect><path d="M13 17v-5a7 7 0 0 1 14 0v5"></path><circle cx="20" cy="25" r="2"></circle><path d="M20 27v3"></path></svg>
+            <h3>An Exclusive Experience</h3>
+            <p>Full hands-on minutes and no deep tissue surcharges — just therapeutic bodywork.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL -->
+  <section class="fm-editorial" id="fm-about">
+    <div class="fm-editorial-image">
+      <img
+        src="../assets/images/gallery/flowshoulder.png"
+        alt="Therapeutic massage bodywork"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="fm-editorial-copy">
+      <p class="fm-eyebrow">An experience beyond the ordinary</p>
+
+      <h2>
+        The Art of<br>
+        <em>Therapeutic Touch.</em>
+      </h2>
+
+      <p>
+       Professional, results-focused, therapeutic massage delivered to your door. The same therapeutic services you trust at FlowTherapy Massaage Co., now with the ease and comfort of a mobile experience. 
+      </p>
+
+      <p>
+        Whether at home, in an office, or <a href=""></a> suite,
+        your experience begins with comfort and convenience.
+      </p>
+
+      <div class="fm-signature">Discover the Rhythm of Relaxation.</div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="fm-services" id="fm-services">
+    <div class="fm-shell">
+      <div class="fm-section-heading">
+        <p class="fm-eyebrow">The FlowMobile Collection</p>
+        <h2>Choose Your Experience.</h2>
+        <p class="fm-intro">
+          Therapeutic massage services delivered to your location.
+          All displayed prices include the mobile service and travel fee.
+        </p>
+      </div>
+
+    <div class="fm-service-grid">
+
+  <!-- TOP ROW: SIGNATURE FLOW -->
+
+  <a class="fm-service-card" href="https://flowtherapy.noterro.com/service/324561/signature-flow-.-60-min">
+    <img src="../assets/images/gallery/flowmobile-60.png"
+         alt="Signature Flow Essential therapeutic massage" loading="lazy">
+    <div class="fm-service-content">
+      <h3>Signature Flow · 60 min</h3>
+      <p>Focused care for 1-2 primary areas of tension, or a full-body reset.</p>
+      <div class="fm-service-price">
+        <span>60 minutes</span>
+        <strong>$190</strong>
+      </div>
+    </div>
+  </a>
+
+  <a class="fm-service-card" href="https://flowtherapy.noterro.com/service/324194/signature-flow-.-75-min">
+    <img src="../assets/images/gallery/flowmobile-75.png"
+         alt="Signature Flow Extended therapeutic massage" loading="lazy">
+    <div class="fm-service-content">
+      <h3>Signature Flow · 75 min</h3>
+      <p>Full-body flow with extra breathing room to linger on stubborn spots.</p>
+      <div class="fm-service-price">
+        <span>75 minutes</span>
+        <strong>$205</strong>
+      </div>
+    </div>
+  </a>
+
+  <a class="fm-service-card" href="https://flowtherapy.noterro.com/service/324196/signature-flow-.-90-min">
+    <img src="../assets/images/gallery/flowmobile-90.png"
+         alt="Signature Flow Comprehensive therapeutic massage" loading="lazy">
+    <div class="fm-service-content">
+      <h3>Signature Flow · 90 min</h3>
+      <p>Unhurried, full-body care with plenty of time for your nervous system to downshift.</p>
+      <div class="fm-service-price">
+        <span>90 minutes</span>
+        <strong>$225</strong>
+      </div>
+    </div>
+  </a>
+
+  <!-- BOTTOM ROW: ADDITIONAL EXPERIENCES -->
+
+  <a class="fm-service-card" href="https://flowtherapy.noterro.com/service/324193/focused-flow-.-45-min">
+    <img src="../assets/images/gallery/mobilefocused-flow.png"
+         alt="Focused Flow therapeutic massage" loading="lazy">
+    <div class="fm-service-content">
+      <h3>Focused Flow</h3>
+      <p> Upper-body or lower-body focus to help you feel lighter on a tighter schedule.</p>
+      <div class="fm-service-price">
+        <span>45 minutes</span>
+        <strong>$140</strong>
+      </div>
+    </div>
+  </a>
+
+  <a class="fm-service-card" href="https://flowtherapy.noterro.com/service/324198/lymphflow-.-75-min">
+    <img src="../assets/images/gallery/lymphflow-75.png"
+         alt="DreamFlow Sleep Massage" loading="lazy">
+    <div class="fm-service-content">
+      <h3>DreamFlow · Sleep Massage</h3>
+      <p>Slow, rhythmic massage that eases tension, quiets a busy mind, and invites deep rest.</p>
+      <div class="fm-service-price">
+        <span>75 minutes</span>
+        <strong>$195</strong>
+      </div>
+    </div>
+  </a>
+
+  <a class="fm-service-card" href="https://flowtherapy.noterro.com/service/326615/motherhood-flow-.-75-min">
+    <img src="../assets/images/gallery/flowmobile-mother.jpg"
+         alt="Motherhood Flow therapeutic massage" loading="lazy">
+    <div class="fm-service-content">
+      <h3>Motherhood Flow · Perinatal</h3>
+      <p>Nurturing support tailored to the changing needs of pregnancy and postpartum recovery.</p>
+      <div class="fm-service-price">
+        <span>75 minutes</span>
+        <strong>$205</strong>
+      </div>
+    </div>
+  </a>
+
+
+  </section>
+
+  <!-- DETAILS / SERVICE AREA -->
+ <!-- WHAT TO EXPECT -->
+<section class="fm-details" id="fm-details">
+
+  <div class="fm-details-image">
+    <img
+      src="../assets/images/gallery/flow-hot-towel.png"
+      alt="Warm towel detail prepared for a FlowTherapy massage"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="fm-details-copy">
+    <p class="fm-eyebrow">What to Expect</p>
+
+    <h2>A seamless experience, from arrival to reset.</h2>
+
+    <p class="fm-details-intro">
+      Professional therapeutic massage, thoughtfully delivered
+      in the comfort of your space.
+    </p>
+
+    <ol class="fm-details-list">
+      <li>
+        <span>01</span>
+        <p>Book your appointment online.</p>
+      </li>
+      <li>
+        <span>02</span>
+        <p>FlowTherapist arrives with everything needed for your session.</p>
+      </li>
+      <li>
+        <span>03</span>
+        <p>Your space is prepared for comfort.</p>
+      </li>
+      <li>
+        <span>04</span>
+        <p>Enjoy a focused, therapeutic massage session.</p>
+      </li>
+      <li>
+        <span>05</span>
+        <p>Your FlowTherapist packs up and leaves your space as they found it.</p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="fm-service-area">
+    <p class="fm-eyebrow">Where FlowMobile Goes</p>
+
+    <h3>Central Texas, at your door.</h3>
+
+    <p>
+      Harker Heights <span>·</span> Salado<br>
+      Georgetown <span>·</span> Round Rock<br>
+      Austin <span>·</span> Downtown
+    </p>
+
+    <div class="fm-area-note">
+      Serving surrounding Central Texas communities.
+    </div>
+  </div>
+
+</section>
+
+  <!-- FINAL CTA -->
+  <section class="fm-final">
+    <p class="fm-eyebrow">Your time is valuable</p>
+    <h2>Ready to Experience FlowMobile?</h2>
+    <a
+      class="fm-final-link"
+      href="https://flowtherapy.noterro.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Book FlowMobile →</a>
+  </section>
+
+</main>
+
+<footer class="fm-footer" id="contact">
+  <div class="fm-footer-grid">
+    <div class="fm-footer-brand">
+      <img
+        src="../assets/images/flowtherapy-logo.png"
+        alt="FlowTherapy Massage Co."
+      />
+      <p>FlowTherapy Massage Co.</p>
+      <p>Discover the Rhythm of Relaxation.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="../index.html#top">Home</a>
+      <a
+        href="https://app.squareup.com/gift/MLV560DXHSF4H/order"
+      >FlowGift</a>
+      <a href="./pages/client-forms.html">Client Forms</a>
+      <a href="./pages/private-events.html">Private Events</a>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <a href="tel:7373873569">737-387-FLOW</a>
+      <a href="fax:5122331764">512-233-1764 (fax)</a>
+      <a href="mailto:hello@discoverflowtherapy.com">
+        hello@discoverflowtherapy.com
+      </a>
+      <p>Studio location details coming soon</p>
+      <p>Serving Bell, Williamson &amp; Travis Co. Texas</p>
+    </div>
+
+    <div>
+      <h3>Policies</h3>
+      <a
+        href="./pages/booking-cancellation.html"
+      >Booking &amp; Cancellation</a>
+      <a href="#" onclick="document.getElementById('respect-dialog').showModal(); return false;">
+  Respect Massage
+</a>
+
+<a href="#" onclick="document.getElementById('privacy-dialog').showModal(); return false;">
+  Privacy
+</a>
+
+<a href="#" onclick="document.getElementById('accessibility-dialog').showModal(); return false;">
+  Accessibility
+</a>
+    </div>
+  </div>
+
+  <div class="fm-footer-bottom">
+    <p>
+      © <span id="footer-year">2026</span> FlowTherapy Massage Co.
+      &nbsp; | &nbsp; Better Bodywork Begins Here.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Shared header: text-size control
+  const textSizeButton = document.getElementById("fm-text");
+
+  if (textSizeButton) {
+    const textSizes = [100, 112.5, 125];
+    let textSizeIndex = 0;
+
+    textSizeButton.setAttribute("aria-pressed", "false");
+    textSizeButton.addEventListener("click", () => {
+      textSizeIndex = (textSizeIndex + 1) % textSizes.length;
+      document.documentElement.style.fontSize = `${textSizes[textSizeIndex]}%`;
+      const enlarged = textSizeIndex > 0;
+      textSizeButton.setAttribute("aria-pressed", String(enlarged));
+      textSizeButton.setAttribute(
+        "aria-label",
+        enlarged ? `Text size ${textSizes[textSizeIndex]} percent` : "Reset text size"
+      );
+    });
+  }
+
+  // Shared header: Soul Flow player
+  const soulButton = document.getElementById("ft-soul-button");
+  const soulPanel = document.getElementById("ft-soul-panel");
+  const soulClose = document.querySelector(".ft-soul-close");
+  const soulFrame = document.querySelector("#ft-soul-embed iframe");
+
+  function openSoulFlow() {
+    if (!soulPanel || !soulButton) return;
+
+    soulPanel.hidden = false;
+    soulButton.setAttribute("aria-expanded", "true");
+
+    if (soulFrame && !soulFrame.src) {
+      soulFrame.src = soulFrame.dataset.src;
+    }
+  }
+
+  function closeSoulFlow() {
+    if (!soulPanel || !soulButton) return;
+
+    soulPanel.hidden = true;
+    soulButton.setAttribute("aria-expanded", "false");
+  }
+
+  if (soulButton && soulPanel) {
+    soulButton.addEventListener("click", () => {
+      if (soulPanel.hidden) {
+        openSoulFlow();
+      } else {
+        closeSoulFlow();
+      }
+    });
+  }
+
+  if (soulClose) {
+    soulClose.addEventListener("click", closeSoulFlow);
+  }
+</script>
+
+</body>
+</html>
