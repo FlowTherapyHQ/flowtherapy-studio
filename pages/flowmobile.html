@@ -184,23 +184,34 @@ body.fm-page .fm-hero-image img {
   transform: none;
 }
 
-/* Desktop-only branded vehicle accent. Hidden at mobile and tablet sizes. */
-body.fm-page .fm-hero-car { display: none; }
-
-@media (min-width: 1001px) {
+/* Desktop/tablet hero image and vehicle scene */
+@media (min-width: 761px) {
   body.fm-page .fm-hero {
     height: 500px !important;
     min-height: 500px !important;
   }
-  body.fm-page .fm-hero-car {
-    display: block;
-    width: min(390px, 90%);
-    height: auto;
-    max-height: 168px;
-    margin: 0;
-    object-fit: contain;
-    object-position: left center;
-    filter: drop-shadow(0 10px 12px rgba(0, 0, 0, .22));
+
+  body.fm-page .fm-hero-image {
+    width: 62%;
+  }
+
+  body.fm-page .fm-hero-image img {
+    object-fit: cover;
+    object-position: right center;
+  }
+
+  body.fm-page .fm-hero::before {
+    left: 38%;
+    width: 24%;
+    background: linear-gradient(
+      90deg,
+      #031d2d 0%,
+      rgba(3, 29, 45, .96) 14%,
+      rgba(3, 29, 45, .78) 34%,
+      rgba(3, 29, 45, .50) 56%,
+      rgba(3, 29, 45, .18) 78%,
+      transparent 100%
+    );
   }
 }
 
@@ -1326,7 +1337,29 @@ body.fm-page .fm-hero::after {
     line-height: 1.35;
   }
 
-  </style>
+}
+
+      /* Desktop/tablet: begin the navy fade exactly at the photo edge to hide the seam. */
+  @media (min-width: 761px) {
+    body.fm-page .fm-hero::before {
+      inset: 0 auto 0 38% !important;
+      width: 26% !important;
+      background: linear-gradient(90deg, #031d2d 0%, rgba(3,29,45,.96) 14%, rgba(3,29,45,.78) 34%, rgba(3,29,45,.50) 56%, rgba(3,29,45,.18) 78%, transparent 100%) !important;
+    }
+  }
+  /* Desktop only: keep linked prices clean and center the service area copy. */
+  @media (min-width: 1001px) {
+    body.fm-page .fm-service-card,
+    body.fm-page .fm-service-card * {
+      text-decoration: none !important;
+    }
+
+    body.fm-page .fm-service-area {
+      align-items: center;
+      text-align: center;
+    }
+  }
+</style>
 </head>
 
 <body class="fm-page">
@@ -1420,15 +1453,7 @@ body.fm-page .fm-hero::after {
       <p class="fm-hero-subtitle">
         In the comfort of your home, office, or suite.
       </p>
-
-      <img
-        class="fm-hero-car"
-        src="../assets/images/home/flowmobile-suv-cutout.png"
-        alt="FlowMobile service SUV"
-        aria-hidden="true"
-      >
-
-      <p class="fm-hero-description">
+<p class="fm-hero-description">
         Leave the drive, the waiting room, and the outside world behind.
         FlowMobile brings professional therapeutic massage to your home,
         office, or  setting.
@@ -1437,11 +1462,17 @@ body.fm-page .fm-hero::after {
 </div>
 
     <div class="fm-hero-image">
-      <img
-        src="../assets/images/gallery/massage-quad.png"
-        alt="Premium FlowMobile therapeutic massage experience"
-        fetchpriority="high"
-      >
+      <picture class="fm-hero-picture">
+        <source
+          media="(min-width: 761px)"
+          srcset="../assets/images/home/flowmobile-austin-hero.png"
+        >
+        <img
+          src="../assets/images/gallery/massage-quad.png"
+          alt="FlowMobile mobile massage service in Austin"
+          fetchpriority="high"
+        >
+      </picture>
     </div>
   </section>
 
@@ -1690,7 +1721,7 @@ body.fm-page .fm-hero::after {
   <div class="fm-service-area">
     <p class="fm-eyebrow">Where FlowMobile Goes</p>
 
-    <h3>Central Texas, at your door.</h3>
+    <h3>Central Texas, Better Bodywork is Here.</h3>
 
     <p>
       Harker Heights <span>·</span> Salado<br>
