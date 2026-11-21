@@ -184,10 +184,10 @@ body.fm-page .fm-hero-image img {
   transform: none;
 }
 
-/* Desktop-only branded vehicle accent. Hidden only on mobile sizes. */
+/* Desktop-only branded vehicle accent. Hidden at mobile and tablet sizes. */
 body.fm-page .fm-hero-car { display: none; }
 
-@media (min-width: 761px) {
+@media (min-width: 1001px) {
   body.fm-page .fm-hero {
     height: 500px !important;
     min-height: 500px !important;
@@ -724,46 +724,32 @@ body.fm-page .fm-hero::after {
 @media (max-width: 760px) {
   .fm-service-card {
     grid-template-columns: 38% minmax(0, 1fr);
-    align-items: stretch;
-    min-height: 190px;
+    min-height: 170px;
     height: auto;
-    text-decoration: none !important;
   }
 
   .fm-service-card img {
-    min-height: 190px;
-  }
-
-  .fm-service-card,
-  .fm-service-card * {
-    text-decoration: none !important;
+    min-height: 170px;
   }
 
   .fm-service-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-    height: auto;
-    min-height: 0;
-    padding: 12px 13px;
-  }
-
-  .fm-service-content h3 {
-    margin: 0;
-    font-size: .95rem;
-  }
-
-  .fm-service-content p {
-    margin: 0;
-    font-size: .78rem;
-    line-height: 1.45;
+    grid-template-rows: auto auto auto;
+    align-content: start;
+    row-gap: 8px;
+    padding: 11px 13px;
   }
 
   .fm-service-price {
     margin-top: 0;
     padding-top: 0;
-    text-decoration: none !important;
+  }
+
+  .fm-service-content h3 {
+    font-size: .95rem;
+  }
+
+  .fm-service-content p {
+    font-size: .78rem;
   }
 
   .fm-service-price span {
@@ -775,7 +761,6 @@ body.fm-page .fm-hero::after {
     min-height: 36px;
     padding: 0 12px;
     font-size: .96rem;
-    text-decoration: none !important;
   }
 }
 /* NARROW PHONES */
@@ -963,7 +948,7 @@ body.fm-page .fm-hero::after {
   transform: translateY(-2px);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
   .fm-details {
     grid-template-columns: minmax(280px, 38%) minmax(0, 62%);
   }
@@ -985,7 +970,6 @@ body.fm-page .fm-hero::after {
     border-left: 0;
   }
 }
-
 
 @media (max-width: 760px) {
   /* Keep the mobile header compact and keep its controls on one row. */
@@ -1111,23 +1095,10 @@ body.fm-page .fm-hero::after {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  /* Show the full square photo on phones so the steam remains in frame. */
-  .fm-details-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: min(80vw, 360px);
-    min-height: 0;
-    background: var(--fm-navy);
-  }
+  .fm-details-image,
   .fm-details-image img {
-    width: min(80vw, 360px);
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
     min-height: 0;
-    object-fit: contain;
-    object-position: center;
+    height: 230px;
   }
 
   .fm-details-copy {
@@ -1249,7 +1220,20 @@ body.fm-page .fm-hero::after {
   line-height: 1.5;
 }
 
+@media (max-width: 1000px) {
+  .fm-page .fm-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 26px;
+  }
 
+  .fm-page .fm-footer-grid > div:nth-child(3) {
+    grid-column: 1 / 2;
+  }
+
+  .fm-page .fm-footer-grid > div:nth-child(4) {
+    grid-column: 2 / 3;
+  }
+}
 
 @media (max-width: 760px) {
   .fm-page .fm-footer {
@@ -1257,8 +1241,8 @@ body.fm-page .fm-hero::after {
   }
 
   .fm-page .fm-footer-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 14px;
   }
 
   .fm-page .fm-footer-brand {
@@ -1301,19 +1285,20 @@ body.fm-page .fm-hero::after {
   }
 
   .fm-page .fm-footer-grid > div:nth-child(4) {
-    display: block;
-    min-width: 0;
-    grid-column: 3 / 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 12px;
+    grid-column: 1 / -1;
+  }
+
+  .fm-page .fm-footer-grid > div:nth-child(4) h3 {
+    flex-basis: 100%;
   }
 
   .fm-page .fm-footer-grid > div:nth-child(4) a {
-    display: block;
+    display: inline-block;
     width: auto;
-    margin-bottom: 5px;
-  }
-
-  .fm-page .fm-footer-grid > div a {
-    overflow-wrap: anywhere;
+    margin-bottom: 4px;
   }
 
   .fm-page .fm-footer h3 {
@@ -1341,20 +1326,6 @@ body.fm-page .fm-hero::after {
     line-height: 1.35;
   }
 
-}
-
-  /* Desktop-only service-area alignment and service-card link styling. */
-  @media (min-width: 761px) {
-    body.fm-page .fm-service-area {
-      align-items: center;
-      text-align: center;
-    }
-
-    body.fm-page .fm-service-card,
-    body.fm-page .fm-service-card * {
-      text-decoration: none !important;
-    }
-  }
   </style>
 </head>
 
@@ -1374,7 +1345,6 @@ body.fm-page .fm-hero::after {
   <button
     class="fm-menu-toggle"
     aria-expanded="false"
-    type="button"
     aria-controls="fm-nav"
     aria-label="Open navigation"
   >
@@ -1445,7 +1415,7 @@ body.fm-page .fm-hero::after {
     <div class="fm-hero-copy">
       <p class="fm-eyebrow">— FlowMobile —</p>
 
-      <h1>Massage,<br>Wherever You Are.</h1>
+      <h1>Therapeutic Massage,<br>Wherever You Are.</h1>
 
       <p class="fm-hero-subtitle">
         In the comfort of your home, office, or suite.
@@ -1741,7 +1711,7 @@ body.fm-page .fm-hero::after {
     <h2>Ready to Experience FlowMobile?</h2>
     <a
       class="fm-final-link"
-      href="https://flowtherapy.noterro.com/service-category/62252/FlowMobile-Therapeutic-Massage-Wherever-You-Are."
+      href="https://flowtherapy.noterro.com/"
       target="_blank"
       rel="noopener noreferrer"
     >Book FlowMobile →</a>
@@ -1809,19 +1779,6 @@ body.fm-page .fm-hero::after {
 </footer>
 
 <script>
-  // Mobile navigation toggle
-  const menuToggle = document.querySelector(".fm-menu-toggle");
-  const primaryNav = document.getElementById("fm-nav");
-
-  if (menuToggle && primaryNav) {
-    menuToggle.addEventListener("click", () => {
-      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!isOpen));
-      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
-      primaryNav.classList.toggle("is-open", !isOpen);
-    });
-  }
-
   // Shared header: text-size control
   const textSizeButton = document.getElementById("fm-text");
 
