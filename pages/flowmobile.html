@@ -969,11 +969,7 @@ body.fm-page .fm-hero::after {
     min-height: 360px;
   }
 
-  .fm-details-copy {
-    padding: 32px 26px;
-  }
-
-  .fm-service-area {
+    .fm-service-area {
     grid-column: 1 / -1;
     margin: 0;
     padding: 28px 24px;
@@ -1129,14 +1125,68 @@ body.fm-page .fm-hero::after {
     height: 230px;
   }
 
-  .fm-details-copy {
-    padding: 30px 24px;
+  body.fm-page .fm-details-copy {
+    padding: 34px 24px 36px;
   }
-
-  .fm-details-list {
-    gap: 14px;
+  body.fm-page .fm-details-copy > .fm-eyebrow {
+    margin-bottom: 10px;
+    letter-spacing: .22em;
   }
-
+  body.fm-page .fm-details-copy h2 {
+    max-width: 22ch;
+    margin-bottom: 12px;
+    font-size: clamp(1.9rem, 7vw, 2.35rem);
+    line-height: 1.08;
+  }
+  body.fm-page .fm-details-intro {
+    max-width: 40ch;
+    margin-bottom: 26px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  body.fm-page .fm-details-list {
+    position: relative;
+    gap: 22px;
+    margin-top: 2px;
+  }
+  body.fm-page .fm-details-list::before {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 21px;
+    width: 1px;
+    background: linear-gradient(to bottom, rgba(217, 119, 0, .68), rgba(217, 119, 0, .24));
+    content: "";
+  }
+  body.fm-page .fm-details-list li {
+    position: relative;
+    z-index: 1;
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+  }
+  body.fm-page .fm-details-list li > span {
+    display: flex;
+    width: 44px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(217, 119, 0, .55);
+    border-radius: 11px;
+    background: linear-gradient(145deg, #dc850d, #bd6d08);
+    color: #fffaf1;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    box-shadow: 0 3px 8px rgba(8, 45, 66, .12);
+  }
+  body.fm-page .fm-details-list li p {
+    padding-top: 4px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
   .fm-service-area {
     align-items: center;
     padding: 26px 24px;
