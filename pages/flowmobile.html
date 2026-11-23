@@ -399,6 +399,65 @@ body.fm-page .fm-hero::after {
       line-height: 1.35;
     }
 
+    /* COMPLIMENTARY FLOWMOBILE RECOVERY LAB */
+    .fm-recovery {
+      padding: clamp(38px, 5vw, 64px) 5%;
+      background: linear-gradient(115deg, #e8f1f5 0%, #fbf3e7 52%, #f3e9da 100%);
+    }
+    .fm-recovery-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .fm-recovery-heading {
+      max-width: 680px;
+      margin: 0 auto 26px;
+      text-align: center;
+    }
+    .fm-recovery-heading .fm-eyebrow { margin: 0 0 8px; }
+    .fm-recovery-heading h2 {
+      margin: 0 0 10px;
+      color: var(--fm-ink);
+      font-size: clamp(1.9rem, 3.3vw, 2.55rem);
+      line-height: 1.08;
+    }
+    .fm-recovery-heading p:last-child {
+      margin: 0;
+      color: var(--fm-muted);
+      font-size: .96rem;
+      line-height: 1.55;
+    }
+    .fm-recovery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .fm-recovery-card {
+      display: flex;
+      min-width: 0;
+      min-height: 168px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 18px;
+      border: 1px solid rgba(187, 112, 22, .24);
+      border-radius: 14px;
+      background: rgba(255, 250, 242, .88);
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(8, 45, 66, .06);
+    }
+    .fm-recovery-card h3 {
+      margin: 0 0 6px;
+      color: var(--fm-ink);
+      font-size: .98rem;
+      line-height: 1.25;
+    }
+    .fm-recovery-card p {
+      margin: 0;
+      color: #405565;
+      font-size: .82rem;
+      line-height: 1.45;
+    }
+
     /* EDITORIAL */
 .fm-editorial {
   display: grid;
@@ -1122,6 +1181,13 @@ body.fm-page .fm-hero::after {
   }
   body.fm-page .fm-service-card { grid-template-columns: 36% minmax(0, 1fr); }
   body.fm-page .fm-service-content { min-width: 0; }
+  body.fm-page .fm-recovery { padding: 34px 16px 38px; }
+  body.fm-page .fm-recovery-heading { margin-bottom: 18px; }
+  body.fm-page .fm-recovery-heading p:last-child { font-size: .88rem; }
+  body.fm-page .fm-recovery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  body.fm-page .fm-recovery-card { min-height: 156px; padding: 16px 12px; }
+  body.fm-page .fm-recovery-card h3 { font-size: .87rem; }
+  body.fm-page .fm-recovery-card p { font-size: .76rem; line-height: 1.4; }
   .fm-details {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1789,6 +1855,41 @@ body.fm-page .fm-hero::after {
   </a>
 
 
+    </div>
+    </div>
+  </section>
+
+  <!-- COMPLIMENTARY RECOVERY LAB -->
+  <section class="fm-recovery" id="fm-recovery" aria-labelledby="fm-recovery-title">
+    <div class="fm-recovery-inner">
+      <div class="fm-recovery-heading">
+        <p class="fm-eyebrow">A FlowMobile Exclusive</p>
+        <h2 id="fm-recovery-title">FlowTherapy Recovery Lab</h2>
+        <p>Four thoughtful tools, included at no extra charge. Choose what feels right for your session; your FlowTherapist will help tailor the options to your goals and comfort.</p>
+      </div>
+
+      <div class="fm-recovery-grid">
+        <article class="fm-recovery-card">
+          <h3>Hot Towels</h3>
+          <p>Soothing steam and gentle heat to melt away surface tension and calm your nervous system.</p>
+        </article>
+
+        <article class="fm-recovery-card">
+          <h3>Hot Stones</h3>
+          <p>Deep, penetrating warmth paired with hands-on massage to ease stubborn tightness.</p>
+        </article>
+
+        <article class="fm-recovery-card">
+          <h3>Glide Cupping</h3>
+          <p>Dynamic, gliding suction lifts tight tissue to boost circulation and relieve deep muscle tension.</p>
+        </article>
+
+        <article class="fm-recovery-card">
+          <h3>Rapid Flow Release</h3>
+          <p>Targeted percussive therapy to wake up tired muscles and complement deep hands-on work.</p>
+        </article>
+      </div>
+    </div>
   </section>
 
   <!-- DETAILS / SERVICE AREA -->
