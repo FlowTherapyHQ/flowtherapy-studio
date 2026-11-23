@@ -124,7 +124,7 @@ if (currentPath.includes("/body-map.html")) {
         </a>
 
         <a
-          href="https://hub.discoverflowtherapy.com/pages/wellness-programs.html"
+          href="https://discoverflowtherapy.com/#ways"
           ${activeClass("programs")}
         >
           Wellness Programs
@@ -167,7 +167,7 @@ if (currentPath.includes("/body-map.html")) {
         </a>
 
         <a
-          href="https://hub.discoverflowtherapy.com/pages/wellness-programs.html"
+          href="https://discoverflowtherapy.com/#ways"
           ${activeClass("programs")}
         >
           Wellness Programs
