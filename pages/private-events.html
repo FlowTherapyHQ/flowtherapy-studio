@@ -829,6 +829,7 @@
       .private-events-inquiry-heading h2 { color:#082d42; font-family:"Playfair Display",Georgia,serif; }
       .private-events-field input,.private-events-field select,.private-events-field textarea { background:#fff; border-color:#d6e0e3; }
       .studio-option { max-width:900px; margin:0 auto 76px; display:block; overflow:hidden; border:1px solid #eee4d4; border-left:5px solid #c58b25; border-radius:18px; background:#fffdfa; box-shadow:0 14px 34px rgba(8,45,66,.08); }
+      .studio-option[hidden] { display:none !important; }
       .studio-option-copy { max-width:720px; margin:auto; padding:34px clamp(26px,4vw,48px); }
       .studio-option-copy .eyebrow { margin-bottom:12px; color:#b47a18; }
       .studio-option-copy h2 { margin:0 0 16px; color:#082d42; font-family:"Playfair Display",Georgia,serif; font-size:clamp(1.8rem,3vw,2.45rem); line-height:1.15; }
@@ -843,6 +844,99 @@
       .preview-footer-bottom { display:flex; justify-content:space-between; align-items:center; gap:18px; padding-top:18px; font-size:.84rem; }
       @media(max-width:900px){.preview-header{flex-wrap:wrap; padding:14px 0}.preview-header nav{order:3;width:100%;justify-content:center;flex-wrap:wrap}.private-events-hero{min-height:470px;padding:52px 40px;background-position:center,right center;background-size:cover,58% 100%}.studio-option{grid-template-columns:1fr}.preview-footer-grid{grid-template-columns:repeat(2,1fr)}}
       @media(max-width:640px){.private-events-inner{width:calc(100% - 32px)}.preview-header{width:calc(100% - 32px);min-height:72px;gap:14px}.preview-brand img{width:118px}.preview-header nav{justify-content:flex-start;gap:12px 18px}.preview-header nav a{font-size:.78rem}.preview-cta{min-height:40px;padding:0 14px;font-size:.82rem}.private-events-hero{min-height:0;margin-bottom:50px;padding:40px 24px 42px;border-radius:0 0 0 54px;background-size:auto,cover;background-position:center,center;background:linear-gradient(90deg,rgba(251,248,240,.98),rgba(251,248,240,.91)),url("../assets/images/private-flow-events-hero.png") center/cover no-repeat}.private-events-hero h1{font-size:clamp(2.35rem,10vw,3.2rem)}.private-events-hero .hero-copy{font-size:.98rem}.private-events-section{margin-bottom:54px}.event-experiences,.event-process{grid-template-columns:1fr}.section-heading h2{font-size:1.9rem}.event-card,.process-card{padding:22px}.event-card{padding-left:38px}.private-events-inquiry{margin:40px 0 18px;padding:28px 20px}.studio-option{margin-bottom:52px}.studio-option-copy{padding:28px 22px}.preview-footer-grid{grid-template-columns:1fr 1fr;gap:24px 16px}.preview-footer-bottom{align-items:flex-start;flex-direction:column}}
+
+      /* SERVICE AREA — STACKED INTRO, CLEAR FAQ AND ACTIONS */
+      .private-events-service-area {
+        margin-bottom: 56px;
+      }
+      .private-events-service-area .section-heading {
+        display: block;
+        max-width: 860px;
+        margin: 0 auto 26px;
+        text-align: center;
+      }
+      .private-events-service-area .section-heading h2 {
+        margin: 0 0 12px;
+        color: #082d42;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(1.9rem, 3.3vw, 2.7rem);
+        line-height: 1.15;
+        text-shadow: none;
+      }
+      .private-events-service-area .section-heading p {
+        max-width: 800px;
+        margin: 0 auto;
+        color: #536978;
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+      .private-events-faq {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        max-width: 980px;
+        margin: 0 auto 24px;
+      }
+      .private-events-faq details {
+        align-self: start;
+        overflow: hidden;
+        border: 1px solid #eee4d4;
+        border-radius: 14px;
+        background: #fffdfa;
+        box-shadow: 0 8px 22px rgba(8, 45, 66, .06);
+      }
+      .private-events-faq summary {
+        display: flex;
+        min-height: 62px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 15px 18px;
+        color: #082d42;
+        cursor: pointer;
+        font-size: .95rem;
+        font-weight: 700;
+        line-height: 1.4;
+        list-style: none;
+      }
+      .private-events-faq summary::-webkit-details-marker { display: none; }
+      .private-events-faq summary::after {
+        flex: 0 0 auto;
+        color: #b47a18;
+        content: "+";
+        font-size: 1.4rem;
+        line-height: 1;
+      }
+      .private-events-faq details[open] summary::after { content: "−"; }
+      .private-events-faq details p {
+        margin: 0;
+        padding: 0 18px 17px;
+        color: #536978;
+        font-size: .92rem;
+        line-height: 1.6;
+      }
+      .private-events-service-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+      }
+      .private-events-service-secondary {
+        color: #082d42;
+        font-size: .9rem;
+        font-weight: 700;
+        text-decoration-color: rgba(180, 122, 24, .65);
+        text-underline-offset: 4px;
+      }
+      @media(max-width:640px) {
+        .private-events-service-area { margin-bottom: 42px; }
+        .private-events-service-area .section-heading { margin-bottom: 20px; }
+        .private-events-faq { grid-template-columns: 1fr; gap: 10px; }
+        .private-events-faq summary { min-height: 56px; padding: 14px 16px; font-size: .9rem; }
+        .private-events-faq details p { padding: 0 16px 15px; font-size: .88rem; }
+        .private-events-service-actions { flex-direction: column; gap: 14px; }
+      }
     </style>
       <script type="application/ld+json">
 {
@@ -947,17 +1041,21 @@
           </div>
         </section>
 
-<section class="private-events-section private-events-inner" aria-labelledby="service-area-title">
+<section class="private-events-section private-events-inner private-events-service-area" aria-labelledby="service-area-title">
       <div class="section-heading">
         <h2 id="service-area-title">Where we bring Private Flow Events</h2>
         <p>Private Flow Events brings focused therapeutic massage to private venues in Austin, including downtown, and across Bell, Williamson, and Travis counties. Whether you’re planning a bridal gathering in Austin, a retreat near Georgetown, or a celebration in Killeen, share your venue address so we can confirm availability and plan around your space.</p>
       </div>
-      <details><summary>What kinds of private events can I book in Central Texas?</summary><p>We plan on-site massage experiences for private celebrations, bridal gatherings, retreats, birthdays, and similar occasions.</p></details>
-      <details><summary>What do you need to plan massage at my venue?</summary><p>Send your event date, venue address, estimated guest count, and preferred service window. Let us know what space is available so we can discuss a setup that fits.</p></details>
-      <p><a href="#private-event-inquiry">Request massage for your private event</a></p>
-      <p><a href="./corporate-wellness.html">Explore FlowChair Anywhere for workplace or community chair massage.</a></p>
+      <div class="private-events-faq">
+        <details><summary>What kinds of private events can I book in Central Texas?</summary><p>We plan on-site massage experiences for private celebrations, bridal gatherings, retreats, birthdays, and similar occasions.</p></details>
+        <details><summary>What do you need to plan massage at my venue?</summary><p>Send your event date, venue address, estimated guest count, and preferred service window. Let us know what space is available so we can discuss a setup that fits.</p></details>
+      </div>
+      <div class="private-events-service-actions">
+        <a class="button" href="#private-event-inquiry">Request massage for your private event <span aria-hidden="true">→</span></a>
+        <a class="private-events-service-secondary" href="./corporate-wellness.html">Explore FlowChair Anywhere</a>
+      </div>
     </section>
-        <section class="studio-option" aria-labelledby="studio-option-title">
+        <section class="studio-option" hidden aria-labelledby="studio-option-title">
           <div class="studio-option-copy">
             <p class="eyebrow">The In-Studio Option</p>
             <h2 id="studio-option-title">A little room to unwind, together.</h2>
