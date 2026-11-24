@@ -359,6 +359,107 @@
       transform: rotate(180deg);
     }
 
+    .service-area-section {
+      padding-block: 44px 38px;
+    }
+
+    .service-area-section .section-heading {
+      display: block;
+      max-width: 820px;
+      margin: 0 auto 24px;
+      text-align: center;
+    }
+
+    .service-area-section .section-heading::before,
+    .service-area-section .section-heading::after {
+      display: block;
+      width: 54px;
+      margin: 0 auto 14px;
+    }
+
+    .service-area-section .section-heading::after {
+      margin: 14px auto 0;
+    }
+
+    .service-area-section .section-heading h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
+      line-height: 1.12;
+    }
+
+    .service-area-intro {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .service-area-faq {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 920px;
+      margin: 0 auto 24px;
+    }
+
+    .service-area-faq details {
+      align-self: start;
+      overflow: hidden;
+      border: 1px solid rgba(8, 45, 66, .12);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .78);
+      box-shadow: 0 6px 18px rgba(8, 45, 66, .05);
+    }
+
+    .service-area-faq summary {
+      display: flex;
+      min-height: 58px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 17px;
+      color: var(--navy);
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.35;
+      list-style: none;
+    }
+
+    .service-area-faq summary::-webkit-details-marker { display: none; }
+    .service-area-faq summary::after {
+      flex: 0 0 auto;
+      color: var(--gold);
+      content: "+";
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+    .service-area-faq details[open] summary::after { content: "−"; }
+
+    .service-area-faq details p {
+      margin: 0;
+      padding: 0 17px 16px;
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.55;
+    }
+
+    .service-area-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .service-area-secondary {
+      color: var(--navy);
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration-color: rgba(197, 139, 37, .65);
+      text-underline-offset: 4px;
+    }
+
     .section-title {
       margin: 0;
       color: var(--navy);
@@ -985,6 +1086,15 @@
         width: 25px;
       }
 
+      .service-area-section { padding-block: 30px; }
+      .service-area-section .section-heading { margin-bottom: 18px; }
+      .service-area-section .section-heading::before,
+      .service-area-section .section-heading::after { width: 40px; }
+      .service-area-faq { grid-template-columns: 1fr; gap: 9px; }
+      .service-area-faq summary { min-height: 52px; padding: 13px 15px; font-size: .9rem; }
+      .service-area-faq details p { padding: 0 15px 14px; font-size: .87rem; }
+      .service-area-actions { flex-direction: column; gap: 14px; }
+
       .section-title {
         font-size: 1.43rem;
       }
@@ -1240,15 +1350,19 @@
       </div>
     </section>
 
-<section class="section wrap" aria-labelledby="service-area-title">
+<section class="section wrap service-area-section" aria-labelledby="service-area-title">
       <div class="section-heading">
         <h2 id="service-area-title">On-site chair massage across Central Texas</h2>
-        <p>Bring FlowChair Anywhere to your workplace, hotel, conference, or community event across Central Texas. Share the venue address, guest count, and event schedule so we can recommend a setup.</p>
+        <p class="service-area-intro">Bring FlowChair Anywhere to your workplace, hotel, conference, or community event across Central Texas. Share the venue address, guest count, and event schedule so we can recommend a setup.</p>
       </div>
-      <details><summary>What kinds of events can book chair massage?</summary><p>FlowChair Anywhere is available by inquiry for workplace wellness days, conferences, employee appreciation events, and community gatherings across Central Texas.</p></details>
-      <details><summary>What should I include in a chair massage inquiry?</summary><p>Share your event date, venue address, approximate guest count, and the time you want massage available. Include any load-in or parking instructions you already have.</p></details>
-      <p><a href="#inquiry">Request event chair massage</a></p>
-      <p><a href="./private-events.html">Explore Private Flow Events for massage designed around a private gathering.</a></p>
+      <div class="service-area-faq">
+        <details><summary>What kinds of events can book chair massage?</summary><p>FlowChair Anywhere is available by inquiry for workplace wellness days, conferences, employee appreciation events, and community gatherings across Central Texas.</p></details>
+        <details><summary>What should I include in a chair massage inquiry?</summary><p>Share your event date, venue address, approximate guest count, and the time you want massage available. Include any load-in or parking instructions you already have.</p></details>
+      </div>
+      <div class="service-area-actions">
+        <a class="button" href="#inquiry">Request event chair massage <span aria-hidden="true">→</span></a>
+        <a class="service-area-secondary" href="./private-events.html">Explore Private Flow Events</a>
+      </div>
     </section>
     <section class="section wrap" aria-labelledby="experiences-title">
       <div class="section-heading">
