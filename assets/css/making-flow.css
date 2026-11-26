@@ -4047,3 +4047,11 @@ body.fm-home,
     padding: 5px 10px !important;
   }
 }
+
+@media (max-width: 800px) {
+  .fm-hero .fm-hero-copy h1 {
+    max-width: none;
+    font-size: clamp(26px, 8.5vw, 49px);
+  }
+  .fm-hero-desktop-break { display: none; }
+}
