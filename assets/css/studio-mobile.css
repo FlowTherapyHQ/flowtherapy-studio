@@ -17,3 +17,29 @@ studio-mobile-footer h2{font:700 17px system-ui;color:inherit;margin:0 0 8px}stu
 .sm-contact{margin:22px 0;scroll-margin-top:80px}.sm-contact p{margin:6px 0}.sm-end{border-top:1px solid #bdcbd0;padding-top:16px;font-size:14px}
 html.sm-ready main,html.sm-ready studio-mobile-footer{zoom:var(--sm-scale,1)}
 }
+@media (max-width:800px) {
+  studio-mobile-header header {gap:4px;padding:6px 10px;min-height:58px}
+  .sm-brand img {width:clamp(36px,12vw,60px);height:42px}
+  studio-mobile-header :is(.sm-size,summary) {display:grid;place-items:center;min-height:44px;padding:0 4px;border:0;background:transparent;color:#12364a;font:600 12px/1 system-ui;white-space:nowrap;cursor:pointer}
+  studio-mobile-header summary::-webkit-details-marker {display:none}
+  studio-mobile-header details {position:static;margin:0;padding:0;border:0;background:transparent}
+  studio-mobile-header details iframe {position:absolute;top:100%;right:8px;width:min(340px,calc(100% - 16px));border:0;border-radius:12px;background:#faf5ec}
+  studio-mobile-header .sm-action {font:650 13px/1.15 system-ui;padding:12px 10px;white-space:nowrap}
+  studio-mobile-header .sm-menu {width:38px;min-width:36px}
+  studio-mobile-footer footer {padding:24px clamp(18px,5vw,32px);background:linear-gradient(155deg,#fcf7ed 25%,#eaf1f4);border-top:2px solid #c18d45}
+  studio-mobile-footer .sm-identity {display:grid;grid-template-columns:60px 1fr;column-gap:12px;align-items:center;text-align:left;margin:0 0 18px}
+  studio-mobile-footer .sm-identity img {grid-row:span 2;width:60px;height:52px}
+  studio-mobile-footer .sm-identity p {align-self:end;margin:0;font:500 19px/1.25 Georgia,serif}
+  studio-mobile-footer .sm-identity i {align-self:start;font:italic 14px/1.5 Georgia,serif;color:#475f6c}
+  studio-mobile-footer .sm-columns {border-top:1px solid #cbd6d7;padding-top:17px;gap:12px}
+  studio-mobile-footer footer h2 {font:650 13px/1.4 system-ui;letter-spacing:.025em;margin-bottom:6px}
+  studio-mobile-footer footer a,studio-mobile-footer .sm-contact p {font:400 14px/1.5 system-ui;color:#274455}
+  studio-mobile-footer footer a {padding:4px 0}
+  studio-mobile-footer .sm-contact {border-top:1px solid #cbd6d7;margin:16px 0 12px;padding-top:14px}
+  studio-mobile-footer .sm-contact p {margin:3px 0}
+  studio-mobile-footer .sm-end {font:400 12px/1.55 system-ui;color:#526875;margin:0;padding-top:12px}
+}
+@media(max-width:360px){
+  studio-mobile-header header {gap:2px;padding-inline:5px}
+  studio-mobile-header .sm-action {padding-inline:7px;font-size:12px}
+}
