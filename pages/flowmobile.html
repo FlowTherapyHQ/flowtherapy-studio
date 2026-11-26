@@ -103,12 +103,12 @@
     }
 
     .fm-page h1,
-    .fm-page h2,
+    .fm-page h2:not(:where(studio-mobile-footer *)),
     .fm-page h3 {
       font-family: "Playfair Display", Georgia, serif;
     }
 
-    .fm-page h2 {
+    .fm-page h2:not(:where(studio-mobile-footer *)) {
       margin: 0 0 12px;
       color: var(--fm-navy);
       font-size: clamp(2rem, 3.4vw, 3.1rem);
