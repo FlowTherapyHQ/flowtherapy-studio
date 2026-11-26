@@ -4032,3 +4032,18 @@ body.fm-home,
     display: none !important;
   }
 }
+@media (max-width: 800px) {
+  #flowstart-card .fm-flowstart-back { justify-content: safe center; overflow-y: auto; }
+  #flowstart-card .fm-flowstart-back .fm-flowstart-desktop { display: none !important; }
+  #flowstart-card .fm-flowstart-back .fm-flowstart-mobile {
+    display: block !important;
+    font: 500 13px/1.25 Inter, Arial, sans-serif !important;
+    margin: 0 !important;
+  }
+  #flowstart-card .fm-flowstart-back .fm-flowstart-book {
+    position: static;
+    flex: none;
+    font: 650 12px/1.2 Inter, Arial, sans-serif !important;
+    padding: 5px 10px !important;
+  }
+}
