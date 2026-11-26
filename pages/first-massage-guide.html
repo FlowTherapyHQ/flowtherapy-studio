@@ -313,8 +313,11 @@
         }
       }
     </style>
-  </head>
+  <link rel="stylesheet" href="/assets/css/studio-mobile.css">
+<script defer src="/assets/js/studio-mobile.js"></script>
+</head>
   <body class="flowtherapy-home fm-home fm-guide-page">
+<studio-mobile-header></studio-mobile-header>
         <a class="fm-skip" href="#fm-guide-title">Skip to content</a>
     <header class="fm-header">
       <a class="fm-brand" href="../index.html#top" aria-label="FlowTherapy Massage Co. home">
@@ -332,7 +335,7 @@
         <a href="../index.html#about">About</a>
         <a href="../index.html#flowhub">Resources</a>
         <a href="./client-forms.html">Client Forms</a>
-        <a href="./contact.html">Contact</a>
+        <a href="/index.html#studio-contact">Contact</a>
       </nav>
       <div class="fm-tools">
         <button id="fm-text" aria-label="Increase text size" type="button">A A A</button>
@@ -444,20 +447,12 @@
         </div>
 
         <div>
-          <h3>Quick Links</h3>
-          <a href="../index.html#top">Home</a>
-          <a href="../index.html#ways">More Ways to Flow</a>
-          <a href="../index.html#flowhub">FlowLibrary &amp; FlowNotes</a>
-          <a href="./client-forms.html">Client Forms</a>
-          <a href="./private-events.html">Private Events</a>
-          <a href="./contact.html">Contact</a>
-        </div>
+          <h3>Quick Links</h3><a href="/index.html">Home</a><a href="/pages/client-forms.html">Client Forms</a><a href="/pages/flowmobile.html">FlowMobile</a><a href="/pages/corporate-wellness.html">FlowChair Anywhere</a><a href="/pages/private-events.html">Private Flow Events</a></div>
 
         <div>
           <h3>Contact</h3>
           <a href="tel:7373873569">737-387-FLOW</a>
           <a href="mailto:hello@discoverflowtherapy.com">hello@discoverflowtherapy.com</a>
-          <p>1805 Florence Rd. Suite 10, Killeen, TX 76541</p>
           <p>Serving Bell, Williamson &amp; Travis Counties, Texas</p>
         </div>
 
@@ -487,5 +482,6 @@
         if (year) year.textContent = new Date().getFullYear();
       })();
     </script>
-  </body>
+  <studio-mobile-footer id="studio-contact"></studio-mobile-footer>
+</body>
 </html>

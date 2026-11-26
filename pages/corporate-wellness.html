@@ -1250,9 +1250,12 @@
   ]
 }
     </script>
+<link rel="stylesheet" href="/assets/css/studio-mobile.css">
+<script defer src="/assets/js/studio-mobile.js"></script>
 </head>
 
 <body class="fm-home">
+<studio-mobile-header></studio-mobile-header>
   <a class="fm-skip" href="#top">Skip to content</a>
   <header class="fm-header" aria-label="FlowTherapy main site navigation">
     <a class="fm-brand" href="../index.html#top" aria-label="FlowTherapy Massage Co. home">
@@ -1265,7 +1268,7 @@
       <a href="../index.html#about">About</a>
       <a href="../index.html#flowhub">Resources</a>
       <a href="client-forms.html">Client Forms</a>
-      <a href="contact.html">Contact</a>
+      <a href="/index.html#studio-contact">Contact</a>
     </nav>
     <div class="fm-tools">
       <button id="fm-text" type="button" aria-label="Increase text size">A A A</button>
@@ -1528,22 +1531,13 @@
         <p>Discover the Rhythm of Relaxation.</p>
       </div>
       <div>
-        <h3>Quick Links</h3>
-        <a href="../index.html#top">Home</a>
-        <a href="../index.html#flowpass">FlowPass</a>
-        <a href="../index.html#flowpack">FlowPack</a>
-        <a href="https://app.squareup.com/gift/MLV560DXHSF4H/order">FlowGift</a>
-        <a href="client-forms.html">Client Forms</a>
-        <a href="private-events.html">Private Events</a>
-        <a href="contact.html">Contact</a>
-      </div>
+        <h3>Quick Links</h3><a href="/index.html">Home</a><a href="/pages/client-forms.html">Client Forms</a><a href="/pages/flowmobile.html">FlowMobile</a><a href="/pages/corporate-wellness.html">FlowChair Anywhere</a><a href="/pages/private-events.html">Private Flow Events</a></div>
       <div>
         <h3>Contact</h3>
         <a href="tel:7373873569">737-387-FLOW</a>
         <a href="fax:5122331764">512-233-1764 (fax)</a>
         <a href="mailto:hello@discoverflowtherapy.com">hello@discoverflowtherapy.com</a>
-        <p>1805 Florence Rd. Suite 10, Killeen, TX 76541</p>
-        <p>Serving Bell, Williamson &amp; Travis Co. Texas</p>
+        <p>FlowMobile serves Austin &amp; Central Texas</p>
       </div>
       <div>
         <h3>Policies</h3>
@@ -1602,6 +1596,7 @@
       window.addEventListener("load", () => navigator.serviceWorker.register("/service-worker.js").catch(() => { }));
     }
   </script>
+<studio-mobile-footer id="studio-contact"></studio-mobile-footer>
 </body>
 
 </html>

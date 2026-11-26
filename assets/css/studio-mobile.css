@@ -1,0 +1,19 @@
+studio-mobile-header,studio-mobile-footer{display:none}
+@media(max-width:800px){
+html.sm-ready body :is(.fm-header,.preview-header,#site-header,.fm-footer,.preview-footer,#site-footer){display:none!important}
+html.sm-ready :is(studio-mobile-header,studio-mobile-footer){display:block;width:100%;grid-column:1/-1;color:#092c40;font:16px/1.45 system-ui,sans-serif;text-align:left}
+studio-mobile-header{position:sticky;top:0;z-index:10000}
+studio-mobile-header header{position:relative;display:flex;align-items:center;gap:10px;padding:8px 16px;min-height:64px;background:#faf5ec}
+.sm-brand{margin-right:auto;display:flex}.sm-brand img{width:72px;height:48px;object-fit:contain}
+studio-mobile-header .sm-action{background:#00799e;color:white;padding:10px 16px;border-radius:999px;font-weight:650;text-decoration:none}
+.sm-menu{background:transparent;color:#12364a;border:1px solid #a9bfca;border-radius:8px;width:44px;height:44px;font:22px system-ui}
+#sm-nav[hidden]{display:none!important}#sm-nav:not([hidden]){display:grid;position:absolute;inset:100% 0 auto;background:#faf5ec;padding:12px 20px;max-height:65vh;overflow:auto;gap:4px;text-align:left}
+#sm-nav a,#sm-nav summary{padding:7px 0;color:inherit}#sm-nav button{justify-self:start;padding:7px}
+studio-mobile-footer footer{background:linear-gradient(125deg,#faf2e6,#e6f0f5);padding:28px 20px;color:#092c40;text-align:left}
+.sm-identity{text-align:center;margin-bottom:24px}.sm-identity img{width:88px;height:62px;object-fit:contain}.sm-identity p{font:600 21px Georgia,serif;margin:8px}.sm-identity i{font:italic 17px Georgia,serif}
+.sm-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+studio-mobile-footer section{padding:0;margin:0;background:none}
+studio-mobile-footer h2{font:700 17px system-ui;color:inherit;margin:0 0 8px}studio-mobile-footer a{display:block;padding:5px 0;color:inherit;text-decoration:none;overflow-wrap:anywhere}
+.sm-contact{margin:22px 0;scroll-margin-top:80px}.sm-contact p{margin:6px 0}.sm-end{border-top:1px solid #bdcbd0;padding-top:16px;font-size:14px}
+html.sm-ready main,html.sm-ready studio-mobile-footer{zoom:var(--sm-scale,1)}
+}

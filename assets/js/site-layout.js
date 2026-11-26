@@ -134,7 +134,7 @@ if (currentPath.includes("/body-map.html")) {
           FAQ
         </a>
 
-        <a href="/pages/contact.html"${activeClass("contact")}>
+        <a href="/index.html#studio-contact"${activeClass("contact")}>
           Contact FlowTherapy
         </a>
       </nav>
@@ -143,44 +143,7 @@ if (currentPath.includes("/body-map.html")) {
 
   const footerHTML = `
     <footer class="footer">
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="/index.html"${activeClass("home")}>Home</a>
-
-        <a href="/pages/forms.html"${activeClass("forms")}>
-          Forms
-        </a>
-
-        <a href="/pages/aftercare.html"${activeClass("aftercare")}>
-          Aftercare
-        </a>
-        <a href="/pages/body-map.html">FlowMap</a>
-
-        <a href="/pages/flownotes.html"${activeClass("flownotes")}>
-          FlowNotes
-        </a>
-
-        <a
-          href="/pages/flowresources-redesign.html"
-          ${activeClass("flowresources")}
-        >
-          FlowResources
-        </a>
-
-        <a
-          href="https://discoverflowtherapy.com/#ways"
-          ${activeClass("programs")}
-        >
-          Wellness Programs
-        </a>
-
-        <a href="/pages/faq.html"${activeClass("faq")}>
-          FAQ
-        </a>
-
-        <a href="/pages/contact.html"${activeClass("contact")}>
-          Contact FlowTherapy
-        </a>
-      </nav>
+      <nav class="footer-nav" aria-label="Quick Links"><a href="/index.html">Home</a><a href="/pages/client-forms.html">Client Forms</a><a href="/pages/flowmobile.html">FlowMobile</a><a href="/pages/corporate-wellness.html">FlowChair Anywhere</a><a href="/pages/private-events.html">Private Flow Events</a></nav>
 
       <p>
         &copy; FlowTherapy • Move Better. Feel Better. Live Better.
