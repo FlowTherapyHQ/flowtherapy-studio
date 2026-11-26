@@ -126,7 +126,7 @@
         }
 
         .faq-intro p {
-          color: #29485e;
+          color: #19394e;
         }
 
         .faq-intro p + p {
@@ -147,7 +147,7 @@
         .faq-category-card {
           box-sizing: border-box;
           display: flex;
-          min-height: 150px;
+          min-height: 112px;
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
@@ -221,11 +221,11 @@
         /* Card descriptions */
 
         .faq-category-card small {
-          color: #6c6255;
+          color: #29485e;
           font-family: "DM Sans", Arial, sans-serif;
           font-size: 12px;
           font-weight: 400;
-          line-height: 1.65;
+          line-height: 1.5;
         }
 
         /* Reduced-motion accessibility */
@@ -238,12 +238,6 @@
           .faq-category-card:hover {
             transform: none;
           }
-        }
-
-        .faq-category-card small {
-          color: #536a7a;
-          font-size: 12px;
-          line-height: 1.5;
         }
 
         .faq-section {
@@ -264,6 +258,12 @@
           flex: 0 0 auto;
         }
 
+        .faq-category-icon svg {
+          display: block;
+          width: 20px;
+          height: 20px;
+        }
+
         .faq-section-heading h2 {
           margin: 0;
           color: #06283e;
@@ -274,7 +274,7 @@
 
         .faq-section-heading p {
           margin: 3px 0 0;
-          color: #536a7a;
+          color: #29485e;
           font-size: 13px;
           line-height: 1.6;
         }
@@ -307,6 +307,11 @@
           display: none;
         }
 
+        .faq-item summary:focus-visible {
+          outline: 3px solid #078fc5;
+          outline-offset: -3px;
+        }
+
         .faq-item summary::after {
           content: "+";
           flex: 0 0 auto;
@@ -325,7 +330,7 @@
 
         .faq-answer {
           padding: 2px 22px 20px;
-          color: #344f60;
+          color: #213d52;
           font-size: 14px;
           line-height: 1.85;
         }
@@ -335,8 +340,9 @@
         }
 
         .faq-answer a {
-          color: #087da8;
-          font-weight: 600;
+          color: #075a7a;
+          font-weight: 700;
+          text-decoration: underline;
           text-underline-offset: 3px;
         }
 
@@ -345,7 +351,7 @@
           border-left: 3px solid #168bb9;
           border-radius: 0 12px 12px 0;
           background: #edf6fa;
-          color: #344f60;
+          color: #213d52;
           font-size: 13px;
           line-height: 1.8;
         }
@@ -369,7 +375,7 @@
         .faq-contact-card p {
           max-width: 600px;
           margin: 0 auto 24px;
-          color: #344f60;
+          color: #213d52;
           font-size: 14px;
           line-height: 1.8;
         }
@@ -404,7 +410,7 @@
           }
 
           .faq-category-card {
-            min-height: 132px;
+            min-height: 96px;
             padding: 16px;
           }
 
@@ -434,7 +440,7 @@
           }
 
           .faq-category-card {
-            min-height: 125px;
+            min-height: 92px;
             padding: 13px;
           }
 
@@ -456,16 +462,11 @@
           }
         }
 
-        @media (prefers-reduced-motion: reduce) {
-          .faq-category-card {
-            transition: none;
-          }
-        }
         /* =========================================
    POLICIES & FAQS — FOOTER
    ========================================= */
 
-        #client-forms-footer.fm-footer {
+        #policies-footer.fm-footer {
           position: relative;
           box-sizing: border-box;
           width: 100%;
@@ -475,7 +476,7 @@
           font-family: "DM Sans", Arial, sans-serif;
         }
 
-        #client-forms-footer .fm-footer-grid {
+        #policies-footer .fm-footer-grid {
           display: grid;
           grid-template-columns: 1.2fr 0.8fr 1.3fr 0.8fr;
           gap: 24px;
@@ -483,25 +484,25 @@
           margin: 0 auto;
         }
 
-        #client-forms-footer .fm-footer-grid > div {
+        #policies-footer .fm-footer-grid > div {
           min-width: 0;
         }
 
-        #client-forms-footer .fm-footer-grid > div + div {
+        #policies-footer .fm-footer-grid > div + div {
           border-left: 1px solid #d6d4cd;
           padding-left: 22px;
         }
 
         /* Brand and logo */
 
-        #client-forms-footer .fm-footer-brand {
+        #policies-footer .fm-footer-brand {
           display: flex;
           flex-direction: column;
           align-items: center;
           text-align: center;
         }
 
-        #client-forms-footer .fm-footer-brand img {
+        #policies-footer .fm-footer-brand img {
           display: block;
           width: 190px;
           max-width: 100%;
@@ -513,7 +514,7 @@
 
         /* Premium FlowTherapy brand typography */
 
-        #client-forms-footer .fm-footer-brand p {
+        #policies-footer .fm-footer-brand p {
           margin: 5px 0;
           color: #06283e;
           font-family: "Cormorant Garamond", Georgia, serif;
@@ -523,7 +524,7 @@
           letter-spacing: 0.2px;
         }
 
-        #client-forms-footer .fm-footer-brand p:last-child {
+        #policies-footer .fm-footer-brand p:last-child {
           margin-top: 8px;
           font-family: "Cormorant Garamond", Georgia, serif;
           font-size: 21px;
@@ -535,7 +536,7 @@
 
         /* Column headings */
 
-        #client-forms-footer .fm-footer-grid h3 {
+        #policies-footer .fm-footer-grid h3 {
           margin: 0 0 12px;
           color: #06283e;
           font-family: "DM Sans", Arial, sans-serif;
@@ -545,7 +546,7 @@
 
         /* Links and contact information */
 
-        #client-forms-footer .fm-footer-grid a {
+        #policies-footer .fm-footer-grid a {
           display: block;
           margin: 0 0 9px;
           color: #06283e;
@@ -556,13 +557,13 @@
           overflow-wrap: anywhere;
         }
 
-        #client-forms-footer .fm-footer-grid a:hover {
+        #policies-footer .fm-footer-grid a:hover {
           color: #087da8;
           text-decoration: underline;
           text-underline-offset: 3px;
         }
 
-        #client-forms-footer .fm-footer-grid p {
+        #policies-footer .fm-footer-grid p {
           margin: 0 0 9px;
           color: #06283e;
           font-family: "DM Sans", Arial, sans-serif;
@@ -573,7 +574,7 @@
 
         /* Copyright and Book Now */
 
-        #client-forms-footer .fm-footer-bottom {
+        #policies-footer .fm-footer-bottom {
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -584,7 +585,7 @@
           border-top: 1px solid #d6d4cd;
         }
 
-        #client-forms-footer .fm-footer-bottom p {
+        #policies-footer .fm-footer-bottom p {
           margin: 0;
           color: #06283e;
           font-family: "DM Sans", Arial, sans-serif;
@@ -592,7 +593,7 @@
           line-height: 1.7;
         }
 
-        #client-forms-footer .fm-footer-bottom .fm-btn {
+        #policies-footer .fm-footer-bottom .fm-btn {
           display: inline-flex;
           flex: 0 0 auto;
           align-items: center;
@@ -610,70 +611,87 @@
           text-decoration: none;
         }
 
-        #client-forms-footer .fm-footer-bottom .fm-btn:hover {
+        #policies-footer .fm-footer-bottom .fm-btn:hover {
           background: #087da8;
+        }
+
+
+        @media (min-width: 761px) and (max-width: 980px) {
+          .faq-category-nav {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+
+          #policies-footer .fm-footer-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 26px 22px;
+          }
+
+          #policies-footer .fm-footer-grid > div + div {
+            border-left: 0;
+            padding-left: 0;
+          }
         }
 
         /* Tablet and mobile */
 
         @media (max-width: 760px) {
-          #client-forms-footer.fm-footer {
+          #policies-footer.fm-footer {
             padding: 30px 22px 18px;
           }
 
-          #client-forms-footer .fm-footer-grid {
+          #policies-footer .fm-footer-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 24px 18px;
           }
 
-          #client-forms-footer .fm-footer-grid > div + div {
+          #policies-footer .fm-footer-grid > div + div {
             border-left: 0;
             padding-left: 0;
           }
 
-          #client-forms-footer .fm-footer-brand {
+          #policies-footer .fm-footer-brand {
             grid-column: 1 / -1;
             text-align: center;
           }
 
-          #client-forms-footer .fm-footer-grid > div:nth-child(2) {
+          #policies-footer .fm-footer-grid > div:nth-child(2) {
             grid-column: 1;
           }
 
-          #client-forms-footer .fm-footer-grid > div:nth-child(3) {
+          #policies-footer .fm-footer-grid > div:nth-child(3) {
             grid-column: 2;
             grid-row: 2;
           }
 
-          #client-forms-footer .fm-footer-grid > div:nth-child(4) {
+          #policies-footer .fm-footer-grid > div:nth-child(4) {
             grid-column: 1 / -1;
             grid-row: 3;
           }
 
-          #client-forms-footer .fm-footer-bottom {
+          #policies-footer .fm-footer-bottom {
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             gap: 12px;
           }
 
-          #client-forms-footer .fm-footer-bottom p {
+          #policies-footer .fm-footer-bottom p {
             max-width: 65%;
           }
         }
 
         @media (max-width: 420px) {
-          #client-forms-footer .fm-footer-grid {
+          #policies-footer .fm-footer-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 22px 14px;
           }
 
-          #client-forms-footer .fm-footer-bottom {
+          #policies-footer .fm-footer-bottom {
             align-items: flex-start;
             flex-direction: column;
           }
 
-          #client-forms-footer .fm-footer-bottom p {
+          #policies-footer .fm-footer-bottom p {
             max-width: 100%;
           }
         }
@@ -735,7 +753,7 @@
         .hero .hero-description {
           max-width: 680px;
           margin: 20px auto 0;
-          color: #42596a;
+          color: #213d52;
           font-family: "DM Sans", Arial, sans-serif;
           font-size: 16px;
           font-weight: 400;
@@ -769,127 +787,6 @@
             line-height: 1.75;
           }
         }
-        /* =========================================
-   FAQ INTRO — REFINED SPACING & TYPOGRAPHY
-   ========================================= */
-
-        .faq-intro {
-          max-width: 820px;
-          margin: 0 auto 42px;
-          padding: 34px 24px 0;
-          text-align: center;
-          color: #06283e;
-        }
-
-        .faq-intro p {
-          margin: 0 auto 18px;
-          max-width: 760px;
-          color: #29485e;
-          font-family: "Cormorant Garamond", Georgia, serif;
-          font-size: 20px;
-          line-height: 1.7;
-        }
-
-        .faq-intro p:last-child {
-          margin-bottom: 0;
-          color: #087da8;
-          font-family: "DM Sans", Arial, sans-serif;
-          font-size: 13px;
-          font-weight: 500;
-          letter-spacing: 0.2px;
-          line-height: 1.8;
-        }
-
-        /* Bring the category cards closer to the introduction */
-
-        .faq-category-nav {
-          margin-top: 0;
-          margin-bottom: 56px;
-        }
-
-        /* Mobile refinement */
-
-        @media (max-width: 600px) {
-          .faq-intro {
-            margin-bottom: 30px;
-            padding: 26px 22px 0;
-          }
-
-          .faq-intro p {
-            font-size: 18px;
-            line-height: 1.65;
-          }
-
-          .faq-intro p:last-child {
-            font-size: 12px;
-          }
-
-          .faq-category-nav {
-            margin-bottom: 40px;
-          }
-        }
-        /* =========================================
-   FLOWTHERAPY FAQ CARDS — WARM IVORY
-   ========================================= */
-
-        .faq-category-card {
-          background: linear-gradient(145deg, #fffdf8 0%, #f8f0e4 100%);
-          border: 1px solid #e8d9c5;
-          border-radius: 20px;
-          box-shadow: 0 5px 18px rgba(87, 68, 43, 0.06);
-          transition:
-            transform 0.25s ease,
-            box-shadow 0.25s ease,
-            border-color 0.25s ease;
-        }
-
-        /* Warm, subtle hover effect */
-
-        .faq-category-card:hover {
-          transform: translateY(-3px);
-          border-color: #c9d9e5;
-          box-shadow: 0 10px 26px rgba(6, 40, 62, 0.1);
-        }
-
-        /* Soft blue icon tiles remain the accent */
-
-        .faq-category-icon {
-          background: #e8f3f8;
-          border: 1px solid #d1e7f2;
-          border-radius: 13px;
-          color: #087da8;
-        }
-
-        /* Elegant card headings */
-
-        .faq-category-card strong {
-          color: #06283e;
-          font-family: "Cormorant Garamond", Georgia, serif;
-          font-size: 20px;
-          font-weight: 600;
-          line-height: 1.3;
-        }
-
-        /* Refined supporting text */
-
-        .faq-category-card small {
-          color: #6c6255;
-          font-family: "DM Sans", Arial, sans-serif;
-          font-size: 12px;
-          line-height: 1.65;
-        }
-
-        /* Respect reduced-motion preferences */
-
-        @media (prefers-reduced-motion: reduce) {
-          .faq-category-card {
-            transition: none;
-          }
-
-          .faq-category-card:hover {
-            transform: none;
-          }
-        }
       </style>
 
       <section class="faq-page">
@@ -897,7 +794,7 @@
           <p>
             We want your FlowTherapy experience to feel comfortable, informed,
             and effortless. Explore the topics below to find answers before your
-            visit.
+            session.
           </p>
           <p>
             Select a category to jump to its questions. Open any question to
@@ -907,49 +804,49 @@
 
         <nav class="faq-category-nav" aria-label="FAQ categories">
           <a class="faq-category-card" href="#faq-booking">
-            <span class="faq-category-icon" aria-hidden="true">◷</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 15l2 2 5-5"/></svg></span>
             <strong>Booking &amp; Scheduling</strong>
             <small>Appointments and cancellations</small>
           </a>
 
           <a class="faq-category-card" href="#faq-experience">
-            <span class="faq-category-icon" aria-hidden="true">✧</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg></span>
             <strong>Your Experience</strong>
             <small>Preparing for your session</small>
           </a>
 
           <a class="faq-category-card" href="#faq-flowpass">
-            <span class="faq-category-icon" aria-hidden="true">◇</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5v5c0 4.2-3.2 7.2-8 8.5-4.8-1.3-8-4.3-8-8.5v-5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
             <strong>FlowPass</strong>
             <small>Membership benefits and terms</small>
           </a>
 
           <a class="faq-category-card" href="#faq-flowpack">
-            <span class="faq-category-icon" aria-hidden="true">▤</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 7 9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7M12 11v10M7.5 5l9 4"/></svg></span>
             <strong>FlowPack</strong>
             <small>Packages and expiration</small>
           </a>
 
           <a class="faq-category-card" href="#faq-payments">
-            <span class="faq-category-icon" aria-hidden="true">♡</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 7v13M12 7s-5-1-5-4 5-1 5 4Zm0 0s5-1 5-4-5-1-5 4Z"/></svg></span>
             <strong>Payments &amp; Gifts</strong>
             <small>Purchases and enhancements</small>
           </a>
 
           <a class="faq-category-card" href="#faq-care">
-            <span class="faq-category-icon" aria-hidden="true">❋</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 7v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
             <strong>Care &amp; Consent</strong>
             <small>Intake, privacy, and comfort</small>
           </a>
 
           <a class="faq-category-card" href="#faq-specialized">
-            <span class="faq-category-icon" aria-hidden="true">❧</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C11 4 5 8 5 14c0 3 2 5 5 5 6 0 10-6 10-15Z"/><path d="M4 21c2-6 6-10 12-14M8 15c2 0 4 1 5 3"/></svg></span>
             <strong>Specialized Services</strong>
             <small>LymphFlow and bodywork</small>
           </a>
 
           <a class="faq-category-card" href="#faq-flowchair">
-            <span class="faq-category-icon" aria-hidden="true">♧</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8M5 13h14l2 6H3l2-6ZM7 19v2m10-2v2"/></svg></span>
             <strong>FlowChair</strong>
             <small>Workplace massage services</small>
           </a>
@@ -957,7 +854,7 @@
 
         <section class="faq-section" id="faq-booking">
           <div class="faq-section-heading">
-            <span class="faq-category-icon" aria-hidden="true">◷</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 15l2 2 5-5"/></svg></span>
             <div>
               <h2>Booking &amp; Scheduling</h2>
               <p>Everything starts with knowing what to expect.</p>
@@ -994,20 +891,40 @@
           </details>
 
           <details class="faq-item">
+            <summary>When am I charged for my appointment?</summary>
+            <div class="faq-answer">
+              <p>
+                FlowMobile appointments are paid in full when you book. For
+                studio appointments, a card on file is required; some longer
+                services also require a $50 deposit, which is applied to your
+                session total and shown during booking.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I book a FlowTherapy Studio appointment?</summary>
+            <div class="faq-answer">
+              <p>
+                FlowTherapy Studio appointments are not available to book just
+                yet. A new studio is coming very soon, and we’ll share its
+                location and booking details when they’re ready. FlowMobile is
+                currently bookable online in Downtown Austin.
+              </p>
+              <p><a href="./flowmobile.html">Explore FlowMobile →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
             <summary>How do I cancel or reschedule an appointment?</summary>
             <div class="faq-answer">
               <p>
-                Please review the current
-                <a
-                  href="./booking-cancellation.html"
-                >
-                  Booking &amp; Cancellation Policy
-                </a>
-                before making changes to your appointment.
-              </p>
-              <p>
-                Any applicable notice requirements or fees are governed by the
-                published policy.
+                Please give at least 24 hours’ notice. For FlowMobile, you may
+                reschedule for free or request a full refund with at least 24
+                hours’ notice; cancellations within 24 hours are nonrefundable.
+                For studio appointments, cancellations with less than 24 hours’
+                notice and missed appointments forfeit the deposit. See the full
+                <a href="./booking-cancellation.html">Booking &amp; Cancellation Policy</a>.
               </p>
             </div>
           </details>
@@ -1016,10 +933,9 @@
             <summary>What if I arrive late?</summary>
             <div class="faq-answer">
               <p>
-                Please arrive with enough time to prepare for your appointment.
-                If you anticipate being late, contact FlowTherapy as soon as
-                possible. The handling of late arrivals is subject to the
-                current appointment policies.
+                Late arrivals may shorten your session so the next appointment
+                can begin on time. Your session will still end at its scheduled
+                time. Please contact FlowTherapy as soon as you know you may be late.
               </p>
             </div>
           </details>
@@ -1027,7 +943,7 @@
 
         <section class="faq-section" id="faq-experience">
           <div class="faq-section-heading">
-            <span class="faq-category-icon" aria-hidden="true">✧</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg></span>
             <div>
               <h2>Your Experience</h2>
               <p>Your comfort, preferences, and boundaries matter.</p>
@@ -1044,6 +960,71 @@
                 consider.
               </p>
               <p><a href="./client-forms.html">Visit Client Forms →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How should I prepare for a FlowMobile session?</summary>
+            <div class="faq-answer">
+              <p>
+                Set aside a clear floor area of about 6 × 10 feet. Your
+                FlowTherapist brings the heated table, fresh linens, and music.
+                For a hotel, office, or apartment, include the property name and
+                any parking or entry instructions with your booking.
+              </p>
+              <p><a href="./flowmobile.html">Explore FlowMobile →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Where can I book FlowMobile?</summary>
+            <div class="faq-answer">
+              <p>
+                Online bookings are currently available in Downtown Austin.
+                Expanded service across Austin and Central Texas is coming
+                soon; the locations listed on the FlowMobile page show the
+                planned service area.
+              </p>
+              <p><a href="./flowmobile.html">View FlowMobile service areas →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are FlowMobile travel fees or deep-tissue surcharges extra?</summary>
+            <div class="faq-answer">
+              <p>
+                No. FlowMobile’s listed prices include the $50 mobile service
+                and travel fee, with no additional travel or deep-tissue
+                surcharge at checkout. Hot towels, hot stones, glide cupping,
+                and Rapid Flow Release with a massage gun are complimentary
+                options for your session. Your full booked session is hands-on
+                massage time.
+              </p>
+              <p><a href="./flowmobile.html#fm-recovery">See FlowMobile options →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What should I wear, and how does draping work?</summary>
+            <div class="faq-answer">
+              <p>
+                Undress only to the level that feels comfortable for you. You’ll
+                remain appropriately covered with a sheet throughout the
+                session, with only the area being worked on uncovered. You can
+                ask for a change or pause at any time.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I book back-to-back FlowMobile sessions?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes. You can request consecutive appointments for two or more
+                people during one visit. Contact FlowTherapy so we can confirm
+                timing and availability for your location.
+              </p>
+              <p><a href="./flowmobile.html">Explore FlowMobile →</a></p>
             </div>
           </details>
 
@@ -1071,7 +1052,7 @@
 
         <section class="faq-section" id="faq-flowpass">
           <div class="faq-section-heading">
-            <span class="faq-category-icon" aria-hidden="true">◇</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5v5c0 4.2-3.2 7.2-8 8.5-4.8-1.3-8-4.3-8-8.5v-5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
             <div>
               <h2>FlowPass Membership</h2>
               <p>Understand your membership and its benefits.</p>
@@ -1082,10 +1063,35 @@
             <summary>What is FlowPass?</summary>
             <div class="faq-answer">
               <p>
-                FlowPass is FlowTherapy's membership offering. Review the
-                current membership details and benefits before enrolling.
+                FlowPass is a monthly wellness membership with one 75- or
+                90-minute Signature Flow session each month, $20 off additional
+                massages, and $10 off qualifying FlowBoosts. One unused session
+                may roll over into the following cycle.
               </p>
               <p><a href="../index.html#flowpass">Explore FlowPass →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the FlowPass commitment and how do I cancel?</summary>
+            <div class="faq-answer">
+              <p>
+                FlowPass has a three-month initial commitment. After that,
+                membership continues month to month and can be canceled with
+                30 days’ notice.
+              </p>
+              <p><a href="../index.html#flowpass">Review FlowPass terms →</a></p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How does FlowPass session rollover work?</summary>
+            <div class="faq-answer">
+              <p>
+                One unused monthly session may roll over and must be used by the
+                end of the following membership cycle.
+              </p>
+              <p><a href="../index.html#flowpass">Review FlowPass terms →</a></p>
             </div>
           </details>
 
@@ -1145,7 +1151,7 @@
 
         <section class="faq-section" id="faq-flowpack">
           <div class="faq-section-heading">
-            <span class="faq-category-icon" aria-hidden="true">▤</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 7 9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7M12 11v10M7.5 5l9 4"/></svg></span>
             <div>
               <h2>FlowPack Packages</h2>
               <p>Make the most of your prepaid sessions.</p>
@@ -1177,9 +1183,9 @@
             <summary>When do my FlowPack sessions expire?</summary>
             <div class="faq-answer">
               <p>
-                The established expiration schedule is six months for FP4 and
-                twelve months for FP8 and FP12. Check your package details for
-                the terms that apply to your purchase.
+                Four-session FlowPacks are valid for six months, and
+                six-session FlowPacks are valid for twelve months. Check your
+                package details for the terms that apply to your purchase.
               </p>
             </div>
           </details>
@@ -1187,7 +1193,7 @@
 
         <section class="faq-section" id="faq-payments">
           <div class="faq-section-heading">
-            <span class="faq-category-icon" aria-hidden="true">♡</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 7v13M12 7s-5-1-5-4 5-1 5 4Zm0 0s5-1 5-4-5-1-5 4Z"/></svg></span>
             <div>
               <h2>Payments, Gifts &amp; Enhancements</h2>
               <p>Helpful information about your purchases.</p>
@@ -1208,6 +1214,29 @@
           </details>
 
           <details class="faq-item">
+            <summary>Do you accept HSA or FSA cards?</summary>
+            <div class="faq-answer">
+              <p>
+                Yes. FlowTherapy accepts HSA and FSA cards through Noterro.
+                Your plan determines whether a massage expense is eligible for
+                payment or reimbursement. We can provide an itemized receipt;
+                check with your plan administrator about eligibility and any
+                additional documentation they require.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is tipping expected?</summary>
+            <div class="faq-answer">
+              <p>
+                Tipping is never expected and is always appreciated. Your
+                FlowTherapist will never ask you for a tip.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
             <summary>Can I purchase an enhancement without a massage?</summary>
             <div class="faq-answer">
               <p>
@@ -1222,7 +1251,7 @@
 
         <section class="faq-section" id="faq-care">
           <div class="faq-section-heading">
-            <span class="faq-category-icon" aria-hidden="true">❋</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 7v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
             <div>
               <h2>Care, Intake &amp; Consent</h2>
               <p>Informed care starts with clear communication.</p>
@@ -1233,9 +1262,16 @@
             <summary>Why do I need to complete an intake form?</summary>
             <div class="faq-answer">
               <p>
-                Intake information helps your therapist understand your goals,
-                relevant health information, and preferences so your session can
-                be planned appropriately.
+                Texas TDLR requires an initial consultation and a signed
+                consultation document before your first massage. Completing
+                FlowTherapy’s forms before your appointment also gives your
+                therapist time to review your goals, relevant health information,
+                and preferences so your session can be prepared for you.
+              </p>
+              <p>
+                <a href="https://www.tdlr.texas.gov/mas/forms/Consultation.pdf"
+                  >Read TDLR’s consultation guidance →</a
+                >
               </p>
               <p>
                 <a href="./client-forms.html">Complete your client forms →</a>
@@ -1269,11 +1305,27 @@
               </p>
             </div>
           </details>
+
+          <details class="faq-item">
+            <summary>What if I’m sick or have a health concern?</summary>
+            <div class="faq-answer">
+              <p>
+                Please contact FlowTherapy if you have a fever or contagious
+                illness; do not attend while contagious. If you have a health
+                condition, recent surgery, or are unsure whether massage is
+                appropriate, check with your healthcare professional and share
+                relevant information with your therapist before your session.
+                If illness affects an appointment within 24 hours, contact us
+                promptly to discuss next steps.
+              </p>
+              <p><a href="./booking-cancellation.html">Read the booking policy →</a></p>
+            </div>
+          </details>
         </section>
 
         <section class="faq-section" id="faq-specialized">
           <div class="faq-section-heading">
-            <span class="faq-category-icon" aria-hidden="true">❧</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C11 4 5 8 5 14c0 3 2 5 5 5 6 0 10-6 10-15Z"/><path d="M4 21c2-6 6-10 12-14M8 15c2 0 4 1 5 3"/></svg></span>
             <div>
               <h2>Specialized Services</h2>
               <p>Find the right starting point for your needs.</p>
@@ -1309,7 +1361,7 @@
 
         <section class="faq-section" id="faq-flowchair">
           <div class="faq-section-heading">
-            <span class="faq-category-icon" aria-hidden="true">♧</span>
+            <span class="faq-category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8M5 13h14l2 6H3l2-6ZM7 19v2m10-2v2"/></svg></span>
             <div>
               <h2>FlowChair Workplace Massage</h2>
               <p>Bring chair massage to your workplace or event.</p>
@@ -1357,7 +1409,7 @@
           <h2>Still Have Questions?</h2>
           <p>
             We're happy to help you find the information you need before your
-            visit. Reach out to FlowTherapy or explore our services to take the
+            session. Reach out to FlowTherapy or explore our services to take the
             next step.
           </p>
           <a class="fm-btn" href="/index.html#studio-contact">
@@ -1366,7 +1418,7 @@
         </section>
       </section>
     </main>
-    <footer class="fm-footer" id="client-forms-footer">
+    <footer class="fm-footer" id="policies-footer">
       <div class="fm-footer-grid">
         <div class="fm-footer-brand">
           <img
