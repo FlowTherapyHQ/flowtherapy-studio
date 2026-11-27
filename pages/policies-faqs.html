@@ -112,9 +112,19 @@
         .faq-page {
           max-width: 1120px;
           margin: 0 auto;
-          padding: 28px 24px 80px;
+          padding: 28px 24px 32px;
           color: #06283e;
-          background: #f2f6f7;
+          background: transparent;
+        }
+
+        body {
+          min-height: 100vh;
+          background: linear-gradient(
+            135deg,
+            #f8f0e4 0%,
+            #f7f5ef 55%,
+            #e3eef6 100%
+          ) fixed;
         }
 
         .faq-intro {
@@ -351,10 +361,10 @@
 
         .faq-contact-card {
           margin-top: 60px;
-          padding: clamp(28px, 5vw, 52px);
+          padding: clamp(24px, 4vw, 36px);
           border: 1px solid #d7e6ed;
           border-radius: 22px;
-          background: linear-gradient(125deg, #f8f0e4 35%, #e3eef6);
+          background: transparent;
           text-align: center;
         }
 
@@ -367,33 +377,15 @@
 
         .faq-contact-card p {
           max-width: 600px;
-          margin: 0 auto 24px;
+          margin: 0 auto;
           color: #213d52;
           font-size: 16px;
           line-height: 1.8;
         }
 
-        .faq-contact-card .fm-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 46px;
-          padding: 12px 24px;
-          border-radius: 999px;
-          background: #0b2857;
-          color: #fff;
-          font-size: 15px;
-          font-weight: 600;
-          text-decoration: none;
-        }
-
-        .faq-contact-card .fm-btn:hover {
-          background: #087da8;
-        }
-
         @media (max-width: 760px) {
           .faq-page {
-            padding: 10px 20px 55px;
+            padding: 10px 20px 24px;
           }
 
           .faq-category-nav {
@@ -464,7 +456,7 @@
           box-sizing: border-box;
           width: 100%;
           padding: 34px clamp(20px, 4vw, 48px) 20px;
-          background: linear-gradient(125deg, #f8f0e4 65%, #e3eef6);
+          background: transparent;
           color: #06283e;
           font-family: "DM Sans", Arial, sans-serif;
         }
@@ -697,13 +689,7 @@
           width: 100%;
           padding: 64px 24px 44px;
           text-align: center;
-          background: linear-gradient(
-            135deg,
-            #f8f0e4 0%,
-            #f7f5ef 55%,
-            #e3eef6 100%
-          );
-          border-bottom: 1px solid #d8e5ed;
+          background: transparent;
         }
 
         /* Brand eyebrow */
@@ -751,6 +737,12 @@
           font-size: 16px;
           font-weight: 400;
           line-height: 1.8;
+        }
+
+        @media (max-width: 800px) {
+          body studio-mobile-footer footer {
+            background: transparent;
+          }
         }
 
         /* Mobile spacing */
@@ -1411,9 +1403,6 @@
             session. Reach out to FlowTherapy or explore our services to take the
             next step.
           </p>
-          <a class="fm-btn" href="/index.html#studio-contact">
-            Contact FlowTherapy <span aria-hidden="true">→</span>
-          </a>
         </section>
       </section>
     </main>
