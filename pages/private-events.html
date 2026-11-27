@@ -1249,12 +1249,13 @@
               </div>
 
               <div class="private-events-field">
-                <label for="event-phone">Phone</label>
+                <label for="event-phone">Phone *</label>
                 <input
                   id="event-phone"
                   name="Phone"
                   type="tel"
                   autocomplete="tel"
+                  required
                 />
               </div>
 
@@ -1284,7 +1285,7 @@
               </div>
 
               <div class="private-events-field">
-                <label for="event-guests">Estimated Guests</label>
+                <label for="event-guests">Estimated Guests *</label>
                 <input
                   id="event-guests"
                   name="Estimated Guests"
@@ -1292,26 +1293,29 @@
                   min="1"
                   inputmode="numeric"
                   placeholder="e.g. 12"
+                  required
                 />
               </div>
 
               <div class="private-events-field">
-                <label for="event-location">Event Location</label>
+                <label for="event-location">Event Location *</label>
                 <input
                   id="event-location"
                   name="Event Location"
                   type="text"
                   placeholder="City / venue"
+                  required
                 />
               </div>
 
               <div class="private-events-field">
-                <label for="event-timing">Preferred Timing</label>
+                <label for="event-timing">Preferred Timing *</label>
                 <input
                   id="event-timing"
                   name="Preferred Timing"
                   type="text"
                   placeholder="e.g. 2–5 PM"
+                  required
                 />
               </div>
 
