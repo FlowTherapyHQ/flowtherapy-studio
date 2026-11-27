@@ -529,6 +529,11 @@
   height: 100%;
   object-fit: cover;
   object-position: right center;
+  transition: transform .4s ease;
+}
+
+.fm-category.fm-flowmobile-category:hover .fm-flowmobile-media img {
+  transform: scale(1.04);
 }
 
 @media (min-width: 801px) {
@@ -2206,6 +2211,16 @@ background: #087EA4 !important;
 
   }
 
+  .fm-category.fm-flowmobile-category .fm-flowmobile-media img,
+  .fm-flowstart-front > img {
+    transition: none;
+  }
+
+  .fm-category.fm-flowmobile-category:hover .fm-flowmobile-media img,
+  .fm-flowstart-card:not(.is-flipped):hover .fm-flowstart-front > img {
+    transform: none;
+  }
+
 }
 
 /* Readable navy text on light backgrounds */
@@ -3497,6 +3512,11 @@ body.fm-home,
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: transform .4s ease;
+}
+
+.fm-flowstart-card:not(.is-flipped):hover .fm-flowstart-front > img {
+  transform: scale(1.04);
 }
 
 .fm-flowstart-front-copy {
