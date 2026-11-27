@@ -1,10 +1,33 @@
 (() => {
+  const flowChair = location.pathname.endsWith('/corporate-wellness.html');
+  if (flowChair) {
+    const form = document.querySelector('form.inquiry-form');
+    const phone = form?.elements.namedItem('Phone');
+    const date = form?.elements.namedItem('Preferred Date');
+    const experience = form?.elements.namedItem('FlowChair Experience');
+
+    if (phone && date && experience) {
+      for (const field of [phone, date, experience]) {
+        if (!field.required) {
+          field.required = true;
+          field.labels[0]?.append(' *');
+        }
+      }
+
+      const undecided = experience.options[0];
+      if (undecided?.value === '' && undecided.text.trim() === 'Not sure yet') {
+        const needsSelection = experience.value === '';
+        undecided.value = 'Not sure yet';
+        experience.add(new Option('Select one', '', true, needsSelection), undecided);
+      }
+    }
+  }
+
   const head = document.querySelector('studio-mobile-header');
   const foot = document.querySelector('studio-mobile-footer');
   if (!head || !foot) return;
   const logo = '<img src="/assets/images/flowtherapy-logo.png" alt="FlowTherapy Massage Co.">';
   const event = location.pathname.endsWith('/private-events.html');
-  const flowChair = location.pathname.endsWith('/corporate-wellness.html');
   const musicControl = flowChair ? '' : '<details><summary>♫ Soul Flow</summary></details>';
   const home = '/index.html';
   const link = ([name,href]) => `<a href="${href}">${name}</a>`;
