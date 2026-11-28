@@ -1235,7 +1235,46 @@
       body.fm-large-text label {
         font-size: 1.1em;
       }
-    </style>
+
+      .appointment-list {
+        max-width: 1020px;
+        margin-inline: auto;
+        background: var(--flow-white);
+        border: 1px solid var(--flow-border);
+        border-radius: 16px;
+      }
+      .appointment-row {
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 22px;
+      }
+      .appointment-row + .appointment-row { border-top: 1px solid var(--flow-border); }
+      .appointment-row .card-icon { width: 42px; height: 42px; border-radius: 11px; }
+      .appointment-row .card-icon svg { width: 20px; height: 20px; }
+      .appointment-copy .card-label {
+        display: block;
+        padding: 0;
+        background: transparent;
+        color: var(--flow-muted);
+      }
+      .appointment-copy h3 { font-size: clamp(22px, 2.3vw, 27px); margin: 3px 0 4px; }
+      .appointment-copy p { font-size: 14px; line-height: 1.55; margin: 0; }
+      .appointment-row > .button { width: auto; min-height: 44px; margin: 0; white-space: nowrap; }
+      .appointment-row > .button-disabled {
+        min-height: 0;
+        padding: 6px 0;
+        border: 0;
+        color: var(--flow-muted);
+        background: transparent;
+      }
+      @media (max-width: 760px) {
+        .appointment-row { grid-template-columns: 36px minmax(0, 1fr); gap: 8px 12px; padding: 14px; }
+        .appointment-row .card-icon { width: 36px; height: 36px; align-self: start; }
+        .appointment-row > .button { grid-column: 2; justify-self: start; }
+      }
+</style>
       <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="/assets/css/studio-mobile.css">
 <script defer src="/assets/js/studio-mobile.js"></script>
@@ -1295,9 +1334,7 @@
         <h1>Client Forms &amp; Intake</h1>
 
         <p class="hero-description">
-          A few simple steps before your FlowTherapy session. Complete the forms
-          relevant to your appointment, review important policies, and explore
-          additional ways to experience FlowTherapy.
+          Complete your intake before your first appointment and review the policies that apply to your visit.
         </p>
 
         <div class="gold-line" aria-hidden="true"></div>
@@ -1305,55 +1342,40 @@
 
       <div class="page-content">
         <section aria-labelledby="forms-heading">
-          <h2 class="section-heading" id="forms-heading">Your Next Steps</h2>
+          <h2 class="section-heading" id="forms-heading">Before Your Appointment</h2>
 
           <p class="section-intro">
-            Choose the option that fits your visit or service. If you are unsure
-            which form you need, please contact us.
+            New clients can complete intake in Noterro. All clients can review booking and cancellation policies here.
           </p>
 
-          <div class="forms-grid">
-            <!-- 1. New Client Intake -->
-
-            <article class="form-card">
-              <div class="card-top">
-                <span class="card-icon" aria-hidden="true">
+          <div class="appointment-list">
+            <article class="appointment-row">
+              <span class="card-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <rect x="5" y="3" width="14" height="18" rx="2"></rect>
 
                     <path d="M9 8h6M9 12h6M9 16h4"></path>
                   </svg>
                 </span>
-
+              <div class="appointment-copy">
                 <span class="card-label">Before your first visit</span>
-              </div>
-
-              <h3>New Client Intake</h3>
+                <h3>New Client Intake</h3>
 
               <p>
-                *For New Clients:* Help us personalize your care by sharing your
-                basic health history, current concerns, and wellness goals. Your
-                information is handled securely by our intake platform in
-                accordance with its strict privacy practices. *Please note:*
-                Submitting this form does not schedule or confirm an
-                appointment.
+                Share your health history, current concerns, and goals in Noterro so we can plan your care. Complete your booking separately to confirm your appointment.
               </p>
-
+              </div>
               <a
                 class="button"
                 href="https://app.noterro.com/clinicForms/completeNow/54f1e510-3618-4c3b-900f-8961f2789148"
-                target="\_blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Complete Client Intake <span aria-hidden="true">→</span>
               </a>
             </article>
-
-            <!-- 2. FlowTherapy Policies & FAQs -->
-
-            <article class="form-card">
-              <div class="card-top">
-                <span class="card-icon" aria-hidden="true">
+            <article class="appointment-row">
+              <span class="card-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path
                       d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v18H7.5A2.5 2.5 0 0 0 5 22z"
@@ -1362,92 +1384,49 @@
                     <path d="M5 4.5V22M9 7h7M9 11h7"></path>
                   </svg>
                 </span>
-
+              <div class="appointment-copy">
                 <span class="card-label">Helpful information</span>
-              </div>
-
-              <h3>FlowTherapy Policies &amp; FAQs</h3>
+                <h3>FlowTherapy Policies &amp; FAQs</h3>
 
               <p>
                 Review booking and cancellation policies, FlowPass membership
                 information, FlowPack guidelines, and helpful answers before
                 your appointment.
               </p>
-
+              </div>
               <a class="button button-outline" href="/pages/policies-faqs.html">
                 Explore Policies &amp; FAQs <span aria-hidden="true">→</span>
               </a>
             </article>
-
-            <!-- 3. FlowChair Consultation & Consent -->
-
-            <article class="form-card">
-              <div class="card-top">
-                <span class="card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M7 4v5a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3V4"></path>
-
-                    <path d="M10 12v3a4 4 0 0 0 4 4h1"></path>
-
-                    <path d="M6 4h3M15 4h3M15 19h4M8 19h3"></path>
-                  </svg>
-                </span>
-
-                <span class="card-label">Workplace chair massage</span>
-              </div>
-
-              <h3>FlowChair Consultation &amp; Consent</h3>
-
-              <p>
-                Complete the consultation and consent form for FlowChair
-                workplace chair massage. Provide session expectations,
-                preferences, and relevant event information.
-              </p>
-
-              <a
-                class="button"
-                href="https://app.noterro.com/clinicForms/completeNow/1d0256ac-5fd5-4c43-ac47-acddfedf9f76"
-                target="\_blank"
-                rel="noopener noreferrer"
-              >
-                Complete FlowChair Form <span aria-hidden="true">→</span>
-              </a>
-            </article>
-
-            <!-- 4. VeteranFlow Authorization -->
-
-            <article class="form-card">
-              <div class="card-top">
-                <span class="card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"
-                    ></path>
-                  </svg>
-                </span>
-
-                <span class="card-label">Veteran Community Care</span>
-              </div>
-
-              <h3>VeteranFlow Authorization</h3>
-
-              <p>
-                For eligible VA Community Care appointments. Authorization and
-                referral requirements must be confirmed before treatment.
-                Complete this only when requested.
-              </p>
-
-              <span
-                class="button button-disabled"
-                aria-label="VeteranFlow form link is not yet available"
-              >
-                Form link coming soon
+            <article class="appointment-row">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"
+                  ></path>
+                </svg>
               </span>
+              <div class="appointment-copy">
+                <span class="card-label">Veteran Community Care</span>
+                <h3>VeteranFlow Authorization</h3>
+
+            <p>
+              For eligible VA Community Care appointments. Authorization and
+              referral requirements must be confirmed before treatment.
+              Complete this only when requested.
+            </p>
+              </div>
+              <span
+              class="button button-disabled"
+              aria-label="VeteranFlow form link is not yet available"
+            >
+              Form link coming soon
+            </span>
             </article>
           </div>
         </section>
 
-        <!-- 5. Insurance Interest Form -->
+        <!-- Insurance Interest Form -->
 
         <section class="insurance-section" aria-labelledby="insurance-heading">
           <div class="insurance-heading">
@@ -1507,22 +1486,21 @@
         <!-- Dedicated service pages -->
 
         <section class="more-ways" aria-labelledby="more-ways-heading">
-          <p class="eyebrow" style="text-align: center">More Ways to Flow</p>
+
 
           <h2 class="section-heading" id="more-ways-heading">
-            Wellness, Your Way
+            Planning an Event?
           </h2>
 
           <p class="section-intro">
-            Explore workplace wellness and private event experiences through
-            their dedicated FlowTherapy pages.
+            Choose the service that fits your event and send an inquiry through its service page.
           </p>
 
           <div class="ways-grid">
             <article class="way-card">
               <p class="way-eyebrow">Workplace &amp; Team Wellness</p>
 
-              <h3>CorporateFlow</h3>
+              <h3>FlowChair Anywhere</h3>
 
               <p>
                 Bring professional chair massage and workplace wellness
@@ -1530,7 +1508,7 @@
               </p>
 
               <a class="button" href="corporate-wellness.html">
-                Explore CorporateFlow <span aria-hidden="true">→</span>
+                Explore FlowChair Anywhere <span aria-hidden="true">→</span>
               </a>
             </article>
 
